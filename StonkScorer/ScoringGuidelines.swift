@@ -19,4 +19,10 @@ struct ScoringGuidelines {
         static let skystoneBonusOptions = [0, 1, 2]
         static let navigatingOptions = ["None", "One", "Both"]
     }
+
+    struct TeleOp {
+        static let stoneDelivered = 1
+        static let stonePlaced = 1
+        static let skyscraperBonus = 2
+    }
 }

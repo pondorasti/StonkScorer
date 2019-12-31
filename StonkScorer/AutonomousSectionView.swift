@@ -29,7 +29,14 @@ struct AutonomousSectionView: View {
     var body: some View {
         Section(header: Text("Autonomous").font(.headline)) {
             Toggle(isOn: $foundationRepositioned) {
-                Text("Repositioning")
+                HStack {
+                    Image("FoundationV2")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(height: 24) //TODO: fix icon
+                        .foregroundColor(foundationRepositioned ? Color(UIColor.systemBlue) : Color(UIColor.systemGray))
+                    Text("Repositioning")
+                }
             }
 
             HStack(spacing: 56) {
@@ -46,12 +53,14 @@ struct AutonomousSectionView: View {
                 in: 0...6
             )
 
-            Stepper("Stones Placed: \(stonesPlaced)",
-                value: $stonesPlaced,
-                in: 0...6
-            )
 
-            HStack(spacing: 56) {
+            StonesPlacedView(stonesPlaced: $stonesPlaced)
+
+            HStack {
+                Image(systemName: "p.circle.fill")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(height: 24)
                 Text("Navigating")
                 Picker(selection: $numberOfNavigations, label: Text("Navigating")) {
                     ForEach(0 ..< ScoringGuidelines.Auto.navigatingOptions.count) {

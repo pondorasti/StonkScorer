@@ -13,6 +13,7 @@ struct ContentView: View {
         NavigationView {
             List {
                 AutonomousSectionView()
+                TeleOpSectionView()
             }
             .listStyle(GroupedListStyle())
             .environment(\.horizontalSizeClass, .regular)
