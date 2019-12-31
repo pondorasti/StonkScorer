@@ -9,49 +9,36 @@
 import SwiftUI
 
 struct AutonomousSectionView: View {
-    @State private var foundationRepositioned = false
-    @State private var numberOfSkystoneBonuses = 0
-    @State private var stonesDelivered = 0
-    @State private var stonesPlaced = 0
-    @State private var numberOfNavigations = 0
 
-    var totalAutonomousPoints: Int {
-        var total = 0
-        total += (foundationRepositioned ? ScoringGuidelines.Auto.repositioning : 0)
-        total += numberOfSkystoneBonuses * ScoringGuidelines.Auto.skystoneBonus
-        total += stonesDelivered * ScoringGuidelines.Auto.stoneDelivered
-        total += stonesPlaced * ScoringGuidelines.Auto.stonePlaced
-        total += numberOfNavigations * ScoringGuidelines.Auto.navigating
-
-        return total
-    }
+    @State private var autoScorer = Scorer.Auto(
+        foundationRepositioned: false,
+        numberOfSkystoneBonuses: 0,
+        stonesDelivered: 0,
+        stonesPlaced: 0,
+        numberOfNavigations: 0
+    )
 
     var body: some View {
         Section(header: Text("Autonomous").font(.headline)) {
-            Toggle(isOn: $foundationRepositioned) {
+            Toggle(isOn: $autoScorer.foundationRepositioned) {
                 HStack {
                     Image("Foundation")
-                        .foregroundColor(foundationRepositioned ? Color(UIColor.systemBlue) : Color(UIColor.systemGray2))
+                        .foregroundColor(autoScorer.foundationRepositioned ? Color(UIColor.systemBlue) : Color(UIColor.systemGray2))
                     Text("Repositioning")
                 }
             }
 
             HStack(spacing: 56) {
                 Text("Skystone Bonus")
-                Picker(selection: $numberOfSkystoneBonuses, label: Text("Skystone Bonus")) {
+                Picker(selection: $autoScorer.numberOfSkystoneBonuses, label: Text("Skystone Bonus")) {
                     ForEach(0 ..< ScoringGuidelines.Auto.skystoneBonusOptions.count) {
                         Text("\(ScoringGuidelines.Auto.skystoneBonusOptions[$0])")
                     }
                 }.pickerStyle(SegmentedPickerStyle())
             }
 
-            Stepper("Stones Delivered: \(stonesDelivered)",
-                value: $stonesDelivered,
-                in: 0...6
-            )
-
-
-            StonesPlacedView(stonesPlaced: $stonesPlaced)
+            StonesDeliveredView(stonesDelivered: $autoScorer.stonesDelivered)
+            StonesPlacedView(stonesPlaced: $autoScorer.stonesPlaced)
 
             HStack {
                 Image(systemName: "p.circle.fill")
@@ -59,19 +46,14 @@ struct AutonomousSectionView: View {
                     .aspectRatio(contentMode: .fit)
                     .frame(height: 24)
                 Text("Navigating")
-                Picker(selection: $numberOfNavigations, label: Text("Navigating")) {
+                Picker(selection: $autoScorer.numberOfNavigations, label: Text("Navigating")) {
                     ForEach(0 ..< ScoringGuidelines.Auto.navigatingOptions.count) {
                         Text(ScoringGuidelines.Auto.navigatingOptions[$0])
                     }
                 }.pickerStyle(SegmentedPickerStyle())
             }
 
-            HStack() {
-                Text("Total Pts")
-                Text("\(totalAutonomousPoints)")
-                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .trailing)
-                    .padding(.trailing)
-            }
+//            TotalPointsView(points: $autoScorer)
         }
     }
 }

@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		C531973C23BBB94E00690A96 /* SkyscraperHeightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C531973B23BBB94E00690A96 /* SkyscraperHeightView.swift */; };
+		C531973E23BBBE2700690A96 /* StonesDeliveredView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C531973D23BBBE2700690A96 /* StonesDeliveredView.swift */; };
+		C531974023BBBF3100690A96 /* TotalPointsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C531973F23BBBF3100690A96 /* TotalPointsView.swift */; };
+		C531974223BBC69B00690A96 /* Scorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C531974123BBC69B00690A96 /* Scorer.swift */; };
 		C545655B23BB5FE50062A0CB /* AutonomousSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C545655A23BB5FE50062A0CB /* AutonomousSectionView.swift */; };
 		C545655D23BB604A0062A0CB /* ScoringGuidelines.swift in Sources */ = {isa = PBXBuildFile; fileRef = C545655C23BB604A0062A0CB /* ScoringGuidelines.swift */; };
 		C545656123BB63C40062A0CB /* TeleOpSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C545656023BB63C40062A0CB /* TeleOpSectionView.swift */; };
@@ -22,6 +25,9 @@
 
 /* Begin PBXFileReference section */
 		C531973B23BBB94E00690A96 /* SkyscraperHeightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyscraperHeightView.swift; sourceTree = "<group>"; };
+		C531973D23BBBE2700690A96 /* StonesDeliveredView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StonesDeliveredView.swift; sourceTree = "<group>"; };
+		C531973F23BBBF3100690A96 /* TotalPointsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalPointsView.swift; sourceTree = "<group>"; };
+		C531974123BBC69B00690A96 /* Scorer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scorer.swift; sourceTree = "<group>"; };
 		C545655923BB59B90062A0CB /* StonkScorer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = StonkScorer.entitlements; sourceTree = "<group>"; };
 		C545655A23BB5FE50062A0CB /* AutonomousSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutonomousSectionView.swift; sourceTree = "<group>"; };
 		C545655C23BB604A0062A0CB /* ScoringGuidelines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoringGuidelines.swift; sourceTree = "<group>"; };
@@ -51,8 +57,10 @@
 		C545656423BBB23C0062A0CB /* List Cell Types */ = {
 			isa = PBXGroup;
 			children = (
+				C531973D23BBBE2700690A96 /* StonesDeliveredView.swift */,
 				C545656223BBAE6A0062A0CB /* StonesPlacedView.swift */,
 				C531973B23BBB94E00690A96 /* SkyscraperHeightView.swift */,
+				C531973F23BBBF3100690A96 /* TotalPointsView.swift */,
 			);
 			path = "List Cell Types";
 			sourceTree = "<group>";
@@ -80,8 +88,9 @@
 				C5E8D9BF23BB56A6009B07E8 /* AppDelegate.swift */,
 				C5E8D9C123BB56A6009B07E8 /* SceneDelegate.swift */,
 				C5E8D9C323BB56A6009B07E8 /* ContentView.swift */,
-				C545655A23BB5FE50062A0CB /* AutonomousSectionView.swift */,
+				C531974123BBC69B00690A96 /* Scorer.swift */,
 				C545656423BBB23C0062A0CB /* List Cell Types */,
+				C545655A23BB5FE50062A0CB /* AutonomousSectionView.swift */,
 				C545656023BB63C40062A0CB /* TeleOpSectionView.swift */,
 				C545655C23BB604A0062A0CB /* ScoringGuidelines.swift */,
 				C5E8D9C523BB56AA009B07E8 /* Assets.xcassets */,
@@ -171,8 +180,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C531974023BBBF3100690A96 /* TotalPointsView.swift in Sources */,
 				C531973C23BBB94E00690A96 /* SkyscraperHeightView.swift in Sources */,
+				C531973E23BBBE2700690A96 /* StonesDeliveredView.swift in Sources */,
 				C545655B23BB5FE50062A0CB /* AutonomousSectionView.swift in Sources */,
+				C531974223BBC69B00690A96 /* Scorer.swift in Sources */,
 				C545656123BB63C40062A0CB /* TeleOpSectionView.swift in Sources */,
 				C545655D23BB604A0062A0CB /* ScoringGuidelines.swift in Sources */,
 				C5E8D9C023BB56A6009B07E8 /* AppDelegate.swift in Sources */,

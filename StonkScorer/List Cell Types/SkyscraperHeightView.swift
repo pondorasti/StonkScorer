@@ -19,16 +19,9 @@ struct SkyscraperHeightView: View {
                         .foregroundColor(Color(UIColor.systemBlue))
                     Image("Skyscraper")
                         .foregroundColor(Color(UIColor.systemYellow))
-
                 }
                 Text("Skyscraper Height: \(skyscraperHeight)")
             }
         }
     }
 }
-
-//struct SkyscraperHeightView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        SkyscraperHeightView()
-//    }
-//}

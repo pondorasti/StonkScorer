@@ -1,5 +1,5 @@
 //
-//  StonesPlacedView.swift
+//  StonesDeliveredView.swift
 //  StonkScorer
 //
 //  Created by Alexandru Turcanu on 31/12/2019.
@@ -8,19 +8,17 @@
 
 import SwiftUI
 
-struct StonesPlacedView: View {
-    @Binding var stonesPlaced: Int
+struct StonesDeliveredView: View {
+    @Binding var stonesDelivered: Int
 
     var body: some View {
-        Stepper(value: $stonesPlaced, in: 0...6) {
+        Stepper(value: $stonesDelivered, in: 0...6) {
             HStack {
                 ZStack(alignment: .top) {
-                    Image("MiniFoundation")
-                        .foregroundColor(Color(UIColor.systemBlue))
                     Image("Stone")
                         .foregroundColor(Color(UIColor.systemYellow))
                 }
-                Text("Stones Placed: \(stonesPlaced)")
+                Text("Stones Placed: \(stonesDelivered)")
             }
         }
     }

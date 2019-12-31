@@ -10,29 +10,21 @@ import SwiftUI
 
 struct TeleOpSectionView: View {
 
-    @State private var stonesDelivered = 0
-    @State private var stonesPlaced = 0
-    @State private var skyscraperHeight = 0
-
-    var totalTeleOpPoints: Int {
-        var total = 0
-
-        return total
-    }
+    @State private var teleOpScorer = Scorer.TeleOp(
+        stonesDelivered: 0,
+        stonesPlaced: 0,
+        skyscraperHeight: 0
+    )
 
     var body: some View {
         Section(header: Text("TeleOp").font(.headline)) {
-            Stepper("Stones Delivered: \(stonesDelivered)",
-                value: $stonesDelivered,
-                in: 0...60
-            )
-
-            StonesPlacedView(stonesPlaced: $stonesPlaced)
-            SkyscraperHeightView(skyscraperHeight: $skyscraperHeight)
+            StonesDeliveredView(stonesDelivered: $teleOpScorer.stonesDelivered)
+            StonesPlacedView(stonesPlaced: $teleOpScorer.stonesPlaced)
+            SkyscraperHeightView(skyscraperHeight: $teleOpScorer.skyscraperHeight)
 
             HStack() {
-                Text("Total Pts")
-                Text("\(totalTeleOpPoints)")
+                Text("Total Points")
+                Text("\(teleOpScorer.totalPoints)")
                     .frame(minWidth: 0, maxWidth: .infinity, alignment: .trailing)
                     .padding(.trailing)
             }
