@@ -8,6 +8,16 @@
 
 import SwiftUI
 
+struct ScoringGuidelines {
+    struct Auto {
+        static let repositioning = 10
+        static let skystoneBonus = 8
+        static let stoneDelivered = 2
+        static let stonePlaced = 4
+        static let navigating = 5
+    }
+}
+
 struct ContentView: View {
     @State private var foundationRepositioned = false
 
@@ -18,8 +28,19 @@ struct ContentView: View {
     @State private var stonesPlaced = 0
 
 
-    @State private var numberOfNavigationOptions = 0
+    @State private var numberOfNavigations = 0
     @State private var navigatingOptions = ["None", "One", "Both"]
+
+    private var totalAutonomousPoints: Int {
+        var total = 0
+        total += (foundationRepositioned ? ScoringGuidelines.Auto.repositioning : 0)
+        total += numberOfSkystoneBonuses * ScoringGuidelines.Auto.skystoneBonus
+        total += stonesDelivered * ScoringGuidelines.Auto.stoneDelivered
+        total += stonesPlaced * ScoringGuidelines.Auto.stonePlaced
+        total += numberOfNavigations * ScoringGuidelines.Auto.navigating
+
+        return total
+    }
 
     var body: some View {
         NavigationView {
@@ -50,7 +71,7 @@ struct ContentView: View {
 
                     HStack(spacing: 56) {
                         Text("Navigating")
-                        Picker(selection: $numberOfNavigationOptions, label: Text("Navigating")) {
+                        Picker(selection: $numberOfNavigations, label: Text("Navigating")) {
                             ForEach(0 ..< navigatingOptions.count) {
                                 Text(self.navigatingOptions[$0])
                             }
@@ -59,7 +80,7 @@ struct ContentView: View {
 
                     HStack() {
                         Text("Total Pts")
-                        Text("56")
+                        Text("\(totalAutonomousPoints)")
                             .frame(minWidth: 0, maxWidth: .infinity, alignment: .trailing)
                             .padding(.trailing)
                     }
