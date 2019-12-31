@@ -8,83 +8,11 @@
 
 import SwiftUI
 
-struct ScoringGuidelines {
-    struct Auto {
-        static let repositioning = 10
-        static let skystoneBonus = 8
-        static let stoneDelivered = 2
-        static let stonePlaced = 4
-        static let navigating = 5
-    }
-}
-
 struct ContentView: View {
-    @State private var foundationRepositioned = false
-
-    @State private var numberOfSkystoneBonuses = 0
-    @State private var skystoneBonusOptions = [0, 1, 2]
-
-    @State private var stonesDelivered = 0
-    @State private var stonesPlaced = 0
-
-
-    @State private var numberOfNavigations = 0
-    @State private var navigatingOptions = ["None", "One", "Both"]
-
-    private var totalAutonomousPoints: Int {
-        var total = 0
-        total += (foundationRepositioned ? ScoringGuidelines.Auto.repositioning : 0)
-        total += numberOfSkystoneBonuses * ScoringGuidelines.Auto.skystoneBonus
-        total += stonesDelivered * ScoringGuidelines.Auto.stoneDelivered
-        total += stonesPlaced * ScoringGuidelines.Auto.stonePlaced
-        total += numberOfNavigations * ScoringGuidelines.Auto.navigating
-
-        return total
-    }
-
     var body: some View {
         NavigationView {
             List {
-                Section(header: Text("Autonomous").font(.headline)) {
-                    Toggle(isOn: $foundationRepositioned) {
-                        Text("Repositioning")
-                    }
-
-                    HStack(spacing: 56) {
-                        Text("Skystone Bonus")
-                        Picker(selection: $numberOfSkystoneBonuses, label: Text("Skystone Bonus")) {
-                            ForEach(0 ..< skystoneBonusOptions.count) {
-                                Text("\(self.skystoneBonusOptions[$0])")
-                            }
-                        }.pickerStyle(SegmentedPickerStyle())
-                    }
-
-                    Stepper("Stones Delivered: \(stonesDelivered)",
-                        value: $stonesDelivered,
-                        in: 0...6
-                    )
-
-                    Stepper("Stones Placed: \(stonesPlaced)",
-                        value: $stonesPlaced,
-                        in: 0...6
-                    )
-
-                    HStack(spacing: 56) {
-                        Text("Navigating")
-                        Picker(selection: $numberOfNavigations, label: Text("Navigating")) {
-                            ForEach(0 ..< navigatingOptions.count) {
-                                Text(self.navigatingOptions[$0])
-                            }
-                        }.pickerStyle(SegmentedPickerStyle())
-                    }
-
-                    HStack() {
-                        Text("Total Pts")
-                        Text("\(totalAutonomousPoints)")
-                            .frame(minWidth: 0, maxWidth: .infinity, alignment: .trailing)
-                            .padding(.trailing)
-                    }
-                }
+                AutonomousSectionView()
             }
             .listStyle(GroupedListStyle())
             .environment(\.horizontalSizeClass, .regular)
