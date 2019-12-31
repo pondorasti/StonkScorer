@@ -28,11 +28,7 @@ struct TeleOpSectionView: View {
             )
 
             StonesPlacedView(stonesPlaced: $stonesPlaced)
-
-            Stepper("Skyscraper Height: \(skyscraperHeight)",
-                value: $skyscraperHeight,
-                in: 0...60
-            )
+            SkyscraperHeightView(skyscraperHeight: $skyscraperHeight)
 
             HStack() {
                 Text("Total Pts")

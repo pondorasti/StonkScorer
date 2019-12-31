@@ -30,11 +30,8 @@ struct AutonomousSectionView: View {
         Section(header: Text("Autonomous").font(.headline)) {
             Toggle(isOn: $foundationRepositioned) {
                 HStack {
-                    Image("FoundationV2")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(height: 24) //TODO: fix icon
-                        .foregroundColor(foundationRepositioned ? Color(UIColor.systemBlue) : Color(UIColor.systemGray))
+                    Image("Foundation")
+                        .foregroundColor(foundationRepositioned ? Color(UIColor.systemBlue) : Color(UIColor.systemGray2))
                     Text("Repositioning")
                 }
             }

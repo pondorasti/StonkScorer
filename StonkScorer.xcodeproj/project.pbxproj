@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C531973C23BBB94E00690A96 /* SkyscraperHeightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C531973B23BBB94E00690A96 /* SkyscraperHeightView.swift */; };
 		C545655B23BB5FE50062A0CB /* AutonomousSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C545655A23BB5FE50062A0CB /* AutonomousSectionView.swift */; };
 		C545655D23BB604A0062A0CB /* ScoringGuidelines.swift in Sources */ = {isa = PBXBuildFile; fileRef = C545655C23BB604A0062A0CB /* ScoringGuidelines.swift */; };
 		C545656123BB63C40062A0CB /* TeleOpSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C545656023BB63C40062A0CB /* TeleOpSectionView.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C531973B23BBB94E00690A96 /* SkyscraperHeightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyscraperHeightView.swift; sourceTree = "<group>"; };
 		C545655923BB59B90062A0CB /* StonkScorer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = StonkScorer.entitlements; sourceTree = "<group>"; };
 		C545655A23BB5FE50062A0CB /* AutonomousSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutonomousSectionView.swift; sourceTree = "<group>"; };
 		C545655C23BB604A0062A0CB /* ScoringGuidelines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoringGuidelines.swift; sourceTree = "<group>"; };
@@ -46,6 +48,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C545656423BBB23C0062A0CB /* List Cell Types */ = {
+			isa = PBXGroup;
+			children = (
+				C545656223BBAE6A0062A0CB /* StonesPlacedView.swift */,
+				C531973B23BBB94E00690A96 /* SkyscraperHeightView.swift */,
+			);
+			path = "List Cell Types";
+			sourceTree = "<group>";
+		};
 		C5E8D9B323BB56A6009B07E8 = {
 			isa = PBXGroup;
 			children = (
@@ -70,7 +81,7 @@
 				C5E8D9C123BB56A6009B07E8 /* SceneDelegate.swift */,
 				C5E8D9C323BB56A6009B07E8 /* ContentView.swift */,
 				C545655A23BB5FE50062A0CB /* AutonomousSectionView.swift */,
-				C545656223BBAE6A0062A0CB /* StonesPlacedView.swift */,
+				C545656423BBB23C0062A0CB /* List Cell Types */,
 				C545656023BB63C40062A0CB /* TeleOpSectionView.swift */,
 				C545655C23BB604A0062A0CB /* ScoringGuidelines.swift */,
 				C5E8D9C523BB56AA009B07E8 /* Assets.xcassets */,
@@ -160,6 +171,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C531973C23BBB94E00690A96 /* SkyscraperHeightView.swift in Sources */,
 				C545655B23BB5FE50062A0CB /* AutonomousSectionView.swift in Sources */,
 				C545656123BB63C40062A0CB /* TeleOpSectionView.swift in Sources */,
 				C545655D23BB604A0062A0CB /* ScoringGuidelines.swift in Sources */,
