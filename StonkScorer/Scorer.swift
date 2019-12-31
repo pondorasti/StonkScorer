@@ -45,8 +45,24 @@ struct Scorer {
         }
     }
 
-    struct EndgGame {
+    struct EndgGame: TotalPoints {
+        var capstoneBonuses: Int
+        var firstCapstoneLevel: Int
+        var secondCapstoneLevel: Int
+        var foundationMoved: Bool
+        var numberOfParkings: Int
 
+        var totalPoints: Int {
+            var total = 0
+
+            total += capstoneBonuses * ScoringGuidelines.EndGame.capstoneBonus
+            total += firstCapstoneLevel * ScoringGuidelines.EndGame.capstoneLevel
+            total += secondCapstoneLevel * ScoringGuidelines.EndGame.capstoneLevel
+            total += (foundationMoved ? ScoringGuidelines.EndGame.foundationMoved : 0)
+            total += numberOfParkings * ScoringGuidelines.EndGame.parking
+
+            return total
+        }
     }
 }
 
