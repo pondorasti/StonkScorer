@@ -14,6 +14,7 @@ struct ContentView: View {
             List {
                 AutonomousSectionView()
                 TeleOpSectionView()
+                EndGameSectionView()
             }
             .listStyle(GroupedListStyle())
             .environment(\.horizontalSizeClass, .regular)

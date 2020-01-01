@@ -11,35 +11,21 @@ import CoreGraphics
 import SwiftUI
 
 struct Constants {
-    static let iconMinWidth: CGFloat = 32
+    static let iconMinWidth: CGFloat = 36
 }
 
-struct Icon: View {
+extension Image {
     enum IconNames: String {
-        case stone = "Stone"
-        case skyscraper = "Skyscraper"
-        case miniFoundation = "MiniFoundation"
-        case miniFoundationV2 = "MiniFoundationV2"
-
-        func retrieveColor() -> Color {
-            switch self {
-            case .stone, .skyscraper:
-                return Color(UIColor.systemYellow)
-            case .miniFoundation, .miniFoundationV2:
-                return Color(UIColor.systemBlue)
-            }
-        }
+        case skystone
+        case stonePlaced
+        case skyscraper
+        case stoneDelivered
+        case stone
+        case foundation
+        
     }
 
-    var iconName: IconNames
-
-    init(name iconName: IconNames) {
-        self.iconName = iconName
+    init(iconName: IconNames) {
+        self.init(decorative: iconName.rawValue)
     }
-
-    var body: some View {
-        Image(iconName.rawValue)
-            .foregroundColor(iconName.retrieveColor())
-    }
-
 }

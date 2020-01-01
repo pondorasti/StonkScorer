@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "StoneLight.pdf"
+      "filename" : "r.pdf"
     },
     {
       "idiom" : "universal",
-      "filename" : "StoneDark.pdf",
+      "filename" : "r copy.pdf",
       "appearances" : [
         {
           "appearance" : "luminosity",

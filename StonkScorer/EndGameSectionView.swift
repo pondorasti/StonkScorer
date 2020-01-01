@@ -1,44 +1,58 @@
-////
-////  EndGameSectionView.swift
-////  StonkScorer
-////
-////  Created by Alexandru Turcanu on 01/01/2020.
-////  Copyright © 2020 CodingBytes. All rights reserved.
-////
 //
-//import SwiftUI
+//  EndGameSectionView.swift
+//  StonkScorer
 //
-//struct EndGameSectionView: View {
+//  Created by Alexandru Turcanu on 01/01/2020.
+//  Copyright © 2020 CodingBytes. All rights reserved.
 //
-//    @State private var endGameScorer = Scorer.EndgGame(
-//        capstoneBonuses: 0,
-//        firstCapstoneLevel: 0,
-//        secondCapstoneLevel: 0,
-//        foundationMoved: false,
-//        numberOfParkings: 0
-//    )
-//
-//    var body: some View {
-//        Section(header: Text("End Game").font(.headline)) {
-////            HStack {
-////                Image(systemName: "p.circle.fill")
-////                    .font(.headline)
-////                    .frame(minWidth: Constants.iconMinWidth)
-////
-////                Text("Navigating")
-////
-////                Picker(selection: $autoScorer.numberOfNavigations, label: Text("Navigating")) {
-////                    ForEach(0 ..< ScoringGuidelines.Auto.navigatingOptions.count) {
-////                        Text(ScoringGuidelines.Auto.navigatingOptions[$0])
-////                    }
-////                }.pickerStyle(SegmentedPickerStyle())
-////            }
-//        }
-//    }
-//}
-//
-//struct EndGameSectionView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        EndGameSectionView()
-//    }
-//}
+
+import SwiftUI
+
+struct EndGameSectionView: View {
+
+    @State private var endGameScorer = Scorer.EndgGame(
+        capstoneBonuses: 0,
+        firstCapstoneLevel: 0,
+        secondCapstoneLevel: 0,
+        foundationMoved: false,
+        numberOfParkings: 0
+    )
+
+    var body: some View {
+        Section(header: Text("End Game").font(.headline)) {
+
+            PickerView(
+                bindingProperty: $endGameScorer.capstoneBonuses,
+                image: Image(iconName: .skystone),
+                title: "Capstone Bonus",
+                options: ScoringGuidelines.EndGame.capstoneBonusOptions
+            )
+
+            StepperView(
+                bindingProperty: $endGameScorer.firstCapstoneLevel,
+                image: Image(iconName: .skystone),
+                title: "Capstone 1 Levels"
+            )
+
+            StepperView(
+                bindingProperty: $endGameScorer.secondCapstoneLevel,
+                image: Image(iconName: .skystone),
+                title: "Capstone 2 Levels"
+            )
+
+            PickerView(
+                bindingProperty: $endGameScorer.numberOfParkings,
+                image: Image(systemName: "p.circle.fill"),
+                title: "Parking",
+                options: ScoringGuidelines.EndGame.parkingOptions
+            )
+
+        }
+    }
+}
+
+struct EndGameSectionView_Previews: PreviewProvider {
+    static var previews: some View {
+        EndGameSectionView()
+    }
+}

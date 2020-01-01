@@ -16,7 +16,7 @@ struct ScoringGuidelines {
         static let stonePlaced = 4
         static let navigating = 5
 
-        static let skystoneBonusOptions = [0, 1, 2]
+        static let skystoneBonusOptions = ["0", "1", "2"]
         static let navigatingOptions = ["None", "One", "Both"]
     }
 
@@ -32,6 +32,7 @@ struct ScoringGuidelines {
         static let foundationMoved = 15
         static let parking = 5
 
-        static let capstoneBonusOptions = [0, 1, 2]
+        static let capstoneBonusOptions = ["0", "1", "2"]
+        static let parkingOptions = ["None", "One", "Both"]
     }
 }

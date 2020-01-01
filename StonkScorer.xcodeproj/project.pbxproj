@@ -12,6 +12,7 @@
 		C531974423BC954900690A96 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C531974323BC954900690A96 /* Helper.swift */; };
 		C531974623BCA66C00690A96 /* EndGameSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C531974523BCA66C00690A96 /* EndGameSectionView.swift */; };
 		C531974823BCA89500690A96 /* StepperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C531974723BCA89500690A96 /* StepperView.swift */; };
+		C531974A23BCB4B700690A96 /* PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C531974923BCB4B700690A96 /* PickerView.swift */; };
 		C545655B23BB5FE50062A0CB /* AutonomousSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C545655A23BB5FE50062A0CB /* AutonomousSectionView.swift */; };
 		C545655D23BB604A0062A0CB /* ScoringGuidelines.swift in Sources */ = {isa = PBXBuildFile; fileRef = C545655C23BB604A0062A0CB /* ScoringGuidelines.swift */; };
 		C545656123BB63C40062A0CB /* TeleOpSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C545656023BB63C40062A0CB /* TeleOpSectionView.swift */; };
@@ -29,6 +30,7 @@
 		C531974323BC954900690A96 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		C531974523BCA66C00690A96 /* EndGameSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndGameSectionView.swift; sourceTree = "<group>"; };
 		C531974723BCA89500690A96 /* StepperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepperView.swift; sourceTree = "<group>"; };
+		C531974923BCB4B700690A96 /* PickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerView.swift; sourceTree = "<group>"; };
 		C545655923BB59B90062A0CB /* StonkScorer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = StonkScorer.entitlements; sourceTree = "<group>"; };
 		C545655A23BB5FE50062A0CB /* AutonomousSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutonomousSectionView.swift; sourceTree = "<group>"; };
 		C545655C23BB604A0062A0CB /* ScoringGuidelines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoringGuidelines.swift; sourceTree = "<group>"; };
@@ -57,8 +59,9 @@
 		C545656423BBB23C0062A0CB /* List Cell Types */ = {
 			isa = PBXGroup;
 			children = (
-				C531973F23BBBF3100690A96 /* TotalPointsView.swift */,
 				C531974723BCA89500690A96 /* StepperView.swift */,
+				C531974923BCB4B700690A96 /* PickerView.swift */,
+				C531973F23BBBF3100690A96 /* TotalPointsView.swift */,
 			);
 			path = "List Cell Types";
 			sourceTree = "<group>";
@@ -188,6 +191,7 @@
 				C545655D23BB604A0062A0CB /* ScoringGuidelines.swift in Sources */,
 				C5E8D9C023BB56A6009B07E8 /* AppDelegate.swift in Sources */,
 				C5E8D9C223BB56A6009B07E8 /* SceneDelegate.swift in Sources */,
+				C531974A23BCB4B700690A96 /* PickerView.swift in Sources */,
 				C5E8D9C423BB56A6009B07E8 /* ContentView.swift in Sources */,
 				C531974623BCA66C00690A96 /* EndGameSectionView.swift in Sources */,
 				C531974423BC954900690A96 /* Helper.swift in Sources */,
@@ -328,6 +332,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = StonkScorer/StonkScorer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"StonkScorer/Preview Content\"";
 				DEVELOPMENT_TEAM = UALV34MRH2;
 				ENABLE_PREVIEWS = YES;
@@ -339,9 +344,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.codingBytes.StonkScorer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -351,6 +356,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = StonkScorer/StonkScorer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"StonkScorer/Preview Content\"";
 				DEVELOPMENT_TEAM = UALV34MRH2;
 				ENABLE_PREVIEWS = YES;
@@ -362,9 +368,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.codingBytes.StonkScorer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

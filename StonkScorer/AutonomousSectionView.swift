@@ -22,7 +22,7 @@ struct AutonomousSectionView: View {
         Section(header: Text("Autonomous").font(.headline)) {
             Toggle(isOn: $autoScorer.foundationRepositioned) {
                 HStack {
-                    Image(decorative: "Foundation")
+                    Image(iconName: .foundation)
                         .foregroundColor(autoScorer.foundationRepositioned ? Color(UIColor.systemBlue) : Color(UIColor.systemGray2))
                         .frame(minWidth: Constants.iconMinWidth)
 
@@ -30,44 +30,34 @@ struct AutonomousSectionView: View {
                 }
             }
 
-            HStack(spacing: 56) {
-                Text("Skystone Bonus")
-
-                Picker(selection: $autoScorer.numberOfSkystoneBonuses, label: Text("Skystone Bonus")) {
-                    ForEach(0 ..< ScoringGuidelines.Auto.skystoneBonusOptions.count) {
-                        Text("\(ScoringGuidelines.Auto.skystoneBonusOptions[$0])")
-                    }
-                }.pickerStyle(SegmentedPickerStyle())
-            }
+            PickerView(
+                bindingProperty: $autoScorer.numberOfSkystoneBonuses,
+                image: Image(iconName: .skystone),
+                title: "Skystone Bonus",
+                options: ScoringGuidelines.Auto.skystoneBonusOptions
+            )
 
 
             StepperView(
                 bindingProperty: $autoScorer.stonesDelivered,
-                icons: [Icon(name: .stone)],
+                image: Image(iconName: .stoneDelivered),
                 title: "Stones Delivered",
                 stepperRange: 0...6
             )
 
             StepperView(
                 bindingProperty: $autoScorer.stonesPlaced,
-                icons: [Icon(name: .miniFoundation), Icon(name: .stone)],
+                image: Image(iconName: .stonePlaced),
                 title: "Stones Placed",
                 stepperRange: 0...6
             )
 
-            HStack {
-                Image(systemName: "p.circle.fill")
-                    .font(.headline)
-                    .frame(minWidth: Constants.iconMinWidth)
-
-                Text("Navigating")
-
-                Picker(selection: $autoScorer.numberOfNavigations, label: Text("Navigating")) {
-                    ForEach(0 ..< ScoringGuidelines.Auto.navigatingOptions.count) {
-                        Text(ScoringGuidelines.Auto.navigatingOptions[$0])
-                    }
-                }.pickerStyle(SegmentedPickerStyle())
-            }
+            PickerView(
+                bindingProperty: $autoScorer.numberOfNavigations,
+                image: Image(systemName: "p.circle.fill"),
+                title: "Navigating",
+                options: ScoringGuidelines.Auto.navigatingOptions
+            )
 
             HStack() {
                 Image(systemName: "a.circle.fill")

@@ -21,19 +21,19 @@ struct TeleOpSectionView: View {
 
             StepperView(
                 bindingProperty: $teleOpScorer.stonesDelivered,
-                icons: [Icon(name: .stone)],
+                image: Image(iconName: .stoneDelivered),
                 title: "Stones Delivered"
             )
 
             StepperView(
                 bindingProperty: $teleOpScorer.stonesPlaced,
-                icons: [Icon(name: .miniFoundation), Icon(name: .stone)],
+                image: Image(iconName: .stonePlaced),
                 title: "Stones Placed"
             )
 
             StepperView(
                 bindingProperty: $teleOpScorer.skyscraperHeight,
-                icons: [Icon(name: .miniFoundationV2), Icon(name: .skyscraper)],
+                image: Image(iconName: .skyscraper),
                 title: "Skyscraper Height"
             )
 
