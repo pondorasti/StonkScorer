@@ -20,7 +20,7 @@ struct ContentView: View {
             .environment(\.horizontalSizeClass, .regular)
             .navigationBarTitle("Scorer")
         }
-
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 

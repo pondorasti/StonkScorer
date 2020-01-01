@@ -13,6 +13,7 @@
 		C531974623BCA66C00690A96 /* EndGameSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C531974523BCA66C00690A96 /* EndGameSectionView.swift */; };
 		C531974823BCA89500690A96 /* StepperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C531974723BCA89500690A96 /* StepperView.swift */; };
 		C531974A23BCB4B700690A96 /* PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C531974923BCB4B700690A96 /* PickerView.swift */; };
+		C531974C23BCF32900690A96 /* ToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C531974B23BCF32900690A96 /* ToggleView.swift */; };
 		C545655B23BB5FE50062A0CB /* AutonomousSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C545655A23BB5FE50062A0CB /* AutonomousSectionView.swift */; };
 		C545655D23BB604A0062A0CB /* ScoringGuidelines.swift in Sources */ = {isa = PBXBuildFile; fileRef = C545655C23BB604A0062A0CB /* ScoringGuidelines.swift */; };
 		C545656123BB63C40062A0CB /* TeleOpSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C545656023BB63C40062A0CB /* TeleOpSectionView.swift */; };
@@ -31,6 +32,7 @@
 		C531974523BCA66C00690A96 /* EndGameSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndGameSectionView.swift; sourceTree = "<group>"; };
 		C531974723BCA89500690A96 /* StepperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepperView.swift; sourceTree = "<group>"; };
 		C531974923BCB4B700690A96 /* PickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerView.swift; sourceTree = "<group>"; };
+		C531974B23BCF32900690A96 /* ToggleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleView.swift; sourceTree = "<group>"; };
 		C545655923BB59B90062A0CB /* StonkScorer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = StonkScorer.entitlements; sourceTree = "<group>"; };
 		C545655A23BB5FE50062A0CB /* AutonomousSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutonomousSectionView.swift; sourceTree = "<group>"; };
 		C545655C23BB604A0062A0CB /* ScoringGuidelines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoringGuidelines.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 			children = (
 				C531974723BCA89500690A96 /* StepperView.swift */,
 				C531974923BCB4B700690A96 /* PickerView.swift */,
+				C531974B23BCF32900690A96 /* ToggleView.swift */,
 				C531973F23BBBF3100690A96 /* TotalPointsView.swift */,
 			);
 			path = "List Cell Types";
@@ -195,6 +198,7 @@
 				C5E8D9C423BB56A6009B07E8 /* ContentView.swift in Sources */,
 				C531974623BCA66C00690A96 /* EndGameSectionView.swift in Sources */,
 				C531974423BC954900690A96 /* Helper.swift in Sources */,
+				C531974C23BCF32900690A96 /* ToggleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

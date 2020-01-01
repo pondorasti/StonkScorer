@@ -40,7 +40,10 @@ struct TeleOpSectionView: View {
             HStack() {
                 Image(systemName: "t.circle.fill")
                     .font(.headline)
+                    .frame(minWidth: Constants.iconMinWidth)
+
                 Text("Total Points")
+
                 Text("\(teleOpScorer.totalPoints)")
                     .frame(minWidth: 0, maxWidth: .infinity, alignment: .trailing)
                     .padding(.trailing)

@@ -9,24 +9,19 @@
 import SwiftUI
 
 struct TotalPointsView: View {
-    @Binding var scorer: TotalPoints
+    @Binding var scor: Int
 
     var body: some View {
         HStack() {
             Image(systemName: "a.circle.fill")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(height: 24)
+                .font(.headline)
+                .frame(minWidth: Constants.iconMinWidth)
+
             Text("Total Points")
-            Text("\(scorer.totalPoints)")
+
+            Text("\(scor)")
                 .frame(minWidth: 0, maxWidth: .infinity, alignment: .trailing)
                 .padding(.trailing)
         }
     }
 }
-
-//struct TotalPointsView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        TotalPointsView()
-//    }
-//}

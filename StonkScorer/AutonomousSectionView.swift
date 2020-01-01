@@ -20,15 +20,12 @@ struct AutonomousSectionView: View {
 
     var body: some View {
         Section(header: Text("Autonomous").font(.headline)) {
-            Toggle(isOn: $autoScorer.foundationRepositioned) {
-                HStack {
-                    Image(iconName: .foundation)
-                        .foregroundColor(autoScorer.foundationRepositioned ? Color(UIColor.systemBlue) : Color(UIColor.systemGray2))
-                        .frame(minWidth: Constants.iconMinWidth)
 
-                    Text("Repositioning")
-                }
-            }
+            ToggleView(
+                bindingProperty: $autoScorer.foundationRepositioned,
+                image: Image(iconName: .foundation),
+                title: "Repositioning"
+            )
 
             PickerView(
                 bindingProperty: $autoScorer.numberOfSkystoneBonuses,
@@ -36,7 +33,6 @@ struct AutonomousSectionView: View {
                 title: "Skystone Bonus",
                 options: ScoringGuidelines.Auto.skystoneBonusOptions
             )
-
 
             StepperView(
                 bindingProperty: $autoScorer.stonesDelivered,
@@ -70,8 +66,6 @@ struct AutonomousSectionView: View {
                     .frame(minWidth: 0, maxWidth: .infinity, alignment: .trailing)
                     .padding(.trailing)
             }
-
-//            TotalPointsView(points: $autoScorer)
         }
     }
 }

@@ -31,13 +31,19 @@ struct EndGameSectionView: View {
             StepperView(
                 bindingProperty: $endGameScorer.firstCapstoneLevel,
                 image: Image(iconName: .skystone),
-                title: "Capstone 1 Levels"
+                title: "Capstone 1 Level"
             )
 
             StepperView(
                 bindingProperty: $endGameScorer.secondCapstoneLevel,
                 image: Image(iconName: .skystone),
-                title: "Capstone 2 Levels"
+                title: "Capstone 2 Level"
+            )
+
+            ToggleView(
+                bindingProperty: $endGameScorer.foundationMoved,
+                image: Image(iconName: .foundation),
+                title: "Foundation Moved"
             )
 
             PickerView(
@@ -47,6 +53,18 @@ struct EndGameSectionView: View {
                 options: ScoringGuidelines.EndGame.parkingOptions
             )
 
+
+            HStack() {
+                Image(systemName: "e.circle.fill")
+                    .font(.headline)
+                    .frame(minWidth: Constants.iconMinWidth)
+
+                Text("Total Points")
+
+                Text("\(endGameScorer.totalPoints)")
+                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .trailing)
+                    .padding(.trailing)
+            }
         }
     }
 }
