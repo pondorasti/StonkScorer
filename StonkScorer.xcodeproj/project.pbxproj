@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C531974023BBBF3100690A96 /* TotalPointsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C531973F23BBBF3100690A96 /* TotalPointsView.swift */; };
 		C531974223BBC69B00690A96 /* Scorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C531974123BBC69B00690A96 /* Scorer.swift */; };
 		C531974423BC954900690A96 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C531974323BC954900690A96 /* Helper.swift */; };
 		C531974623BCA66C00690A96 /* EndGameSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C531974523BCA66C00690A96 /* EndGameSectionView.swift */; };
@@ -26,7 +25,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C531973F23BBBF3100690A96 /* TotalPointsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalPointsView.swift; sourceTree = "<group>"; };
 		C531974123BBC69B00690A96 /* Scorer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scorer.swift; sourceTree = "<group>"; };
 		C531974323BC954900690A96 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		C531974523BCA66C00690A96 /* EndGameSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndGameSectionView.swift; sourceTree = "<group>"; };
@@ -37,7 +35,7 @@
 		C545655A23BB5FE50062A0CB /* AutonomousSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutonomousSectionView.swift; sourceTree = "<group>"; };
 		C545655C23BB604A0062A0CB /* ScoringGuidelines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoringGuidelines.swift; sourceTree = "<group>"; };
 		C545656023BB63C40062A0CB /* TeleOpSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeleOpSectionView.swift; sourceTree = "<group>"; };
-		C5E8D9BC23BB56A6009B07E8 /* StonkScorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StonkScorer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5E8D9BC23BB56A6009B07E8 /* FTC Scorer - Skystone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FTC Scorer - Skystone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5E8D9BF23BB56A6009B07E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C5E8D9C123BB56A6009B07E8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C5E8D9C323BB56A6009B07E8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -64,7 +62,6 @@
 				C531974723BCA89500690A96 /* StepperView.swift */,
 				C531974923BCB4B700690A96 /* PickerView.swift */,
 				C531974B23BCF32900690A96 /* ToggleView.swift */,
-				C531973F23BBBF3100690A96 /* TotalPointsView.swift */,
 			);
 			path = "List Cell Types";
 			sourceTree = "<group>";
@@ -80,7 +77,7 @@
 		C5E8D9BD23BB56A6009B07E8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C5E8D9BC23BB56A6009B07E8 /* StonkScorer.app */,
+				C5E8D9BC23BB56A6009B07E8 /* FTC Scorer - Skystone.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -132,7 +129,7 @@
 			);
 			name = StonkScorer;
 			productName = StonkScorer;
-			productReference = C5E8D9BC23BB56A6009B07E8 /* StonkScorer.app */;
+			productReference = C5E8D9BC23BB56A6009B07E8 /* FTC Scorer - Skystone.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -186,7 +183,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C531974023BBBF3100690A96 /* TotalPointsView.swift in Sources */,
 				C545655B23BB5FE50062A0CB /* AutonomousSectionView.swift in Sources */,
 				C531974823BCA89500690A96 /* StepperView.swift in Sources */,
 				C531974223BBC69B00690A96 /* Scorer.swift in Sources */,
@@ -347,7 +343,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.codingBytes.StonkScorer;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "FTC Scorer - Skystone";
 				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -371,7 +367,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.codingBytes.StonkScorer;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "FTC Scorer - Skystone";
 				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

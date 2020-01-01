@@ -31,7 +31,7 @@ struct PickerView: View {
                 }
             }
             .pickerStyle(SegmentedPickerStyle())
-
+            .frame(maxWidth: 256)
         }
     }
 }

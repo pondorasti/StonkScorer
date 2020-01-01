@@ -18,8 +18,10 @@ struct ToggleView: View {
         Toggle(isOn: $bindingProperty) {
             HStack {
                 Image(iconName: .foundation)
-                    .foregroundColor(bindingProperty ? Color(UIColor.systemBlue) : Color(UIColor.systemGray2))
+                    .foregroundColor(.white)
+                    .colorMultiply(bindingProperty ? Color(UIColor.systemBlue) : Color(UIColor.systemGray2))
                     .frame(minWidth: Constants.iconMinWidth)
+                    .animation(.linear)
 
                 Text("\(title)")
             }
