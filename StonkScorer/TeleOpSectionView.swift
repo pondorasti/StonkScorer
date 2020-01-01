@@ -18,11 +18,28 @@ struct TeleOpSectionView: View {
 
     var body: some View {
         Section(header: Text("TeleOp").font(.headline)) {
-            StonesDeliveredView(stonesDelivered: $teleOpScorer.stonesDelivered)
-            StonesPlacedView(stonesPlaced: $teleOpScorer.stonesPlaced)
-            SkyscraperHeightView(skyscraperHeight: $teleOpScorer.skyscraperHeight)
+
+            StepperView(
+                bindingProperty: $teleOpScorer.stonesDelivered,
+                icons: [Icon(name: .stone)],
+                title: "Stones Delivered"
+            )
+
+            StepperView(
+                bindingProperty: $teleOpScorer.stonesPlaced,
+                icons: [Icon(name: .miniFoundation), Icon(name: .stone)],
+                title: "Stones Placed"
+            )
+
+            StepperView(
+                bindingProperty: $teleOpScorer.skyscraperHeight,
+                icons: [Icon(name: .miniFoundationV2), Icon(name: .skyscraper)],
+                title: "Skyscraper Height"
+            )
 
             HStack() {
+                Image(systemName: "t.circle.fill")
+                    .font(.headline)
                 Text("Total Points")
                 Text("\(teleOpScorer.totalPoints)")
                     .frame(minWidth: 0, maxWidth: .infinity, alignment: .trailing)

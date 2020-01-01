@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C531973C23BBB94E00690A96 /* SkyscraperHeightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C531973B23BBB94E00690A96 /* SkyscraperHeightView.swift */; };
-		C531973E23BBBE2700690A96 /* StonesDeliveredView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C531973D23BBBE2700690A96 /* StonesDeliveredView.swift */; };
 		C531974023BBBF3100690A96 /* TotalPointsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C531973F23BBBF3100690A96 /* TotalPointsView.swift */; };
 		C531974223BBC69B00690A96 /* Scorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C531974123BBC69B00690A96 /* Scorer.swift */; };
+		C531974423BC954900690A96 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C531974323BC954900690A96 /* Helper.swift */; };
+		C531974623BCA66C00690A96 /* EndGameSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C531974523BCA66C00690A96 /* EndGameSectionView.swift */; };
+		C531974823BCA89500690A96 /* StepperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C531974723BCA89500690A96 /* StepperView.swift */; };
 		C545655B23BB5FE50062A0CB /* AutonomousSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C545655A23BB5FE50062A0CB /* AutonomousSectionView.swift */; };
 		C545655D23BB604A0062A0CB /* ScoringGuidelines.swift in Sources */ = {isa = PBXBuildFile; fileRef = C545655C23BB604A0062A0CB /* ScoringGuidelines.swift */; };
 		C545656123BB63C40062A0CB /* TeleOpSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C545656023BB63C40062A0CB /* TeleOpSectionView.swift */; };
-		C545656323BBAE6A0062A0CB /* StonesPlacedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C545656223BBAE6A0062A0CB /* StonesPlacedView.swift */; };
 		C5E8D9C023BB56A6009B07E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E8D9BF23BB56A6009B07E8 /* AppDelegate.swift */; };
 		C5E8D9C223BB56A6009B07E8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E8D9C123BB56A6009B07E8 /* SceneDelegate.swift */; };
 		C5E8D9C423BB56A6009B07E8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E8D9C323BB56A6009B07E8 /* ContentView.swift */; };
@@ -24,15 +24,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C531973B23BBB94E00690A96 /* SkyscraperHeightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyscraperHeightView.swift; sourceTree = "<group>"; };
-		C531973D23BBBE2700690A96 /* StonesDeliveredView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StonesDeliveredView.swift; sourceTree = "<group>"; };
 		C531973F23BBBF3100690A96 /* TotalPointsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalPointsView.swift; sourceTree = "<group>"; };
 		C531974123BBC69B00690A96 /* Scorer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scorer.swift; sourceTree = "<group>"; };
+		C531974323BC954900690A96 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		C531974523BCA66C00690A96 /* EndGameSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndGameSectionView.swift; sourceTree = "<group>"; };
+		C531974723BCA89500690A96 /* StepperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepperView.swift; sourceTree = "<group>"; };
 		C545655923BB59B90062A0CB /* StonkScorer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = StonkScorer.entitlements; sourceTree = "<group>"; };
 		C545655A23BB5FE50062A0CB /* AutonomousSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutonomousSectionView.swift; sourceTree = "<group>"; };
 		C545655C23BB604A0062A0CB /* ScoringGuidelines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoringGuidelines.swift; sourceTree = "<group>"; };
 		C545656023BB63C40062A0CB /* TeleOpSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeleOpSectionView.swift; sourceTree = "<group>"; };
-		C545656223BBAE6A0062A0CB /* StonesPlacedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StonesPlacedView.swift; sourceTree = "<group>"; };
 		C5E8D9BC23BB56A6009B07E8 /* StonkScorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StonkScorer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5E8D9BF23BB56A6009B07E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C5E8D9C123BB56A6009B07E8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,10 +57,8 @@
 		C545656423BBB23C0062A0CB /* List Cell Types */ = {
 			isa = PBXGroup;
 			children = (
-				C531973D23BBBE2700690A96 /* StonesDeliveredView.swift */,
-				C545656223BBAE6A0062A0CB /* StonesPlacedView.swift */,
-				C531973B23BBB94E00690A96 /* SkyscraperHeightView.swift */,
 				C531973F23BBBF3100690A96 /* TotalPointsView.swift */,
+				C531974723BCA89500690A96 /* StepperView.swift */,
 			);
 			path = "List Cell Types";
 			sourceTree = "<group>";
@@ -90,9 +88,11 @@
 				C5E8D9C323BB56A6009B07E8 /* ContentView.swift */,
 				C545655C23BB604A0062A0CB /* ScoringGuidelines.swift */,
 				C531974123BBC69B00690A96 /* Scorer.swift */,
+				C531974323BC954900690A96 /* Helper.swift */,
 				C545656423BBB23C0062A0CB /* List Cell Types */,
 				C545655A23BB5FE50062A0CB /* AutonomousSectionView.swift */,
 				C545656023BB63C40062A0CB /* TeleOpSectionView.swift */,
+				C531974523BCA66C00690A96 /* EndGameSectionView.swift */,
 				C5E8D9C523BB56AA009B07E8 /* Assets.xcassets */,
 				C5E8D9CA23BB56AA009B07E8 /* LaunchScreen.storyboard */,
 				C5E8D9CD23BB56AA009B07E8 /* Info.plist */,
@@ -181,16 +181,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				C531974023BBBF3100690A96 /* TotalPointsView.swift in Sources */,
-				C531973C23BBB94E00690A96 /* SkyscraperHeightView.swift in Sources */,
-				C531973E23BBBE2700690A96 /* StonesDeliveredView.swift in Sources */,
 				C545655B23BB5FE50062A0CB /* AutonomousSectionView.swift in Sources */,
+				C531974823BCA89500690A96 /* StepperView.swift in Sources */,
 				C531974223BBC69B00690A96 /* Scorer.swift in Sources */,
 				C545656123BB63C40062A0CB /* TeleOpSectionView.swift in Sources */,
 				C545655D23BB604A0062A0CB /* ScoringGuidelines.swift in Sources */,
 				C5E8D9C023BB56A6009B07E8 /* AppDelegate.swift in Sources */,
 				C5E8D9C223BB56A6009B07E8 /* SceneDelegate.swift in Sources */,
 				C5E8D9C423BB56A6009B07E8 /* ContentView.swift in Sources */,
-				C545656323BBAE6A0062A0CB /* StonesPlacedView.swift in Sources */,
+				C531974623BCA66C00690A96 /* EndGameSectionView.swift in Sources */,
+				C531974423BC954900690A96 /* Helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

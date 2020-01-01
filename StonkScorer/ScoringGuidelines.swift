@@ -31,5 +31,7 @@ struct ScoringGuidelines {
         static let capstoneLevel = 1
         static let foundationMoved = 15
         static let parking = 5
+
+        static let capstoneBonusOptions = [0, 1, 2]
     }
 }
