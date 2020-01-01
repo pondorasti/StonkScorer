@@ -49,17 +49,11 @@ struct AutonomousSectionView: View {
                 options: ScoringGuidelines.Auto.navigatingOptions
             )
 
-            HStack() {
-                Image(systemName: "a.circle.fill")
-                    .font(.headline)
-                    .frame(minWidth: Constants.iconMinWidth)
-
-                Text("Total Points")
-
-                Text("\(autoScorer.totalPoints)")
-                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .trailing)
-                    .padding(.trailing)
-            }
+            TotalPointsView(
+                scorer: $autoScorer,
+                image: Image(systemName: "a.circle.fill"),
+                title: "Total Points"
+            )
         }
     }
 }

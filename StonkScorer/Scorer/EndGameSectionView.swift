@@ -17,20 +17,20 @@ struct EndGameSectionView: View {
 
             PickerView(
                 bindingProperty: $endGameScorer.capstoneBonuses,
-                image: Image(iconName: .skystone),
+                image: Image(iconName: .capstone),
                 title: "Capstone Bonus",
                 options: ScoringGuidelines.EndGame.capstoneBonusOptions
             )
 
             StepperView(
                 bindingProperty: $endGameScorer.firstCapstoneLevel,
-                image: Image(iconName: .skystone),
+                image: Image(iconName: .capstoneLevel),
                 title: "Capstone 1 Level"
             )
 
             StepperView(
                 bindingProperty: $endGameScorer.secondCapstoneLevel,
-                image: Image(iconName: .skystone),
+                image: Image(iconName: .capstoneLevel),
                 title: "Capstone 2 Level"
             )
 
@@ -48,17 +48,11 @@ struct EndGameSectionView: View {
             )
 
 
-            HStack() {
-                Image(systemName: "e.circle.fill")
-                    .font(.headline)
-                    .frame(minWidth: Constants.iconMinWidth)
-
-                Text("Total Points")
-
-                Text("\(endGameScorer.totalPoints)")
-                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .trailing)
-                    .padding(.trailing)
-            }
+            TotalPointsView(
+                scorer: $endGameScorer,
+                image: Image(systemName: "e.circle.fill"),
+                title: "Total Points"
+            )
         }
     }
 }

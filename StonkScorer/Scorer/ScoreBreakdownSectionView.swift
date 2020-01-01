@@ -11,59 +11,34 @@ import SwiftUI
 struct ScoreBreakdownSectionView: View {
     @Binding var scorer: Scorer
 
+
+
     var body: some View {
         Section(header: Text("Score Breakdown").font(.headline)) {
 
-            HStack() {
-                Image(systemName: "a.circle.fill")
-                    .font(.system(size: Constants.sfSymbolSize))
-                    .foregroundColor(Color(UIColor.systemGreen))
-                    .frame(minWidth: Constants.iconMinWidth)
+            TotalPointsView(
+                scorer: $scorer.auto,
+                image: Image(systemName: "a.circle.fill"),
+                title: "Autonomous"
+            )
 
-                Text("Autonomous")
+            TotalPointsView(
+                scorer: $scorer.teleOp,
+                image: Image(systemName: "t.circle.fill"),
+                title: "TeleOp"
+            )
 
-                Text("\(scorer.auto.totalPoints)")
-                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .trailing)
-                    .padding(.trailing)
-            }
+            TotalPointsView(
+                scorer: $scorer.endGame,
+                image: Image(systemName: "e.circle.fill"),
+                title: "End Game"
+            )
 
-            HStack() {
-                Image(systemName: "t.circle.fill")
-                    .font(.system(size: Constants.sfSymbolSize))
-                    .foregroundColor(Color(UIColor.systemIndigo))
-                    .frame(minWidth: Constants.iconMinWidth)
-
-                Text("TeleOp")
-
-                Text("\(scorer.teleOp.totalPoints)")
-                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .trailing)
-                    .padding(.trailing)
-            }
-
-            HStack() {
-                Image(systemName: "e.circle.fill")
-                    .font(.system(size: Constants.sfSymbolSize))
-                    .foregroundColor(Color(UIColor.systemPink))
-                    .frame(minWidth: Constants.iconMinWidth)
-
-                Text("End Game")
-
-                Text("\(scorer.endGame.totalPoints)")
-                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .trailing)
-                    .padding(.trailing)
-            }
-
-            HStack() {
-                Image(systemName: "e.circle.fill")
-                    .font(.system(size: Constants.sfSymbolSize))
-                    .frame(minWidth: Constants.iconMinWidth)
-
-                Text("Total Points")
-
-                Text("\(scorer.auto.totalPoints + scorer.teleOp.totalPoints + scorer.endGame.totalPoints)")
-                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .trailing)
-                    .padding(.trailing)
-            }
+            TotalPointsView(
+                scorer: $scorer,
+                image: Image(systemName: "t.circle.fill"),
+                title: "Total Points"
+            )
         }
     }
 }

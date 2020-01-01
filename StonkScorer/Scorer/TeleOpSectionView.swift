@@ -33,17 +33,11 @@ struct TeleOpSectionView: View {
                 title: "Skyscraper Height"
             )
 
-            HStack() {
-                Image(systemName: "t.circle.fill")
-                    .font(.headline)
-                    .frame(minWidth: Constants.iconMinWidth)
-
-                Text("Total Points")
-
-                Text("\(teleOpScorer.totalPoints)")
-                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .trailing)
-                    .padding(.trailing)
-            }
+            TotalPointsView(
+                scorer: $teleOpScorer,
+                image: Image(systemName: "t.circle.fill"),
+                title: "Total Points"
+            )
         }
     }
 }

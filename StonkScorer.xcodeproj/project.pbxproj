@@ -24,7 +24,7 @@
 		C5E8D9C623BB56AA009B07E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5E8D9C523BB56AA009B07E8 /* Assets.xcassets */; };
 		C5E8D9C923BB56AA009B07E8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5E8D9C823BB56AA009B07E8 /* Preview Assets.xcassets */; };
 		C5E8D9CC23BB56AA009B07E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5E8D9CA23BB56AA009B07E8 /* LaunchScreen.storyboard */; };
-		C5F41BF523BD36E700A657FC /* TotalPointView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F41BF423BD36E700A657FC /* TotalPointView.swift */; };
+		C5F41BF523BD36E700A657FC /* TotalPointsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F41BF423BD36E700A657FC /* TotalPointsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,7 +48,7 @@
 		C5E8D9C823BB56AA009B07E8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C5E8D9CB23BB56AA009B07E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C5E8D9CD23BB56AA009B07E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C5F41BF423BD36E700A657FC /* TotalPointView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalPointView.swift; sourceTree = "<group>"; };
+		C5F41BF423BD36E700A657FC /* TotalPointsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalPointsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +78,7 @@
 				C531974723BCA89500690A96 /* StepperView.swift */,
 				C531974923BCB4B700690A96 /* PickerView.swift */,
 				C531974B23BCF32900690A96 /* ToggleView.swift */,
-				C5F41BF423BD36E700A657FC /* TotalPointView.swift */,
+				C5F41BF423BD36E700A657FC /* TotalPointsView.swift */,
 			);
 			path = "List Cell Types";
 			sourceTree = "<group>";
@@ -214,7 +214,7 @@
 				C531975023BD25C500690A96 /* ImageExtension.swift in Sources */,
 				C531974223BBC69B00690A96 /* Scorer.swift in Sources */,
 				C545656123BB63C40062A0CB /* TeleOpSectionView.swift in Sources */,
-				C5F41BF523BD36E700A657FC /* TotalPointView.swift in Sources */,
+				C5F41BF523BD36E700A657FC /* TotalPointsView.swift in Sources */,
 				C545655D23BB604A0062A0CB /* ScoringGuidelines.swift in Sources */,
 				C5E8D9C023BB56A6009B07E8 /* AppDelegate.swift in Sources */,
 				C5E8D9C223BB56A6009B07E8 /* SceneDelegate.swift in Sources */,

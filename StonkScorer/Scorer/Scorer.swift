@@ -8,10 +8,19 @@
 
 import Foundation
 
-struct Scorer {
+struct Scorer: TotalPoints {
     var auto = Auto()
     var teleOp = TeleOp()
     var endGame = EndGame()
+
+    var totalPoints: Int {
+        var total = 0
+        total += auto.totalPoints
+        total += teleOp.totalPoints
+        total += endGame.totalPoints
+
+        return total
+    }
     
     struct Auto: TotalPoints {
         var foundationRepositioned: Bool = false

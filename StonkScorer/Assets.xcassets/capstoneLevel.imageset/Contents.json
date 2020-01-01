@@ -1,0 +1,26 @@
+{
+  "images" : [
+    {
+      "idiom" : "universal",
+      "filename" : "CapstoneLevelLight.pdf"
+    },
+    {
+      "idiom" : "universal",
+      "filename" : "CapstoneLevelDark.pdf",
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ]
+    }
+  ],
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  },
+  "properties" : {
+    "template-rendering-intent" : "original",
+    "preserves-vector-representation" : true
+  }
+}

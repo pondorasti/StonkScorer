@@ -17,6 +17,8 @@ extension Image {
         case stoneDelivered
         case stone
         case foundation
+        case capstoneLevel
+        case capstone
 
     }
 
