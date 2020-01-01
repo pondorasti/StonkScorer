@@ -10,13 +10,7 @@ import SwiftUI
 
 struct EndGameSectionView: View {
 
-    @State private var endGameScorer = Scorer.EndgGame(
-        capstoneBonuses: 0,
-        firstCapstoneLevel: 0,
-        secondCapstoneLevel: 0,
-        foundationMoved: false,
-        numberOfParkings: 0
-    )
+    @Binding var endGameScorer: Scorer.EndGame
 
     var body: some View {
         Section(header: Text("End Game").font(.headline)) {
@@ -69,8 +63,3 @@ struct EndGameSectionView: View {
     }
 }
 
-struct EndGameSectionView_Previews: PreviewProvider {
-    static var previews: some View {
-        EndGameSectionView()
-    }
-}

@@ -10,12 +10,8 @@ import SwiftUI
 
 struct TeleOpSectionView: View {
 
-    @State private var teleOpScorer = Scorer.TeleOp(
-        stonesDelivered: 0,
-        stonesPlaced: 0,
-        skyscraperHeight: 0
-    )
-
+    @Binding var teleOpScorer: Scorer.TeleOp
+    
     var body: some View {
         Section(header: Text("TeleOp").font(.headline)) {
 
@@ -49,11 +45,5 @@ struct TeleOpSectionView: View {
                     .padding(.trailing)
             }
         }
-    }
-}
-
-struct TeleOpSectionView_Previews: PreviewProvider {
-    static var previews: some View {
-        TeleOpSectionView()
     }
 }

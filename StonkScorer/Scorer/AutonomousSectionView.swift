@@ -10,13 +10,7 @@ import SwiftUI
 
 struct AutonomousSectionView: View {
 
-    @State private var autoScorer = Scorer.Auto(
-        foundationRepositioned: false,
-        numberOfSkystoneBonuses: 0,
-        stonesDelivered: 0,
-        stonesPlaced: 0,
-        numberOfNavigations: 0
-    )
+    @Binding var autoScorer: Scorer.Auto
 
     var body: some View {
         Section(header: Text("Autonomous").font(.headline)) {
@@ -67,15 +61,5 @@ struct AutonomousSectionView: View {
                     .padding(.trailing)
             }
         }
-    }
-}
-
-struct AutonomousSectionView_Previews: PreviewProvider {
-    static var previews: some View {
-        List {
-            AutonomousSectionView()
-        }
-        .listStyle(GroupedListStyle())
-        .environment(\.horizontalSizeClass, .regular)
     }
 }

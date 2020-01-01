@@ -1,0 +1,18 @@
+//
+//  Helper.swift
+//  StonkScorer
+//
+//  Created by Alexandru Turcanu on 01/01/2020.
+//  Copyright © 2020 CodingBytes. All rights reserved.
+//
+
+import Foundation
+import CoreGraphics
+import SwiftUI
+
+struct Constants {
+    static let iconMinWidth: CGFloat = 36
+    static let sfSymbolSize: CGFloat = 24
+}
+
+

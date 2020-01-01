@@ -9,12 +9,16 @@
 import Foundation
 
 struct Scorer {
+    var auto = Auto()
+    var teleOp = TeleOp()
+    var endGame = EndGame()
+    
     struct Auto: TotalPoints {
-        var foundationRepositioned: Bool
-        var numberOfSkystoneBonuses: Int
-        var stonesDelivered: Int
-        var stonesPlaced: Int
-        var numberOfNavigations: Int
+        var foundationRepositioned: Bool = false
+        var numberOfSkystoneBonuses: Int = 0
+        var stonesDelivered: Int = 0
+        var stonesPlaced: Int = 0
+        var numberOfNavigations: Int = 0
 
         var totalPoints: Int {
             var total = 0
@@ -30,9 +34,9 @@ struct Scorer {
     }
 
     struct TeleOp: TotalPoints {
-        var stonesDelivered: Int
-        var stonesPlaced: Int
-        var skyscraperHeight: Int
+        var stonesDelivered: Int = 0
+        var stonesPlaced: Int = 0
+        var skyscraperHeight: Int = 0
 
         var totalPoints: Int {
             var total = 0
@@ -45,12 +49,12 @@ struct Scorer {
         }
     }
 
-    struct EndgGame: TotalPoints {
-        var capstoneBonuses: Int
-        var firstCapstoneLevel: Int
-        var secondCapstoneLevel: Int
-        var foundationMoved: Bool
-        var numberOfParkings: Int
+    struct EndGame: TotalPoints {
+        var capstoneBonuses: Int = 0
+        var firstCapstoneLevel: Int = 0
+        var secondCapstoneLevel: Int = 0
+        var foundationMoved: Bool = false
+        var numberOfParkings: Int = 0
 
         var totalPoints: Int {
             var total = 0

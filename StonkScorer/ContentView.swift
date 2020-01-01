@@ -9,12 +9,15 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var scorer = Scorer()
+
     var body: some View {
         NavigationView {
             List {
-                AutonomousSectionView()
-                TeleOpSectionView()
-                EndGameSectionView()
+                AutonomousSectionView(autoScorer: $scorer.auto)
+                TeleOpSectionView(teleOpScorer: $scorer.teleOp)
+                EndGameSectionView(endGameScorer: $scorer.endGame)
+                ScoreBreakdownSectionView(scorer: $scorer)
             }
             .listStyle(GroupedListStyle())
             .environment(\.horizontalSizeClass, .regular)

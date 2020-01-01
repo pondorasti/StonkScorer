@@ -1,5 +1,5 @@
 //
-//  Helper.swift
+//  ImageExtension.swift
 //  StonkScorer
 //
 //  Created by Alexandru Turcanu on 01/01/2020.
@@ -7,12 +7,7 @@
 //
 
 import Foundation
-import CoreGraphics
 import SwiftUI
-
-struct Constants {
-    static let iconMinWidth: CGFloat = 36
-}
 
 extension Image {
     enum IconNames: String {
@@ -22,7 +17,7 @@ extension Image {
         case stoneDelivered
         case stone
         case foundation
-        
+
     }
 
     init(iconName: IconNames) {
