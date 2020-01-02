@@ -19,7 +19,7 @@ struct ToggleView: View {
             HStack {
                 Image(iconName: .foundation)
                     .foregroundColor(.white)
-                    .colorMultiply(bindingProperty ? Color(UIColor.systemBlue) : Color(UIColor.systemGray2))
+                    .colorMultiply(bindingProperty ? Color(.systemBlue) : Color(.systemGray2))
                     .frame(minWidth: Constants.iconMinWidth)
                     .animation(.linear)
 

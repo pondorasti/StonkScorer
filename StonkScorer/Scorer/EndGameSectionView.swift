@@ -51,6 +51,7 @@ struct EndGameSectionView: View {
             TotalPointsView(
                 scorer: $endGameScorer,
                 image: Image(systemName: "e.circle.fill"),
+                imageColor: Color(.systemOrange),
                 title: "Total Points"
             )
         }

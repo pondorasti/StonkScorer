@@ -52,6 +52,7 @@ struct AutonomousSectionView: View {
             TotalPointsView(
                 scorer: $autoScorer,
                 image: Image(systemName: "a.circle.fill"),
+                imageColor: Color(.systemGreen),
                 title: "Total Points"
             )
         }
