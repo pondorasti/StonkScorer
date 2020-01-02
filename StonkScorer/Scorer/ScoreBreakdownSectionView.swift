@@ -19,21 +19,18 @@ struct ScoreBreakdownSectionView: View {
             TotalPointsView(
                 scorer: $scorer.auto,
                 image: Image(systemName: "a.circle.fill"),
-                imageColor: Color(.systemGreen),
                 title: "Autonomous"
             )
 
             TotalPointsView(
                 scorer: $scorer.teleOp,
                 image: Image(systemName: "t.circle.fill"),
-                imageColor: Color(.systemIndigo),
                 title: "TeleOp"
             )
 
             TotalPointsView(
                 scorer: $scorer.endGame,
                 image: Image(systemName: "e.circle.fill"),
-                imageColor: Color(.systemOrange),
                 title: "End Game"
             )
 

@@ -1,5 +1,5 @@
 //
-//  ImageExtension.swift
+//  Image.swift
 //  StonkScorer
 //
 //  Created by Alexandru Turcanu on 01/01/2020.

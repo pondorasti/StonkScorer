@@ -36,7 +36,6 @@ struct TeleOpSectionView: View {
             TotalPointsView(
                 scorer: $teleOpScorer,
                 image: Image(systemName: "t.circle.fill"),
-                imageColor: Color(.systemIndigo),
                 title: "Total Points"
             )
         }

@@ -8,14 +8,9 @@
 
 import Foundation
 import CoreGraphics
-import SwiftUI
 
 struct Constants {
     static let iconMinWidth: CGFloat = 36
     static let sfSymbolSize: CGFloat = 24
-}
-
-extension UserDefaults {
-    static let showingNewUserView = "showingNewUserView"
 }
 
