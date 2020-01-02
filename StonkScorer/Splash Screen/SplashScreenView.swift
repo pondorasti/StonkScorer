@@ -9,6 +9,8 @@
 import SwiftUI
 
 struct SplashScreenView: View {
+    @Binding var isPresented: Bool
+
     var body: some View {
         VStack {
             ScrollView {
@@ -20,22 +22,28 @@ struct SplashScreenView: View {
             }
 
             Button(action: {
-                print("button pressed")
+                self.isPresented.toggle()
+                self.updateUserDefaults()
             }) {
-                Text("Press me")
+                Text("Continue")
                     .customButton()
-            }
-
-            .padding(.horizontal)
+            }.padding(.horizontal)
+        }
+        .onDisappear {
+            self.updateUserDefaults()
         }
     }
-}
 
-struct SplashScreenView_Previews: PreviewProvider {
-    static var previews: some View {
-        SplashScreenView()
+    private func updateUserDefaults() {
+        UserDefaults.standard.set(false, forKey: UserDefaults.showingNewUserView)
     }
 }
+
+//struct SplashScreenView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        SplashScreenView()
+//    }
+//}
 
 struct ButtonModifier: ViewModifier {
     func body(content: Content) -> some View {
@@ -43,11 +51,12 @@ struct ButtonModifier: ViewModifier {
             .foregroundColor(.white)
             .font(.headline)
             .padding()
-            .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+            .frame(minWidth: 0, maxWidth: 480, alignment: .center)
             .background(
                 RoundedRectangle(cornerRadius: 16, style: .continuous)
                     .fill(Color.mainColor)
                 )
+            .padding(.bottom)
             .padding(.bottom)
     }
 }

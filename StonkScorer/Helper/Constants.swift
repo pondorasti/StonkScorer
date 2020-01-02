@@ -15,4 +15,7 @@ struct Constants {
     static let sfSymbolSize: CGFloat = 24
 }
 
+extension UserDefaults {
+    static let showingNewUserView = "showingNewUserView"
+}
 

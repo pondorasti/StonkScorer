@@ -10,6 +10,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var scorer = Scorer()
+    @State var showingNewUserView: Bool
 
     var body: some View {
         NavigationView {
@@ -22,6 +23,9 @@ struct ContentView: View {
             .listStyle(GroupedListStyle())
             .environment(\.horizontalSizeClass, .regular)
             .navigationBarTitle("Scorer")
+            .sheet(isPresented: $showingNewUserView) {
+                SplashScreenView(isPresented: self.$showingNewUserView)
+            }
         }
         .navigationViewStyle(StackNavigationViewStyle())
     }
@@ -29,6 +33,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(showingNewUserView: true)
     }
 }

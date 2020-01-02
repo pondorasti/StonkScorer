@@ -9,6 +9,6 @@
 import SwiftUI
 
 extension Color {
-    static let mainColor = Color(.systemYellow)
+    static let mainColor = Color(.systemBlue)
 }
 
