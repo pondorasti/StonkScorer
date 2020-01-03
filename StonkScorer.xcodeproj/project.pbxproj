@@ -31,6 +31,8 @@
 		C5F41C0123BE2A1700A657FC /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F41C0023BE2A1700A657FC /* TitleView.swift */; };
 		C5F41C0323BE2B4900A657FC /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F41C0223BE2B4900A657FC /* SplashScreenView.swift */; };
 		C5F41C0723BE756F00A657FC /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F41C0623BE756F00A657FC /* UserDefaults.swift */; };
+		C5F41C0923BE92CD00A657FC /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F41C0823BE92CD00A657FC /* SettingsView.swift */; };
+		C5F41C0D23BF6D7E00A657FC /* TappableSettingsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F41C0C23BF6D7E00A657FC /* TappableSettingsRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +63,8 @@
 		C5F41C0023BE2A1700A657FC /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		C5F41C0223BE2B4900A657FC /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		C5F41C0623BE756F00A657FC /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		C5F41C0823BE92CD00A657FC /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		C5F41C0C23BF6D7E00A657FC /* TappableSettingsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TappableSettingsRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,7 +88,7 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
-		C545656423BBB23C0062A0CB /* List Cell Types */ = {
+		C545656423BBB23C0062A0CB /* List Row Types */ = {
 			isa = PBXGroup;
 			children = (
 				C531974723BCA89500690A96 /* StepperView.swift */,
@@ -92,7 +96,7 @@
 				C531974B23BCF32900690A96 /* ToggleView.swift */,
 				C5F41BF423BD36E700A657FC /* TotalPointsView.swift */,
 			);
-			path = "List Cell Types";
+			path = "List Row Types";
 			sourceTree = "<group>";
 		};
 		C556065E23BD27F700E2CE41 /* Scorer */ = {
@@ -130,9 +134,11 @@
 				C5E8D9C123BB56A6009B07E8 /* SceneDelegate.swift */,
 				C5E8D9C323BB56A6009B07E8 /* ContentView.swift */,
 				C5E8D9CA23BB56AA009B07E8 /* LaunchScreen.storyboard */,
+				C5F41C0823BE92CD00A657FC /* SettingsView.swift */,
+				C5F41C0C23BF6D7E00A657FC /* TappableSettingsRow.swift */,
 				C5F41BF723BE245100A657FC /* Splash Screen */,
 				C556065E23BD27F700E2CE41 /* Scorer */,
-				C545656423BBB23C0062A0CB /* List Cell Types */,
+				C545656423BBB23C0062A0CB /* List Row Types */,
 				C531975123BD25D700690A96 /* Helper */,
 				C5F41C0423BE744D00A657FC /* Utilities */,
 				C5E8D9C523BB56AA009B07E8 /* Assets.xcassets */,
@@ -261,6 +267,7 @@
 				C5F41C0323BE2B4900A657FC /* SplashScreenView.swift in Sources */,
 				C545656123BB63C40062A0CB /* TeleOpSectionView.swift in Sources */,
 				C5F41BF523BD36E700A657FC /* TotalPointsView.swift in Sources */,
+				C5F41C0D23BF6D7E00A657FC /* TappableSettingsRow.swift in Sources */,
 				C545655D23BB604A0062A0CB /* ScoringGuidelines.swift in Sources */,
 				C5E8D9C023BB56A6009B07E8 /* AppDelegate.swift in Sources */,
 				C5E8D9C223BB56A6009B07E8 /* SceneDelegate.swift in Sources */,
@@ -271,6 +278,7 @@
 				C531974423BC954900690A96 /* Constants.swift in Sources */,
 				C531974C23BCF32900690A96 /* ToggleView.swift in Sources */,
 				C5F41BFF23BE25E600A657FC /* FeaturesContainerView.swift in Sources */,
+				C5F41C0923BE92CD00A657FC /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

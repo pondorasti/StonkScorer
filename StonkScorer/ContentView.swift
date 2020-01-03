@@ -11,6 +11,7 @@ import SwiftUI
 struct ContentView: View {
     @State private var scorer = Scorer()
     @State var showingNewUserView: Bool
+    @State private var shouldShowSettings = false
 
     var body: some View {
         NavigationView {
@@ -22,10 +23,24 @@ struct ContentView: View {
             }
             .listStyle(GroupedListStyle())
             .environment(\.horizontalSizeClass, .regular)
-            .navigationBarTitle("Scorer")
             .sheet(isPresented: $showingNewUserView) {
                 SplashScreenView(isPresented: self.$showingNewUserView)
             }
+            .navigationBarTitle("Scorer")
+            .navigationBarItems(leading:
+                Button(action: {
+                    self.shouldShowSettings.toggle()
+                }, label: {
+                    Image(systemName: "gear")
+                    .resizable()
+                        .frame(width: 24, height: 24, alignment: .center)
+                })
+                    .sheet(isPresented: $shouldShowSettings, content: {
+                        SettingsView()
+                    })
+
+            )
+
         }
         .navigationViewStyle(StackNavigationViewStyle())
     }
@@ -33,6 +48,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(showingNewUserView: true)
+        ContentView(showingNewUserView: false)
     }
 }
