@@ -11,6 +11,7 @@ import SwiftUI
 struct TappableSettingsRow: View {
 
     var image: Image
+    var imageColor: Color
     var title: String
 
     var action: () -> ()
@@ -19,7 +20,8 @@ struct TappableSettingsRow: View {
     var body: some View {
         HStack {
             image
-                .foregroundColor(Color(UIColor.systemBlue))
+                .aspectRatio(contentMode: .fit)
+                .foregroundColor(imageColor)
                 .font(.system(size: Constants.sfSymbolSize))
                 .frame(minWidth: Constants.iconMinWidth)
             Text(title)

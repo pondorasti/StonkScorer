@@ -14,62 +14,61 @@ import SafariServices
 struct SettingsView: View {
     var body: some View {
         NavigationView {
-            Form {
+            List {
                 Section(header: Text("Send Feedback").font(.headline)) {
 
                     TappableSettingsRow(
                         image: Image(systemName: "envelope.fill"),
-                        title: "aril") {
-                            if let url = URL(string: "itms-apps://itunes.apple.com/app/id1423771095"),
-                                UIApplication.shared.canOpenURL(url){
-                                UIApplication.shared.open(url, options: [:])
-                            }
+                        imageColor: Color(UIColor.systemBlue),
+                        title: "Email") {
+                            self.openWebsite()
                     }
 
-                    HStack {
-                        Image(systemName: "envelope.fill")
-                            .foregroundColor(Color(UIColor.systemBlue))
-                            .font(.system(size: Constants.sfSymbolSize))
-                            .frame(minWidth: Constants.iconMinWidth)
-                        Text("Email")
-                            .font(.headline)
-                        Spacer()
-                        Image(systemName: "chevron.right")
-                    }
-                    .onTapGesture {
-                        if let url = URL(string: "itms-apps://itunes.apple.com/app/id1423771095"),
-                            UIApplication.shared.canOpenURL(url){
-                            UIApplication.shared.open(url, options: [:])
-                        }
+
+                    TappableSettingsRow(
+                        image: Image(systemName: "envelope.fill"),
+                        imageColor: Color(UIColor.systemBlue),
+                        title: "Twitter") {
+                            self.openWebsite()
                     }
 
-                    HStack {
-                        Image(systemName: "envelope.fill")
-                            .foregroundColor(Color(UIColor.systemBlue))
-                            .font(.system(size: Constants.sfSymbolSize))
-                            .frame(minWidth: Constants.iconMinWidth)
-                        Text("Twitter")
-                            .font(.headline)
-                        Spacer()
-                        Image(systemName: "chevron.right")
+                    TappableSettingsRow(
+                        image: Image(systemName: "star.fill"),
+                        imageColor: Color(UIColor.systemYellow),
+                        title: "Rate in App Store") {
+                            self.openWebsite()
+                    }
+                }
+
+                Section(header: Text("Info").font(.headline)) {
+
+                    TappableSettingsRow(
+                        image: Image(systemName: "square.and.arrow.up.fill"),
+                        imageColor: Color(UIColor.systemBlue),
+                        title: "Share FTC Scouter") {
+                            self.openWebsite()
                     }
 
-                    HStack {
-                        Image(systemName: "star.fill")
-                            .foregroundColor(Color(UIColor.systemBlue))
-                            .font(.system(size: Constants.sfSymbolSize))
-                            .frame(minWidth: Constants.iconMinWidth)
-                        Text("Rate in App Store")
-                            .font(.headline)
-                        Spacer()
-                        Image(systemName: "chevron.right")
+
+                    TappableSettingsRow(
+                        image: Image(systemName: "lock.fill"),
+                        imageColor: Color(UIColor.systemPink),
+                        title: "Privacy Policy") {
+                            self.openWebsite()
                     }
 
+                    TappableSettingsRow(
+                        image: Image(systemName: "info.circle.fill"),
+                        imageColor: Color(UIColor.systemBlue),
+                        title: "About") {
+                            self.openWebsite()
+                    }
                 }
 
             }
             .listStyle(GroupedListStyle())
             .environment(\.horizontalSizeClass, .regular)
+            .navigationBarTitle("Settings")
         }
 
     }
