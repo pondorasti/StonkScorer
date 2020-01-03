@@ -32,12 +32,12 @@ struct ContentView: View {
                     self.shouldShowSettings.toggle()
                 }, label: {
                     Image(systemName: "gear")
-                    .resizable()
-                        .frame(width: 24, height: 24, alignment: .center)
+                        .resizable()
+                        .frame(width: Constants.navBarIcons, height: Constants.navBarIcons, alignment: .center)
                 })
-                    .sheet(isPresented: $shouldShowSettings, content: {
-                        SettingsView()
-                    })
+                .sheet(isPresented: $shouldShowSettings, content: {
+                    SettingsView(isPresented: self.$shouldShowSettings)
+                })
 
             )
 

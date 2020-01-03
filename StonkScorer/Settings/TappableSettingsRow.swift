@@ -23,10 +23,10 @@ struct TappableSettingsRow: View {
         }) {
             HStack {
                 image
+                    .resizable()
                     .aspectRatio(contentMode: .fit)
                     .foregroundColor(imageColor)
-                    .font(.system(size: Constants.sfSymbolSize))
-                    .frame(minWidth: Constants.iconMinWidth)
+                    .frame(width: Constants.sfSymbolSize, height: Constants.sfSymbolSize, alignment: .center)
 
                 Text(title)
                     .foregroundColor(.primary)
@@ -39,9 +39,3 @@ struct TappableSettingsRow: View {
         }
     }
 }
-
-//struct TappableSettingsRow_Previews: PreviewProvider {
-//    static var previews: some View {
-//        TappableSettingsRow(image: Image(systemName: "envelope.fill"), title: "Email", action: <#() -> ()#>)
-//    }
-//}

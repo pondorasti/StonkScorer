@@ -19,6 +19,7 @@ extension Image {
         case foundation
         case capstoneLevel
         case capstone
+        case twitter
 
     }
 
