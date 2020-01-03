@@ -7,11 +7,13 @@
 //
 
 import SwiftUI
-import UIKit
-import WebKit
-import SafariServices
+import MessageUI
 
 struct SettingsView: View {
+
+    @State var result: Result<MFMailComposeResult, Error>? = nil
+    @State var isShowingMailView = false
+
     var body: some View {
         NavigationView {
             List {
@@ -21,7 +23,7 @@ struct SettingsView: View {
                         image: Image(systemName: "envelope.fill"),
                         imageColor: Color(UIColor.systemBlue),
                         title: "Email") {
-                            self.openWebsite()
+//                            self.sendEmail()
                     }
 
 
@@ -37,6 +39,17 @@ struct SettingsView: View {
                         imageColor: Color(UIColor.systemYellow),
                         title: "Rate in App Store") {
                             self.openWebsite()
+                    }
+
+                    Button(action: {
+                        self.isShowingMailView.toggle()
+                    }) {
+                        Text("Tap Me")
+                    }
+                    .disabled(!MFMailComposeViewController.canSendMail())
+                    .sheet(isPresented: $isShowingMailView) {
+                        MailView(result: self.$result)
+
                     }
                 }
 
@@ -70,7 +83,7 @@ struct SettingsView: View {
             .environment(\.horizontalSizeClass, .regular)
             .navigationBarTitle("Settings")
         }
-
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 
     func openWebsite() {
@@ -87,16 +100,4 @@ struct SettingsView_Previews: PreviewProvider {
     }
 }
 
-struct SafariView: UIViewControllerRepresentable {
-    let url: URL
 
-    func makeUIViewController(context: UIViewControllerRepresentableContext<SafariView>) -> SFSafariViewController {
-        return SFSafariViewController(url: url)
-    }
-
-    func updateUIViewController(_ uiViewController: SFSafariViewController,
-                                context: UIViewControllerRepresentableContext<SafariView>) {
-
-    }
-
-}

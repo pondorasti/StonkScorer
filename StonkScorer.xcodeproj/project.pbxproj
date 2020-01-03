@@ -18,6 +18,7 @@
 		C545655B23BB5FE50062A0CB /* AutonomousSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C545655A23BB5FE50062A0CB /* AutonomousSectionView.swift */; };
 		C545655D23BB604A0062A0CB /* ScoringGuidelines.swift in Sources */ = {isa = PBXBuildFile; fileRef = C545655C23BB604A0062A0CB /* ScoringGuidelines.swift */; };
 		C545656123BB63C40062A0CB /* TeleOpSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C545656023BB63C40062A0CB /* TeleOpSectionView.swift */; };
+		C552379823BFB3A000F75526 /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C552379723BFB3A000F75526 /* MailView.swift */; };
 		C5E8D9C023BB56A6009B07E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E8D9BF23BB56A6009B07E8 /* AppDelegate.swift */; };
 		C5E8D9C223BB56A6009B07E8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E8D9C123BB56A6009B07E8 /* SceneDelegate.swift */; };
 		C5E8D9C423BB56A6009B07E8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E8D9C323BB56A6009B07E8 /* ContentView.swift */; };
@@ -48,6 +49,7 @@
 		C545655A23BB5FE50062A0CB /* AutonomousSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutonomousSectionView.swift; sourceTree = "<group>"; };
 		C545655C23BB604A0062A0CB /* ScoringGuidelines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoringGuidelines.swift; sourceTree = "<group>"; };
 		C545656023BB63C40062A0CB /* TeleOpSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeleOpSectionView.swift; sourceTree = "<group>"; };
+		C552379723BFB3A000F75526 /* MailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailView.swift; sourceTree = "<group>"; };
 		C5E8D9BC23BB56A6009B07E8 /* FTC Scorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FTC Scorer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5E8D9BF23BB56A6009B07E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C5E8D9C123BB56A6009B07E8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -99,9 +101,28 @@
 			path = "List Row Types";
 			sourceTree = "<group>";
 		};
+		C552379623BFB37F00F75526 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				C5F41C0823BE92CD00A657FC /* SettingsView.swift */,
+				C5F41C0C23BF6D7E00A657FC /* TappableSettingsRow.swift */,
+				C552379923BFB3A500F75526 /* UIKit Imports */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		C552379923BFB3A500F75526 /* UIKit Imports */ = {
+			isa = PBXGroup;
+			children = (
+				C552379723BFB3A000F75526 /* MailView.swift */,
+			);
+			path = "UIKit Imports";
+			sourceTree = "<group>";
+		};
 		C556065E23BD27F700E2CE41 /* Scorer */ = {
 			isa = PBXGroup;
 			children = (
+				C545656423BBB23C0062A0CB /* List Row Types */,
 				C531974123BBC69B00690A96 /* Scorer.swift */,
 				C545655A23BB5FE50062A0CB /* AutonomousSectionView.swift */,
 				C545656023BB63C40062A0CB /* TeleOpSectionView.swift */,
@@ -134,11 +155,9 @@
 				C5E8D9C123BB56A6009B07E8 /* SceneDelegate.swift */,
 				C5E8D9C323BB56A6009B07E8 /* ContentView.swift */,
 				C5E8D9CA23BB56AA009B07E8 /* LaunchScreen.storyboard */,
-				C5F41C0823BE92CD00A657FC /* SettingsView.swift */,
-				C5F41C0C23BF6D7E00A657FC /* TappableSettingsRow.swift */,
 				C5F41BF723BE245100A657FC /* Splash Screen */,
 				C556065E23BD27F700E2CE41 /* Scorer */,
-				C545656423BBB23C0062A0CB /* List Row Types */,
+				C552379623BFB37F00F75526 /* Settings */,
 				C531975123BD25D700690A96 /* Helper */,
 				C5F41C0423BE744D00A657FC /* Utilities */,
 				C5E8D9C523BB56AA009B07E8 /* Assets.xcassets */,
@@ -263,6 +282,7 @@
 				C531975023BD25C500690A96 /* Image.swift in Sources */,
 				C5F41C0723BE756F00A657FC /* UserDefaults.swift in Sources */,
 				C531974223BBC69B00690A96 /* Scorer.swift in Sources */,
+				C552379823BFB3A000F75526 /* MailView.swift in Sources */,
 				C5F41BFD23BE24F000A657FC /* Color.swift in Sources */,
 				C5F41C0323BE2B4900A657FC /* SplashScreenView.swift in Sources */,
 				C545656123BB63C40062A0CB /* TeleOpSectionView.swift in Sources */,

@@ -11,6 +11,6 @@ import CoreGraphics
 
 struct Constants {
     static let iconMinWidth: CGFloat = 36
-    static let sfSymbolSize: CGFloat = 24
+    static let sfSymbolSize: CGFloat = 22
 }
 

@@ -16,22 +16,26 @@ struct TappableSettingsRow: View {
 
     var action: () -> ()
 
-
     var body: some View {
-        HStack {
-            image
-                .aspectRatio(contentMode: .fit)
-                .foregroundColor(imageColor)
-                .font(.system(size: Constants.sfSymbolSize))
-                .frame(minWidth: Constants.iconMinWidth)
-            Text(title)
-            Spacer()
-            Image(systemName: "chevron.right")
-                .foregroundColor(Color(UIColor.systemGray))
-        }
-        .background(Color(UIColor.secondarySystemBackground))
-        .onTapGesture {
+
+        Button(action: {
             self.action()
+        }) {
+            HStack {
+                image
+                    .aspectRatio(contentMode: .fit)
+                    .foregroundColor(imageColor)
+                    .font(.system(size: Constants.sfSymbolSize))
+                    .frame(minWidth: Constants.iconMinWidth)
+
+                Text(title)
+                    .foregroundColor(.primary)
+
+                Spacer()
+
+                Image(systemName: "chevron.right")
+                    .foregroundColor(Color(UIColor.systemGray))
+            }
         }
     }
 }

@@ -18,7 +18,7 @@ struct PickerView: View {
     var body: some View {
         HStack() {
             image
-                .font(.system(size: Constants.sfSymbolSize)) //MARK: this is not okay
+                .font(.system(size: Constants.sfSymbolSize)) //MARK: this should not be allowed :]
                 .frame(minWidth: Constants.iconMinWidth)
 
             Text("\(title)")
