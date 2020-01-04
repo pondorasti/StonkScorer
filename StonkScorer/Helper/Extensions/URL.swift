@@ -1,0 +1,29 @@
+//
+//  URL.swift
+//  StonkScorer
+//
+//  Created by Alexandru Turcanu on 04/01/2020.
+//  Copyright © 2020 CodingBytes. All rights reserved.
+//
+
+import Foundation
+import UIKit
+
+extension URL {
+    enum appLinks: String {
+        case appStore = "itms-apps://itunes.apple.com/app/id1423771095"
+        case rateApp = "itms-apps://itunes.apple.com/app/id1423771095?action=write-review"
+        case twitter = "https://twitter.com/Pondorasti"
+    }
+
+    init?(link: appLinks) {
+        self.init(string: link.rawValue)
+    }
+
+    static func open(link: appLinks) {
+        if let url = URL(link: link),
+            UIApplication.shared.canOpenURL(url){
+            UIApplication.shared.open(url, options: [:])
+        }
+    }
+}

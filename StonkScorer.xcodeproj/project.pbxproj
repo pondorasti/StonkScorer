@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C50984BA23C11EE600CD708F /* SharePopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50984B923C11EE600CD708F /* SharePopUp.swift */; };
+		C50984BC23C1249A00CD708F /* URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50984BB23C1249A00CD708F /* URL.swift */; };
+		C50984BE23C125FB00CD708F /* AboutAppSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50984BD23C125FB00CD708F /* AboutAppSectionView.swift */; };
+		C50984C023C12A2B00CD708F /* SendFeedbackSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50984BF23C12A2B00CD708F /* SendFeedbackSectionView.swift */; };
+		C50984C223C12A9100CD708F /* AppInfoSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50984C123C12A9100CD708F /* AppInfoSectionView.swift */; };
 		C531974223BBC69B00690A96 /* Scorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C531974123BBC69B00690A96 /* Scorer.swift */; };
 		C531974423BC954900690A96 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C531974323BC954900690A96 /* Constants.swift */; };
 		C531974623BCA66C00690A96 /* EndGameSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C531974523BCA66C00690A96 /* EndGameSectionView.swift */; };
@@ -34,10 +39,14 @@
 		C5F41C0323BE2B4900A657FC /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F41C0223BE2B4900A657FC /* SplashScreenView.swift */; };
 		C5F41C0723BE756F00A657FC /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F41C0623BE756F00A657FC /* UserDefaults.swift */; };
 		C5F41C0923BE92CD00A657FC /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F41C0823BE92CD00A657FC /* SettingsView.swift */; };
-		C5F41C0D23BF6D7E00A657FC /* TappableSettingsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F41C0C23BF6D7E00A657FC /* TappableSettingsRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C50984B923C11EE600CD708F /* SharePopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharePopUp.swift; sourceTree = "<group>"; };
+		C50984BB23C1249A00CD708F /* URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URL.swift; sourceTree = "<group>"; };
+		C50984BD23C125FB00CD708F /* AboutAppSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutAppSectionView.swift; sourceTree = "<group>"; };
+		C50984BF23C12A2B00CD708F /* SendFeedbackSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendFeedbackSectionView.swift; sourceTree = "<group>"; };
+		C50984C123C12A9100CD708F /* AppInfoSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfoSectionView.swift; sourceTree = "<group>"; };
 		C531974123BBC69B00690A96 /* Scorer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scorer.swift; sourceTree = "<group>"; };
 		C531974323BC954900690A96 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C531974523BCA66C00690A96 /* EndGameSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndGameSectionView.swift; sourceTree = "<group>"; };
@@ -68,7 +77,6 @@
 		C5F41C0223BE2B4900A657FC /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		C5F41C0623BE756F00A657FC /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		C5F41C0823BE92CD00A657FC /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		C5F41C0C23BF6D7E00A657FC /* TappableSettingsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TappableSettingsRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +115,9 @@
 			isa = PBXGroup;
 			children = (
 				C5F41C0823BE92CD00A657FC /* SettingsView.swift */,
-				C5F41C0C23BF6D7E00A657FC /* TappableSettingsRow.swift */,
+				C50984BD23C125FB00CD708F /* AboutAppSectionView.swift */,
+				C50984BF23C12A2B00CD708F /* SendFeedbackSectionView.swift */,
+				C50984C123C12A9100CD708F /* AppInfoSectionView.swift */,
 				C56DE93823BFD327007BD13A /* SettingsRowView.swift */,
 				C552379923BFB3A500F75526 /* UIKit Imports */,
 			);
@@ -118,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				C552379723BFB3A000F75526 /* MailView.swift */,
+				C50984B923C11EE600CD708F /* SharePopUp.swift */,
 			);
 			path = "UIKit Imports";
 			sourceTree = "<group>";
@@ -203,6 +214,7 @@
 				C5F41BFC23BE24F000A657FC /* Color.swift */,
 				C5F41C0623BE756F00A657FC /* UserDefaults.swift */,
 				C531974F23BD25C500690A96 /* Image.swift */,
+				C50984BB23C1249A00CD708F /* URL.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -281,6 +293,7 @@
 				C531974E23BD25AA00690A96 /* ScoreBreakdownSectionView.swift in Sources */,
 				C545655B23BB5FE50062A0CB /* AutonomousSectionView.swift in Sources */,
 				C531974823BCA89500690A96 /* StepperView.swift in Sources */,
+				C50984C023C12A2B00CD708F /* SendFeedbackSectionView.swift in Sources */,
 				C5F41BFB23BE249400A657FC /* FeatureInfoView.swift in Sources */,
 				C531975023BD25C500690A96 /* Image.swift in Sources */,
 				C5F41C0723BE756F00A657FC /* UserDefaults.swift in Sources */,
@@ -288,12 +301,15 @@
 				C56DE93923BFD327007BD13A /* SettingsRowView.swift in Sources */,
 				C552379823BFB3A000F75526 /* MailView.swift in Sources */,
 				C5F41BFD23BE24F000A657FC /* Color.swift in Sources */,
+				C50984BA23C11EE600CD708F /* SharePopUp.swift in Sources */,
+				C50984BC23C1249A00CD708F /* URL.swift in Sources */,
 				C5F41C0323BE2B4900A657FC /* SplashScreenView.swift in Sources */,
 				C545656123BB63C40062A0CB /* TeleOpSectionView.swift in Sources */,
 				C5F41BF523BD36E700A657FC /* TotalPointsView.swift in Sources */,
-				C5F41C0D23BF6D7E00A657FC /* TappableSettingsRow.swift in Sources */,
 				C545655D23BB604A0062A0CB /* ScoringGuidelines.swift in Sources */,
 				C5E8D9C023BB56A6009B07E8 /* AppDelegate.swift in Sources */,
+				C50984BE23C125FB00CD708F /* AboutAppSectionView.swift in Sources */,
+				C50984C223C12A9100CD708F /* AppInfoSectionView.swift in Sources */,
 				C5E8D9C223BB56A6009B07E8 /* SceneDelegate.swift in Sources */,
 				C531974A23BCB4B700690A96 /* PickerView.swift in Sources */,
 				C5E8D9C423BB56A6009B07E8 /* ContentView.swift in Sources */,

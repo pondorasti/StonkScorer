@@ -18,34 +18,34 @@ struct AutonomousSectionView: View {
             ToggleView(
                 bindingProperty: $autoScorer.foundationRepositioned,
                 image: Image(iconName: .foundation),
-                title: "Repositioning"
+                title: "Repositioning (\(ScoringGuidelines.Auto.repositioning))"
             )
 
             PickerView(
                 bindingProperty: $autoScorer.numberOfSkystoneBonuses,
                 image: Image(iconName: .skystone),
-                title: "Skystone Bonus",
+                title: "Skystone Bonus (\(ScoringGuidelines.Auto.skystoneBonus))",
                 options: ScoringGuidelines.Auto.skystoneBonusOptions
             )
 
             StepperView(
                 bindingProperty: $autoScorer.stonesDelivered,
                 image: Image(iconName: .stoneDelivered),
-                title: "Stones Delivered",
+                title: "Stones Delivered (\(ScoringGuidelines.Auto.stoneDelivered))",
                 stepperRange: 0...6
             )
 
             StepperView(
                 bindingProperty: $autoScorer.stonesPlaced,
                 image: Image(iconName: .stonePlaced),
-                title: "Stones Placed",
+                title: "Stones Placed (\(ScoringGuidelines.Auto.stonePlaced))",
                 stepperRange: 0...6
             )
 
             PickerView(
                 bindingProperty: $autoScorer.numberOfNavigations,
                 image: Image(systemName: "p.circle.fill"),
-                title: "Navigating",
+                title: "Navigating (\(ScoringGuidelines.Auto.navigating))",
                 options: ScoringGuidelines.Auto.navigatingOptions
             )
 

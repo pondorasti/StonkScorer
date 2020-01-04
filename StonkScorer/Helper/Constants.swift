@@ -14,4 +14,3 @@ struct Constants {
     static let sfSymbolSize: CGFloat = 22
     static let navBarIcons: CGFloat = 24
 }
-
