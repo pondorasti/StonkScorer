@@ -51,7 +51,7 @@ struct SettingsView: View {
     private var appVersionView: some View {
         if let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String,
             let build = Bundle.main.infoDictionary?["CFBundleVersion"] as? String {
-            
+
             return Text("Version: \(version) (\(build))")
         } else {
             return Text("#chad")

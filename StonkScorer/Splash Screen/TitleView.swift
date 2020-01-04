@@ -25,13 +25,11 @@ struct TitleView: View {
                     .fontWeight(.black)
                     .font(.system(size: 36))
 
-                Text("FTC Scouter")
+                Text("FTC Scorer")
                     .fontWeight(.black)
                     .font(.system(size: 36))
                     .foregroundColor(.mainColor)
             }
-
-
         }
     }
 }

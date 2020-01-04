@@ -19,7 +19,7 @@ struct AppInfoSectionView: View {
                 SettingsRowView(
                     image: Image(systemName: "square.and.arrow.up"),
                     imageColor: Color(UIColor.systemBlue),
-                    title: "Share FTC Scouter"
+                    title: "Share FTC Scorer"
                 )
             }
 
@@ -35,9 +35,11 @@ struct AppInfoSectionView: View {
             }
 
             //MARK: - About
-            Button(action: {
-                URL.appLinks.appStore.share()
-            }) {
+            ZStack { //embedding the NavLink inside the ZStack and giving it an EmptyView() in order to hide the automatic disclorure indicator
+                NavigationLink(destination: AboutView()) {
+                    EmptyView()
+                }
+
                 SettingsRowView(
                     image: Image(systemName: "info.circle.fill"),
                     imageColor: Color(UIColor.systemBlue),
