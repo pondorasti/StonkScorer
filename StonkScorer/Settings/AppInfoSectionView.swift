@@ -14,7 +14,7 @@ struct AppInfoSectionView: View {
 
             //MARK: - Share
             Button(action: {
-                URL.appLinks.appStore.share()
+                URL.appLinks.appStore.rawValue.share()
             }) {
                 SettingsRowView(
                     image: Image(systemName: "square.and.arrow.up"),
