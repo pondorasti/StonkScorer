@@ -26,4 +26,11 @@ extension Image {
     init(iconName: IconNames) {
         self.init(decorative: iconName.rawValue)
     }
+
+    func navigationBarStyle() -> some View {
+        self
+            .resizable()
+            .aspectRatio(contentMode: .fit)
+            .frame(width: Constants.navBarIcons, height: Constants.navBarIcons, alignment: .center)
+    }
 }

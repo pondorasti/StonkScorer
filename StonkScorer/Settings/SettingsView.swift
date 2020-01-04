@@ -40,8 +40,7 @@ struct SettingsView: View {
                     self.isPresented.toggle()
                 }, label: {
                     Image(systemName: "xmark.circle.fill")
-                        .resizable()
-                        .frame(width: Constants.navBarIcons, height: Constants.navBarIcons, alignment: .center)
+                        .navigationBarStyle()
                 })
             )
         }

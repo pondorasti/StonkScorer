@@ -17,7 +17,7 @@ struct FeaturesContainerView: View {
 
             FeatureInfoView(title: "Multi Platform Support", description: "Use the app on any device you would like. iPhone. iPad. Mac.", imageName: "aspectratio.fill")
 
-            FeatureInfoView(title: "Dark Mode Support", description: "Automatically switches between Light and Dark Mode based on your time.", imageName: "sun.max.fill")
+            FeatureInfoView(title: "Dark Mode Support", description: "Automatically switches between Light and Dark Mode based on your time.", imageName: "circle.righthalf.fill")
         }
         .padding(.horizontal)
     }
