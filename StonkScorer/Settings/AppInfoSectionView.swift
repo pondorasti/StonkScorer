@@ -25,7 +25,7 @@ struct AppInfoSectionView: View {
 
             //MARK: - Privacy Policy
             Button(action: {
-                URL.appLinks.appStore.share()
+                URL.open(link: .privacyPolicy)
             }) {
                 SettingsRowView(
                     image: Image(systemName: "lock.circle.fill"),

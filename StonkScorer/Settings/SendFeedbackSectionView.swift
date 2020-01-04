@@ -34,7 +34,7 @@ struct SendFeedbackSectionView: View {
 
             //MARK: - Twitter
             Button(action: {
-                URL.open(link: .appStore)
+                URL.open(link: .twitter)
             }) {
                 SettingsRowView(
                     image: Image(iconName: .twitter),

@@ -14,6 +14,7 @@ extension URL {
         case appStore = "itms-apps://itunes.apple.com/app/id1423771095"
         case rateApp = "itms-apps://itunes.apple.com/app/id1423771095?action=write-review"
         case twitter = "https://twitter.com/Pondorasti"
+        case privacyPolicy = "https://docs.google.com/document/d/1Pf2aK4PXcrWsGKXQau_ivqZhgamcuvLsd9jmFtxyN44/edit?usp=sharing"
     }
 
     init?(link: appLinks) {
