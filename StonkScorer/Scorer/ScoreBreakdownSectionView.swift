@@ -9,32 +9,31 @@
 import SwiftUI
 
 struct ScoreBreakdownSectionView: View {
+    
     @Binding var scorer: Scorer
-
-
 
     var body: some View {
         Section(header: Text("Score Breakdown").font(.headline)) {
 
-            TotalPointsView(
+            ScorerTotalPointsView(
                 scorer: $scorer.auto,
                 image: Image(systemName: "a.circle.fill"),
                 title: "Autonomous"
             )
 
-            TotalPointsView(
+            ScorerTotalPointsView(
                 scorer: $scorer.teleOp,
                 image: Image(systemName: "t.circle.fill"),
                 title: "TeleOp"
             )
 
-            TotalPointsView(
+            ScorerTotalPointsView(
                 scorer: $scorer.endGame,
                 image: Image(systemName: "e.circle.fill"),
                 title: "End Game"
             )
 
-            TotalPointsView(
+            ScorerTotalPointsView(
                 scorer: $scorer,
                 image: Image(systemName: "t.circle.fill"),
                 title: "Total Points"

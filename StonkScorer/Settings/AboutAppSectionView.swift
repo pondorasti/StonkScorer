@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct AboutAppSectionView: View {
+    
     @Binding var isShowingSplashScreen: Bool
 
     var body: some View {

@@ -1,5 +1,5 @@
 //
-//  TotalPointsView.swift
+//  ScorerTotalPointsView.swift
 //  StonkScorer
 //
 //  Created by Alexandru Turcanu on 01/01/2020.
@@ -8,7 +8,8 @@
 
 import SwiftUI
 
-struct TotalPointsView<Type: TotalPoints>: View {
+struct ScorerTotalPointsView<Type: TotalPoints>: View {
+    
     @Binding var scorer: Type
 
     var image: Image

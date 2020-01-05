@@ -15,25 +15,25 @@ struct TeleOpSectionView: View {
     var body: some View {
         Section(header: Text("TeleOp").font(.headline)) {
 
-            StepperView(
+            ScorerStepperView(
                 bindingProperty: $teleOpScorer.stonesDelivered,
                 image: Image(iconName: .stoneDelivered),
                 title: "Stones Delivered"
             )
 
-            StepperView(
+            ScorerStepperView(
                 bindingProperty: $teleOpScorer.stonesPlaced,
                 image: Image(iconName: .stonePlaced),
                 title: "Stones Placed"
             )
 
-            StepperView(
+            ScorerStepperView(
                 bindingProperty: $teleOpScorer.skyscraperHeight,
                 image: Image(iconName: .skyscraper),
                 title: "Skyscraper Height"
             )
 
-            TotalPointsView(
+            ScorerTotalPointsView(
                 scorer: $teleOpScorer,
                 image: Image(systemName: "t.circle.fill"),
                 title: "Total Points"

@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct TitleView: View {
+    
     let imageName = "person.3.fill"
 
     var body: some View {

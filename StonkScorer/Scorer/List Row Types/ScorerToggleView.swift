@@ -1,5 +1,5 @@
 //
-//  ToggleView.swift
+//  ScorerToggleView.swift
 //  StonkScorer
 //
 //  Created by Alexandru Turcanu on 01/01/2020.
@@ -8,7 +8,8 @@
 
 import SwiftUI
 
-struct ToggleView: View {
+struct ScorerToggleView: View {
+    
     @Binding var bindingProperty: Bool
 
     var image: Image

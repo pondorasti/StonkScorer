@@ -15,41 +15,41 @@ struct AutonomousSectionView: View {
     var body: some View {
         Section(header: Text("Autonomous").font(.headline)) {
 
-            ToggleView(
+            ScorerToggleView(
                 bindingProperty: $autoScorer.foundationRepositioned,
                 image: Image(iconName: .foundation),
                 title: "Repositioning"
             )
 
-            PickerView(
+            ScorerPickerView(
                 bindingProperty: $autoScorer.numberOfSkystoneBonuses,
                 image: Image(iconName: .skystone),
                 title: "Skystone Bonus",
                 options: ScoringGuidelines.Auto.skystoneBonusOptions
             )
 
-            StepperView(
+            ScorerStepperView(
                 bindingProperty: $autoScorer.stonesDelivered,
                 image: Image(iconName: .stoneDelivered),
                 title: "Stones Delivered",
                 stepperRange: 0...6
             )
 
-            StepperView(
+            ScorerStepperView(
                 bindingProperty: $autoScorer.stonesPlaced,
                 image: Image(iconName: .stonePlaced),
                 title: "Stones Placed",
                 stepperRange: 0...6
             )
 
-            PickerView(
+            ScorerPickerView(
                 bindingProperty: $autoScorer.numberOfNavigations,
                 image: Image(systemName: "p.circle.fill"),
                 title: "Navigating",
                 options: ScoringGuidelines.Auto.navigatingOptions
             )
 
-            TotalPointsView(
+            ScorerTotalPointsView(
                 scorer: $autoScorer,
                 image: Image(systemName: "a.circle.fill"),
                 title: "Total Points"

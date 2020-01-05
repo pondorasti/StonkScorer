@@ -38,31 +38,3 @@ struct SplashScreenView: View {
         UserDefaults.standard.set(false, forKey: UserDefaults.showingNewUserView)
     }
 }
-
-//struct SplashScreenView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        SplashScreenView()
-//    }
-//}
-
-struct ButtonModifier: ViewModifier {
-    func body(content: Content) -> some View {
-        content
-            .foregroundColor(.white)
-            .font(.headline)
-            .padding()
-            .frame(minWidth: 0, maxWidth: 480, alignment: .center)
-            .background(
-                RoundedRectangle(cornerRadius: 16, style: .continuous)
-                    .fill(Color.mainColor)
-                )
-            .padding(.bottom)
-            .padding(.bottom)
-    }
-}
-
-extension View {
-    func customButton() -> ModifiedContent<Self, ButtonModifier> {
-        return modifier(ButtonModifier())
-    }
-}

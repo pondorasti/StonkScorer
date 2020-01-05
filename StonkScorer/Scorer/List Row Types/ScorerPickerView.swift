@@ -1,5 +1,5 @@
 //
-//  PickerView.swift
+//  ScorerPickerView.swift
 //  StonkScorer
 //
 //  Created by Alexandru Turcanu on 01/01/2020.
@@ -8,7 +8,8 @@
 
 import SwiftUI
 
-struct PickerView: View {
+struct ScorerPickerView: View {
+    
     @Binding var bindingProperty: Int
 
     var image: Image

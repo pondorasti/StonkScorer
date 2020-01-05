@@ -1,5 +1,5 @@
 //
-//  StepperView.swift
+//  ScorerStepperView.swift
 //  StonkScorer
 //
 //  Created by Alexandru Turcanu on 01/01/2020.
@@ -8,7 +8,8 @@
 
 import SwiftUI
 
-struct StepperView: View {
+struct ScorerStepperView: View {
+    
     @Binding var bindingProperty: Int
 
     var image: Image
