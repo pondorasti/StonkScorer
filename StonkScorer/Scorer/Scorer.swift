@@ -25,8 +25,20 @@ struct Scorer: TotalPoints {
     struct Auto: TotalPoints {
         var foundationRepositioned: Bool = false
         var numberOfSkystoneBonuses: Int = 0
-        var stonesDelivered: Int = 0
-        var stonesPlaced: Int = 0
+        var stonesDelivered: Int = 0 {
+            didSet {
+                if stonesDelivered < stonesPlaced {
+                    stonesPlaced = stonesDelivered
+                }
+            }
+        }
+        var stonesPlaced: Int = 0 {
+            didSet {
+                if stonesDelivered < stonesPlaced {
+                    stonesDelivered = stonesPlaced
+                }
+            }
+        }
         var numberOfNavigations: Int = 0
 
         var totalPoints: Int {
@@ -43,9 +55,31 @@ struct Scorer: TotalPoints {
     }
 
     struct TeleOp: TotalPoints {
-        var stonesDelivered: Int = 0
-        var stonesPlaced: Int = 0
-        var skyscraperHeight: Int = 0
+        var stonesDelivered: Int = 0 {
+            didSet {
+                if stonesDelivered < stonesPlaced {
+                    stonesPlaced = stonesDelivered
+                }
+            }
+        }
+        var stonesPlaced: Int = 0 {
+            didSet {
+                if stonesDelivered < stonesPlaced {
+                    stonesDelivered = stonesPlaced
+                }
+
+                if stonesPlaced < skyscraperHeight {
+                    skyscraperHeight = stonesPlaced
+                }
+            }
+        }
+        var skyscraperHeight: Int = 0 {
+            didSet {
+                if stonesPlaced < skyscraperHeight {
+                    stonesPlaced = skyscraperHeight
+                }
+            }
+        }
 
         var totalPoints: Int {
             var total = 0
