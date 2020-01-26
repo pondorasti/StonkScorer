@@ -55,31 +55,9 @@ struct Scorer: TotalPoints {
     }
 
     struct TeleOp: TotalPoints {
-        var stonesDelivered: Int = 0 {
-            didSet {
-                if stonesDelivered < stonesPlaced {
-                    stonesPlaced = stonesDelivered
-                }
-            }
-        }
-        var stonesPlaced: Int = 0 {
-            didSet {
-                if stonesDelivered < stonesPlaced {
-                    stonesDelivered = stonesPlaced
-                }
-
-                if stonesPlaced < skyscraperHeight {
-                    skyscraperHeight = stonesPlaced
-                }
-            }
-        }
-        var skyscraperHeight: Int = 0 {
-            didSet {
-                if stonesPlaced < skyscraperHeight {
-                    stonesPlaced = skyscraperHeight
-                }
-            }
-        }
+        var stonesDelivered: Int = 0
+        var stonesPlaced: Int = 0
+        var skyscraperHeight: Int = 0
 
         var totalPoints: Int {
             var total = 0
@@ -93,7 +71,16 @@ struct Scorer: TotalPoints {
     }
 
     struct EndGame: TotalPoints {
-        var capstoneBonuses: Int = 0
+        var capstoneBonuses: Int = 0 {
+            didSet {
+                if capstoneBonuses == 0 {
+                    firstCapstoneLevel = 0
+                    secondCapstoneLevel = 0
+                } else if capstoneBonuses == 1 {
+                    secondCapstoneLevel = 0
+                }
+            }
+        }
         var firstCapstoneLevel: Int = 0
         var secondCapstoneLevel: Int = 0
         var foundationMoved: Bool = false

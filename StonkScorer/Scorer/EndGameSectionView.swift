@@ -26,13 +26,13 @@ struct EndGameSectionView: View {
                 bindingProperty: $endGameScorer.firstCapstoneLevel,
                 image: Image(iconName: .capstoneLevel),
                 title: "Capstone 1 Level"
-            )
+            ).disabled(endGameScorer.capstoneBonuses <= 0)
 
             ScorerStepperView(
                 bindingProperty: $endGameScorer.secondCapstoneLevel,
                 image: Image(iconName: .capstoneLevel),
                 title: "Capstone 2 Level"
-            )
+            ).disabled(endGameScorer.capstoneBonuses <= 1)
 
             ScorerToggleView(
                 bindingProperty: $endGameScorer.foundationMoved,
