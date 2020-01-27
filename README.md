@@ -19,6 +19,12 @@ This project started as a playground for experimenting with **SwiftUI** and evol
 * The framework is relatively still in its early stages, chances are that you will quickly find the need for an object that has not yet been implemented (ex: multiline textfield, share sheet, etc), but there is a workaround for injecting UIKit code with UIViewRepresentable.
 * Navigations Bar and the macOS version feel laggy and buggy 🤨, not the production quality I was expecting.
 
+## App Preview
+
+<p align="center">
+   <image src="https://media.giphy.com/media/Q8xsudWIpz65w1Fh28/giphy.gif" width="200">
+</p>
+
 ## Screenshots
 
 <p align="center">
