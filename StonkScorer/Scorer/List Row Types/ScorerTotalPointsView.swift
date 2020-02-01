@@ -21,7 +21,7 @@ struct ScorerTotalPointsView<Type: TotalPoints>: View {
                 .font(.system(size: Constants.sfSymbolSize))
                 .frame(minWidth: Constants.iconMinWidth)
 
-            Text("\(title)")
+            Text(title)
 
             Text("\(scorer.totalPoints)")
                 .frame(minWidth: 0, maxWidth: .infinity, alignment: .trailing)

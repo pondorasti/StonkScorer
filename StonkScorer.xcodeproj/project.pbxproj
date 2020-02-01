@@ -27,6 +27,7 @@
 		C545656123BB63C40062A0CB /* TeleOpSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C545656023BB63C40062A0CB /* TeleOpSectionView.swift */; };
 		C552379823BFB3A000F75526 /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C552379723BFB3A000F75526 /* MailView.swift */; };
 		C56DE93923BFD327007BD13A /* SettingsRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56DE93823BFD327007BD13A /* SettingsRowView.swift */; };
+		C5909F0423E5B6ED00D06070 /* Scorer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C5909F0223E5B6ED00D06070 /* Scorer.xcdatamodeld */; };
 		C5E8D9C023BB56A6009B07E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E8D9BF23BB56A6009B07E8 /* AppDelegate.swift */; };
 		C5E8D9C223BB56A6009B07E8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E8D9C123BB56A6009B07E8 /* SceneDelegate.swift */; };
 		C5E8D9C423BB56A6009B07E8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E8D9C323BB56A6009B07E8 /* ContentView.swift */; };
@@ -65,6 +66,7 @@
 		C545656023BB63C40062A0CB /* TeleOpSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeleOpSectionView.swift; sourceTree = "<group>"; };
 		C552379723BFB3A000F75526 /* MailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailView.swift; sourceTree = "<group>"; };
 		C56DE93823BFD327007BD13A /* SettingsRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRowView.swift; sourceTree = "<group>"; };
+		C5909F0323E5B6ED00D06070 /* Scorer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Scorer.xcdatamodel; sourceTree = "<group>"; };
 		C5E8D9BC23BB56A6009B07E8 /* FTC Scorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FTC Scorer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5E8D9BF23BB56A6009B07E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C5E8D9C123BB56A6009B07E8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 		C5E8D9BE23BB56A6009B07E8 /* StonkScorer */ = {
 			isa = PBXGroup;
 			children = (
+				C5909F0223E5B6ED00D06070 /* Scorer.xcdatamodeld */,
 				C5E8D9C323BB56A6009B07E8 /* ContentView.swift */,
 				C5F41BF723BE245100A657FC /* Splash Screen */,
 				C556065E23BD27F700E2CE41 /* Scorer */,
@@ -321,6 +324,7 @@
 				C5E8D9C223BB56A6009B07E8 /* SceneDelegate.swift in Sources */,
 				C531974A23BCB4B700690A96 /* ScorerPickerView.swift in Sources */,
 				C5E8D9C423BB56A6009B07E8 /* ContentView.swift in Sources */,
+				C5909F0423E5B6ED00D06070 /* Scorer.xcdatamodeld in Sources */,
 				C5F41C0123BE2A1700A657FC /* TitleView.swift in Sources */,
 				C531974623BCA66C00690A96 /* EndGameSectionView.swift in Sources */,
 				C531974423BC954900690A96 /* Constants.swift in Sources */,
@@ -532,6 +536,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C5909F0223E5B6ED00D06070 /* Scorer.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C5909F0323E5B6ED00D06070 /* Scorer.xcdatamodel */,
+			);
+			currentVersion = C5909F0323E5B6ED00D06070 /* Scorer.xcdatamodel */;
+			name = Scorer.xcdatamodeld;
+			path = "Supporting Files/Scorer.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = C5E8D9B423BB56A6009B07E8 /* Project object */;
 }

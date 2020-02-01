@@ -22,13 +22,13 @@ struct ScorerPickerView: View {
                 .font(.system(size: Constants.sfSymbolSize)) //MARK: this should not be allowed :]
                 .frame(minWidth: Constants.iconMinWidth)
 
-            Text("\(title)")
+            Text(title)
 
             Spacer(minLength: 48)
 
             Picker(title, selection: $bindingProperty) {
                 ForEach(0 ..< options.count) {
-                    Text("\(self.options[$0])")
+                    Text(self.options[$0])
                 }
             }
             .pickerStyle(SegmentedPickerStyle())

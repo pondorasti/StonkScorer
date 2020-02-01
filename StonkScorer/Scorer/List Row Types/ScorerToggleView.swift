@@ -24,7 +24,7 @@ struct ScorerToggleView: View {
                     .frame(minWidth: Constants.iconMinWidth)
                     .animation(.linear)
 
-                Text("\(title)")
+                Text(title)
             }
         }
     }
