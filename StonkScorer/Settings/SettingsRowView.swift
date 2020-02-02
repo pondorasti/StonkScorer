@@ -17,10 +17,8 @@ struct SettingsRowView: View {
     var body: some View {
         HStack {
             image
-                .resizable()
-                .aspectRatio(contentMode: .fit)
+                .iconModifier()
                 .foregroundColor(imageColor)
-                .frame(width: Constants.sfSymbolSize, height: Constants.sfSymbolSize, alignment: .center)
 
             Text(title)
                 .foregroundColor(.primary)

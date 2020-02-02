@@ -19,7 +19,8 @@ struct ScorerStepperView: View {
     var body: some View {
         Stepper(value: $bindingProperty, in: stepperRange) {
             HStack {
-                image.frame(minWidth: Constants.iconMinWidth)
+                image
+                    .iconModifier()
 
                 Text("\(title): \(bindingProperty)")
             }

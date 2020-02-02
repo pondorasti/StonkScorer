@@ -28,6 +28,9 @@
 		C552379823BFB3A000F75526 /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C552379723BFB3A000F75526 /* MailView.swift */; };
 		C56DE93923BFD327007BD13A /* SettingsRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56DE93823BFD327007BD13A /* SettingsRowView.swift */; };
 		C5909F0423E5B6ED00D06070 /* Scorer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C5909F0223E5B6ED00D06070 /* Scorer.xcdatamodeld */; };
+		C5909F3323E7120100D06070 /* ScorerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5909F3223E7120100D06070 /* ScorerView.swift */; };
+		C5909F3523E713AB00D06070 /* ScorerTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5909F3423E713AB00D06070 /* ScorerTextFieldView.swift */; };
+		C5909F3723E717EC00D06070 /* ImageModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5909F3623E717EC00D06070 /* ImageModifier.swift */; };
 		C5E8D9C023BB56A6009B07E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E8D9BF23BB56A6009B07E8 /* AppDelegate.swift */; };
 		C5E8D9C223BB56A6009B07E8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E8D9C123BB56A6009B07E8 /* SceneDelegate.swift */; };
 		C5E8D9C423BB56A6009B07E8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E8D9C323BB56A6009B07E8 /* ContentView.swift */; };
@@ -67,6 +70,9 @@
 		C552379723BFB3A000F75526 /* MailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailView.swift; sourceTree = "<group>"; };
 		C56DE93823BFD327007BD13A /* SettingsRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRowView.swift; sourceTree = "<group>"; };
 		C5909F0323E5B6ED00D06070 /* Scorer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Scorer.xcdatamodel; sourceTree = "<group>"; };
+		C5909F3223E7120100D06070 /* ScorerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScorerView.swift; sourceTree = "<group>"; };
+		C5909F3423E713AB00D06070 /* ScorerTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScorerTextFieldView.swift; sourceTree = "<group>"; };
+		C5909F3623E717EC00D06070 /* ImageModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModifier.swift; sourceTree = "<group>"; };
 		C5E8D9BC23BB56A6009B07E8 /* FTC Scorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FTC Scorer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5E8D9BF23BB56A6009B07E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C5E8D9C123BB56A6009B07E8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +108,7 @@
 				C545655C23BB604A0062A0CB /* ScoringGuidelines.swift */,
 				C531974323BC954900690A96 /* Constants.swift */,
 				C50984C923C1F20C00CD708F /* ButtonModifier.swift */,
+				C5909F3623E717EC00D06070 /* ImageModifier.swift */,
 				C5F41C0523BE753B00A657FC /* Extensions */,
 			);
 			path = Helper;
@@ -110,6 +117,7 @@
 		C545656423BBB23C0062A0CB /* List Row Types */ = {
 			isa = PBXGroup;
 			children = (
+				C5909F3423E713AB00D06070 /* ScorerTextFieldView.swift */,
 				C531974723BCA89500690A96 /* ScorerStepperView.swift */,
 				C531974923BCB4B700690A96 /* ScorerPickerView.swift */,
 				C531974B23BCF32900690A96 /* ScorerToggleView.swift */,
@@ -150,6 +158,7 @@
 				C545656023BB63C40062A0CB /* TeleOpSectionView.swift */,
 				C531974523BCA66C00690A96 /* EndGameSectionView.swift */,
 				C531974D23BD25AA00690A96 /* ScoreBreakdownSectionView.swift */,
+				C5909F3223E7120100D06070 /* ScorerView.swift */,
 			);
 			path = Scorer;
 			sourceTree = "<group>";
@@ -300,6 +309,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C531974E23BD25AA00690A96 /* ScoreBreakdownSectionView.swift in Sources */,
+				C5909F3723E717EC00D06070 /* ImageModifier.swift in Sources */,
 				C545655B23BB5FE50062A0CB /* AutonomousSectionView.swift in Sources */,
 				C50984CA23C1F20C00CD708F /* ButtonModifier.swift in Sources */,
 				C531974823BCA89500690A96 /* ScorerStepperView.swift in Sources */,
@@ -324,12 +334,14 @@
 				C5E8D9C223BB56A6009B07E8 /* SceneDelegate.swift in Sources */,
 				C531974A23BCB4B700690A96 /* ScorerPickerView.swift in Sources */,
 				C5E8D9C423BB56A6009B07E8 /* ContentView.swift in Sources */,
+				C5909F3323E7120100D06070 /* ScorerView.swift in Sources */,
 				C5909F0423E5B6ED00D06070 /* Scorer.xcdatamodeld in Sources */,
 				C5F41C0123BE2A1700A657FC /* TitleView.swift in Sources */,
 				C531974623BCA66C00690A96 /* EndGameSectionView.swift in Sources */,
 				C531974423BC954900690A96 /* Constants.swift in Sources */,
 				C531974C23BCF32900690A96 /* ScorerToggleView.swift in Sources */,
 				C5F41BFF23BE25E600A657FC /* FeaturesContainerView.swift in Sources */,
+				C5909F3523E713AB00D06070 /* ScorerTextFieldView.swift in Sources */,
 				C5F41C0923BE92CD00A657FC /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

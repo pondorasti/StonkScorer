@@ -18,8 +18,7 @@ struct ScorerTotalPointsView<Type: TotalPoints>: View {
     var body: some View {
         HStack() {
             image
-                .font(.system(size: Constants.sfSymbolSize))
-                .frame(minWidth: Constants.iconMinWidth)
+                .iconModifier()
 
             Text(title)
 

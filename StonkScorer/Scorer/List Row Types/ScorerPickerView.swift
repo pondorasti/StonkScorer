@@ -19,8 +19,7 @@ struct ScorerPickerView: View {
     var body: some View {
         HStack() {
             image
-                .font(.system(size: Constants.sfSymbolSize)) //MARK: this should not be allowed :]
-                .frame(minWidth: Constants.iconMinWidth)
+                .iconModifier()
 
             Text(title)
 

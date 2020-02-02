@@ -44,7 +44,7 @@ struct AutonomousSectionView: View {
 
             ScorerPickerView(
                 bindingProperty: $autoScorer.numberOfNavigations,
-                image: Image(systemName: "p.circle.fill"),
+                image: Image(systemName: "n.circle.fill"),
                 title: "Navigating",
                 options: ScoringGuidelines.Auto.navigatingOptions
             )

@@ -19,9 +19,9 @@ struct ScorerToggleView: View {
         Toggle(isOn: $bindingProperty) {
             HStack {
                 Image(iconName: .foundation)
+                    .iconModifier()
                     .foregroundColor(.white)
                     .colorMultiply(bindingProperty ? Color(.systemBlue) : Color(.systemGray2))
-                    .frame(minWidth: Constants.iconMinWidth)
                     .animation(.linear)
 
                 Text(title)
