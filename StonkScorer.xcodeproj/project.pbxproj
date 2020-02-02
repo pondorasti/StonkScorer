@@ -25,6 +25,7 @@
 		C545655B23BB5FE50062A0CB /* AutonomousSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C545655A23BB5FE50062A0CB /* AutonomousSectionView.swift */; };
 		C545655D23BB604A0062A0CB /* ScoringGuidelines.swift in Sources */ = {isa = PBXBuildFile; fileRef = C545655C23BB604A0062A0CB /* ScoringGuidelines.swift */; };
 		C545656123BB63C40062A0CB /* TeleOpSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C545656023BB63C40062A0CB /* TeleOpSectionView.swift */; };
+		C547ECF323E771420008B411 /* MatchInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C547ECF223E771420008B411 /* MatchInfo.swift */; };
 		C552379823BFB3A000F75526 /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C552379723BFB3A000F75526 /* MailView.swift */; };
 		C56DE93923BFD327007BD13A /* SettingsRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56DE93823BFD327007BD13A /* SettingsRowView.swift */; };
 		C5909F0423E5B6ED00D06070 /* Scorer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C5909F0223E5B6ED00D06070 /* Scorer.xcdatamodeld */; };
@@ -68,6 +69,7 @@
 		C545655A23BB5FE50062A0CB /* AutonomousSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutonomousSectionView.swift; sourceTree = "<group>"; };
 		C545655C23BB604A0062A0CB /* ScoringGuidelines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoringGuidelines.swift; sourceTree = "<group>"; };
 		C545656023BB63C40062A0CB /* TeleOpSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeleOpSectionView.swift; sourceTree = "<group>"; };
+		C547ECF223E771420008B411 /* MatchInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchInfo.swift; sourceTree = "<group>"; };
 		C552379723BFB3A000F75526 /* MailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailView.swift; sourceTree = "<group>"; };
 		C56DE93823BFD327007BD13A /* SettingsRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRowView.swift; sourceTree = "<group>"; };
 		C5909F0323E5B6ED00D06070 /* Scorer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Scorer.xcdatamodel; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 			children = (
 				C5909F0223E5B6ED00D06070 /* Scorer.xcdatamodeld */,
 				C5E8D9C323BB56A6009B07E8 /* ContentView.swift */,
+				C547ECF223E771420008B411 /* MatchInfo.swift */,
 				C5909F3823E75A8000D06070 /* AlliancePickerView.swift */,
 				C5F41BF723BE245100A657FC /* Splash Screen */,
 				C556065E23BD27F700E2CE41 /* Scorer */,
@@ -318,6 +321,7 @@
 				C531974823BCA89500690A96 /* ScorerStepperView.swift in Sources */,
 				C50984C023C12A2B00CD708F /* SendFeedbackSectionView.swift in Sources */,
 				C50984C423C1399A00CD708F /* AboutView.swift in Sources */,
+				C547ECF323E771420008B411 /* MatchInfo.swift in Sources */,
 				C5F41BFB23BE249400A657FC /* FeatureInfoView.swift in Sources */,
 				C531975023BD25C500690A96 /* Image.swift in Sources */,
 				C5909F3923E75A8000D06070 /* AlliancePickerView.swift in Sources */,

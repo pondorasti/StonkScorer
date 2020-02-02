@@ -10,51 +10,50 @@ import SwiftUI
 import CoreData
 
 struct ContentView: View {
-
-    @State private var scorer = Scorer()
-    @State private var shouldShowSettings = false
-
     @State var showingNewUserView: Bool
 
-    @State private var allianceColor = 0
-    @State private var teamNumber = ""
-    @State private var matchNumber = ""
+    @State private var shouldShowSettings = false
+    @State private var scorer = Scorer()
+    @State private var matchInfo = MatchInfo()
 
     var body: some View {
         NavigationView {
             List {
-                ScorerView(scorer: $scorer)
-
                 Section(header: Text("Match Info").font(.headline)) {
 
-                    AlliancePickerView(allianceColor: $allianceColor)
+                    AlliancePickerView(allianceColor: $matchInfo.allianceColor)
 
                     ScorerTextFieldView(
-                        bindingValue: $teamNumber,
+                        bindingValue: $matchInfo.teamNumber,
                         image: Image(systemName: "t.circle.fill"),
                         title: "Team Number",
                         placeholder: "14270"
                     ).keyboardType(.numberPad)
 
                     ScorerTextFieldView(
-                        bindingValue: $matchNumber,
+                        bindingValue: $matchInfo.matchNumber,
                         image: Image(systemName: "m.circle.fill"),
                         title: "Match Number",
                         placeholder: "12"
                     ).keyboardType(.numberPad)
+
+                    TextField("Comments", text: $matchInfo.comments)
                 }
+
+                ScorerView(scorer: $scorer)
 
                 Section {
                     Button(action: {
-
                     }, label: {
                         HStack {
                             Image(systemName: "arrow.down.circle.fill")
                                 .iconModifier()
                             Text("Save Score")
                                 .bold()
+                            Spacer()
                         }
                     })
+                    .buttonStyle(BorderlessButtonStyle())
                 }
                 .foregroundColor(.white)
                 .listRowBackground(Color(UIColor.systemGreen))

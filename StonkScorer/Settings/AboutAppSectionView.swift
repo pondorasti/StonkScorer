@@ -27,8 +27,6 @@ struct AboutAppSectionView: View {
             }
             .sheet(isPresented: $isShowingSplashScreen) {
                 SplashScreenView(isPresented: self.$isShowingSplashScreen)
-
-                
             }
         }
     }
