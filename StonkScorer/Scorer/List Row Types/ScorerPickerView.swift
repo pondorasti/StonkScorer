@@ -31,7 +31,7 @@ struct ScorerPickerView: View {
                 }
             }
             .pickerStyle(SegmentedPickerStyle())
-            .frame(maxWidth: 256)
+            .frame(maxWidth: Constants.pickerMaxWidth)
         }
     }
 }

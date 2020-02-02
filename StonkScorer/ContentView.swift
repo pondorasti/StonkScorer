@@ -16,13 +16,48 @@ struct ContentView: View {
 
     @State var showingNewUserView: Bool
 
+    @State private var allianceColor = 0
+    @State private var teamNumber = ""
+    @State private var matchNumber = ""
+
     var body: some View {
         NavigationView {
             List {
-                AutonomousSectionView(autoScorer: $scorer.auto)
-                TeleOpSectionView(teleOpScorer: $scorer.teleOp)
-                EndGameSectionView(endGameScorer: $scorer.endGame)
-                ScoreBreakdownSectionView(scorer: $scorer)
+                ScorerView(scorer: $scorer)
+
+                Section(header: Text("Match Info").font(.headline)) {
+
+                    AlliancePickerView(allianceColor: $allianceColor)
+
+                    ScorerTextFieldView(
+                        bindingValue: $teamNumber,
+                        image: Image(systemName: "t.circle.fill"),
+                        title: "Team Number",
+                        placeholder: "14270"
+                    ).keyboardType(.numberPad)
+
+                    ScorerTextFieldView(
+                        bindingValue: $matchNumber,
+                        image: Image(systemName: "m.circle.fill"),
+                        title: "Match Number",
+                        placeholder: "12"
+                    ).keyboardType(.numberPad)
+                }
+
+                Section {
+                    Button(action: {
+
+                    }, label: {
+                        HStack {
+                            Image(systemName: "arrow.down.circle.fill")
+                                .iconModifier()
+                            Text("Save Score")
+                                .bold()
+                        }
+                    })
+                }
+                .foregroundColor(.white)
+                .listRowBackground(Color(UIColor.systemGreen))
             }
             .listStyle(GroupedListStyle())
             .environment(\.horizontalSizeClass, .regular)
@@ -43,21 +78,13 @@ struct ContentView: View {
                 })
 
                 , trailing:
-                HStack {
-                    Button(action: {
-                        self.scorer = Scorer() //TODO: add a reset function, this is the lazy way
-                    }, label: {
-                        Image(systemName: "gobackward")
-                            .navigationBarStyle()
-                    })
 
-                    Button(action: {
-
-                    }, label: {
-                        Image(systemName: "square.and.arrow.down")
-                            .navigationBarStyle()
-                    })
-                }
+                Button(action: {
+                    self.scorer = Scorer() //TODO: add a reset function, this is the lazy way
+                }, label: {
+                    Image(systemName: "gobackward")
+                        .navigationBarStyle()
+                })
             )
         }
         .navigationViewStyle(StackNavigationViewStyle())
