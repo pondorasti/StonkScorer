@@ -7,11 +7,14 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct ContentView: View {
+
     @State private var scorer = Scorer()
-    @State var showingNewUserView: Bool
     @State private var shouldShowSettings = false
+
+    @State var showingNewUserView: Bool
 
     var body: some View {
         NavigationView {
@@ -40,13 +43,21 @@ struct ContentView: View {
                 })
 
                 , trailing:
+                HStack {
+                    Button(action: {
+                        self.scorer = Scorer() //TODO: add a reset function, this is the lazy way
+                    }, label: {
+                        Image(systemName: "gobackward")
+                            .navigationBarStyle()
+                    })
 
-                Button(action: {
-                    self.scorer = Scorer() //TODO: add a reset function, this is the lazy way
-                }, label: {
-                    Image(systemName: "gobackward")
-                        .navigationBarStyle()
-                })
+                    Button(action: {
+
+                    }, label: {
+                        Image(systemName: "square.and.arrow.down")
+                            .navigationBarStyle()
+                    })
+                }
             )
         }
         .navigationViewStyle(StackNavigationViewStyle())
@@ -56,5 +67,27 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView(showingNewUserView: false)
+    }
+}
+
+extension SkystoneScore {
+    convenience init(scorer: Scorer, inContext context: NSManagedObjectContext) {
+        self.init(context: context)
+
+        foundationRepositioned = scorer.auto.foundationRepositioned
+        numberOfSkystoneBonuses = Int16(scorer.auto.numberOfSkystoneBonuses)
+        autoStonesDelivered = Int16(scorer.auto.stonesDelivered)
+        autoStonesPlaced = Int16(scorer.auto.stonesPlaced)
+        numberOfNavigations = Int16(scorer.auto.numberOfNavigations)
+
+        teleOpStonesDelivered = Int16(scorer.teleOp.stonesDelivered)
+        teleOpStonesPlaced = Int16(scorer.teleOp.stonesPlaced)
+        skyscraperHeight = Int16(scorer.teleOp.skyscraperHeight)
+
+        capstoneBonuses = Int16(scorer.endGame.capstoneBonuses)
+        firstCapstoneLevel = Int16(scorer.endGame.firstCapstoneLevel)
+        secondCapstoneLevel = Int16(scorer.endGame.secondCapstoneLevel)
+        foundationMoved = scorer.endGame.foundationMoved
+        numberOfParkings = Int16(scorer.endGame.numberOfParkings)
     }
 }

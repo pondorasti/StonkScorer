@@ -16,7 +16,6 @@ struct AboutAppSectionView: View {
         Section(header: Text("About the App").font(.headline)) {
 
             //MARK: - Splash Screen
-            //TODO: try this with a NavigationLink
             Button(action: {
                 self.isShowingSplashScreen.toggle()
             }) {
@@ -28,6 +27,8 @@ struct AboutAppSectionView: View {
             }
             .sheet(isPresented: $isShowingSplashScreen) {
                 SplashScreenView(isPresented: self.$isShowingSplashScreen)
+
+                
             }
         }
     }
