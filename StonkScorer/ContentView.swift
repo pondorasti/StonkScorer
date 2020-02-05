@@ -10,8 +10,6 @@ import SwiftUI
 import CoreData
 
 struct ContentView: View {
-    @Environment(\.managedObjectContext) var moc
-
     @State var showingNewUserView: Bool
 
     @State private var shouldShowSettings = false
@@ -46,7 +44,7 @@ struct ContentView: View {
 
                 Section {
                     Button(action: {
-                        let _ = SkystoneScore(from: self.scorer, with: self.matchInfo, inContext: self.moc)
+                        let _ = SkystoneScore(from: self.scorer, with: self.matchInfo)
                     }, label: {
                         HStack {
                             Image(systemName: "arrow.down.circle.fill")
@@ -100,7 +98,11 @@ struct ContentView_Previews: PreviewProvider {
 }
 
 extension SkystoneScore {
-    convenience init(from scorer: Scorer, with matchInfo: MatchInfo, inContext context: NSManagedObjectContext, shouldSave: Bool = true) {
+    convenience init(from scorer: Scorer,
+                     with matchInfo: MatchInfo,
+                     shouldSave: Bool = true,
+                     context: NSManagedObjectContext = SkystoneScore.persistentContainer.viewContext) {
+
         self.init(context: context)
 
         allianceColor = Int16(matchInfo.allianceColor)
@@ -129,7 +131,8 @@ extension SkystoneScore {
         }
     }
 
-    static func conditionalSave(in context: NSManagedObjectContext) {
+    // MARK: - Core Data Saving support
+    static func conditionalSave(in context: NSManagedObjectContext = SkystoneScore.persistentContainer.viewContext) {
         if context.hasChanges {
             do {
                 try context.save()
@@ -141,6 +144,7 @@ extension SkystoneScore {
         }
     }
 
+    // MARK: - Core Data stack
     static var persistentContainer: NSPersistentContainer = {
         let container = NSPersistentContainer(name: "Scorer")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in

@@ -9,11 +9,10 @@
 import SwiftUI
 
 struct SavedScoresView: View {
-    @Environment(\.managedObjectContext) var moc
     @FetchRequest(entity: SkystoneScore.entity(), sortDescriptors: []) var scores: FetchedResults<SkystoneScore>
 
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("Number of saved entries: \(scores.count)")
     }
 }
 

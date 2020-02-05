@@ -27,12 +27,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             showingNewUserView = false
         }
 
-        // Get the managed object context from the shared persistent container.
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-
-        // Create the SwiftUI view that provides the window contents.
-        // Create the SwiftUI view and set the context as the value for the managedObjectContext environment keyPath.
-        // Add `@Environment(\.managedObjectContext)` in the views that will need the context.
+        let context = SkystoneScore.persistentContainer.viewContext
         let contentView = ContentView(showingNewUserView: showingNewUserView)
             .environment(\.managedObjectContext, context)
 
