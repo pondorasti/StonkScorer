@@ -9,5 +9,16 @@
 import Foundation
 
 extension UserDefaults {
-    static let showingNewUserView = "showingNewUserView"
+    enum Keys: String {
+        case showingMatchInfo
+        case showingNewUserView
+
+        static func retrieveObject(for key: Keys) -> Any? {
+            return UserDefaults.standard.object(forKey: key.rawValue)
+        }
+
+        static func setObject(for key: Keys, with value: Any?) {
+            UserDefaults.standard.set(value, forKey: key.rawValue)
+        }
+    }
 }

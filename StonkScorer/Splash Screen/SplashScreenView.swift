@@ -35,6 +35,6 @@ struct SplashScreenView: View {
     }
 
     private func updateUserDefaults() {
-        UserDefaults.standard.set(false, forKey: UserDefaults.showingNewUserView)
+        UserDefaults.Keys.setObject(for: .showingNewUserView, with: false)
     }
 }

@@ -21,11 +21,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         //Check if it should show SplashScreen/NewFeatures
         let showingNewUserView: Bool
-        if UserDefaults.standard.object(forKey: UserDefaults.showingNewUserView) == nil {
+        if UserDefaults.Keys.retrieveObject(for: .showingNewUserView) == nil {
             showingNewUserView = true
         }  else {
             showingNewUserView = false
         }
+
+
 
         let context = SkystoneScore.persistentContainer.viewContext
         let contentView = ContentView(showingNewUserView: showingNewUserView)

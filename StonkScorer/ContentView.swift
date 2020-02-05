@@ -32,12 +32,10 @@ struct ContentView: View {
                 }, label: {
                     Image(systemName: "gear")
                         .navigationBarStyle()
-                })
-                    .sheet(isPresented: $shouldShowSettings, content: {
-                        SettingsView(isPresented: self.$shouldShowSettings)
-                    })
+                }).sheet(isPresented: $shouldShowSettings, content: {
+                    SettingsView(isPresented: self.$shouldShowSettings)
 
-                , trailing:
+                }), trailing:
 
                 // Reset Scorer Button
                 Button(action: {
