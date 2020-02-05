@@ -12,7 +12,19 @@ struct SavedScoresView: View {
     @FetchRequest(entity: SkystoneScore.entity(), sortDescriptors: []) var scores: FetchedResults<SkystoneScore>
 
     var body: some View {
-        Text("Number of saved entries: \(scores.count)")
+        List {
+            ForEach(scores, id: \.self) { score in
+//                let scorer = Scorer()
+
+                NavigationLink(destination: ScorerView(matchInfo: .constant(MatchInfo()), scorer: .constant(Scorer(from: score))).navigationBarTitle("Score")) {
+
+
+                    Text("\(score.matchNumber!)")
+
+                }
+            }
+        }
+        .navigationBarTitle("Saved Scores")
     }
 }
 

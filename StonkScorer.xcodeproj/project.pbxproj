@@ -27,6 +27,7 @@
 		C545656123BB63C40062A0CB /* TeleOpSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C545656023BB63C40062A0CB /* TeleOpSectionView.swift */; };
 		C547ECF323E771420008B411 /* MatchInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C547ECF223E771420008B411 /* MatchInfo.swift */; };
 		C547ECF523EAA0F40008B411 /* SavedScoresView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C547ECF423EAA0F40008B411 /* SavedScoresView.swift */; };
+		C547ECF723EB0FCE0008B411 /* MatchInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C547ECF623EB0FCD0008B411 /* MatchInfoView.swift */; };
 		C552379823BFB3A000F75526 /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C552379723BFB3A000F75526 /* MailView.swift */; };
 		C56DE93923BFD327007BD13A /* SettingsRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56DE93823BFD327007BD13A /* SettingsRowView.swift */; };
 		C5909F0423E5B6ED00D06070 /* Scorer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C5909F0223E5B6ED00D06070 /* Scorer.xcdatamodeld */; };
@@ -72,6 +73,7 @@
 		C545656023BB63C40062A0CB /* TeleOpSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeleOpSectionView.swift; sourceTree = "<group>"; };
 		C547ECF223E771420008B411 /* MatchInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchInfo.swift; sourceTree = "<group>"; };
 		C547ECF423EAA0F40008B411 /* SavedScoresView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedScoresView.swift; sourceTree = "<group>"; };
+		C547ECF623EB0FCD0008B411 /* MatchInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchInfoView.swift; sourceTree = "<group>"; };
 		C552379723BFB3A000F75526 /* MailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailView.swift; sourceTree = "<group>"; };
 		C56DE93823BFD327007BD13A /* SettingsRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRowView.swift; sourceTree = "<group>"; };
 		C5909F0323E5B6ED00D06070 /* Scorer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Scorer.xcdatamodel; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 		C545656423BBB23C0062A0CB /* List Row Types */ = {
 			isa = PBXGroup;
 			children = (
+				C5909F3823E75A8000D06070 /* AlliancePickerView.swift */,
 				C5909F3423E713AB00D06070 /* ScorerTextFieldView.swift */,
 				C531974723BCA89500690A96 /* ScorerStepperView.swift */,
 				C531974923BCB4B700690A96 /* ScorerPickerView.swift */,
@@ -130,6 +133,27 @@
 				C5F41BF423BD36E700A657FC /* ScorerTotalPointsView.swift */,
 			);
 			path = "List Row Types";
+			sourceTree = "<group>";
+		};
+		C547ECF823EB10760008B411 /* Modules View */ = {
+			isa = PBXGroup;
+			children = (
+				C547ECF623EB0FCD0008B411 /* MatchInfoView.swift */,
+				C545655A23BB5FE50062A0CB /* AutonomousSectionView.swift */,
+				C545656023BB63C40062A0CB /* TeleOpSectionView.swift */,
+				C531974523BCA66C00690A96 /* EndGameSectionView.swift */,
+				C531974D23BD25AA00690A96 /* ScoreBreakdownSectionView.swift */,
+			);
+			path = "Modules View";
+			sourceTree = "<group>";
+		};
+		C547ECFA23EB13B90008B411 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C531974123BBC69B00690A96 /* Scorer.swift */,
+				C547ECF223E771420008B411 /* MatchInfo.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		C552379623BFB37F00F75526 /* Settings */ = {
@@ -159,13 +183,10 @@
 		C556065E23BD27F700E2CE41 /* Scorer */ = {
 			isa = PBXGroup;
 			children = (
-				C545656423BBB23C0062A0CB /* List Row Types */,
-				C531974123BBC69B00690A96 /* Scorer.swift */,
-				C545655A23BB5FE50062A0CB /* AutonomousSectionView.swift */,
-				C545656023BB63C40062A0CB /* TeleOpSectionView.swift */,
-				C531974523BCA66C00690A96 /* EndGameSectionView.swift */,
-				C531974D23BD25AA00690A96 /* ScoreBreakdownSectionView.swift */,
 				C5909F3223E7120100D06070 /* ScorerView.swift */,
+				C547ECFA23EB13B90008B411 /* Models */,
+				C545656423BBB23C0062A0CB /* List Row Types */,
+				C547ECF823EB10760008B411 /* Modules View */,
 			);
 			path = Scorer;
 			sourceTree = "<group>";
@@ -191,8 +212,6 @@
 			children = (
 				C5909F0223E5B6ED00D06070 /* Scorer.xcdatamodeld */,
 				C5E8D9C323BB56A6009B07E8 /* ContentView.swift */,
-				C547ECF223E771420008B411 /* MatchInfo.swift */,
-				C5909F3823E75A8000D06070 /* AlliancePickerView.swift */,
 				C5F41BF723BE245100A657FC /* Splash Screen */,
 				C556065E23BD27F700E2CE41 /* Scorer */,
 				C552379623BFB37F00F75526 /* Settings */,
@@ -344,6 +363,7 @@
 				C50984BE23C125FB00CD708F /* AboutAppSectionView.swift in Sources */,
 				C50984C223C12A9100CD708F /* AppInfoSectionView.swift in Sources */,
 				C5E8D9C223BB56A6009B07E8 /* SceneDelegate.swift in Sources */,
+				C547ECF723EB0FCE0008B411 /* MatchInfoView.swift in Sources */,
 				C531974A23BCB4B700690A96 /* ScorerPickerView.swift in Sources */,
 				C5E8D9C423BB56A6009B07E8 /* ContentView.swift in Sources */,
 				C5909F3323E7120100D06070 /* ScorerView.swift in Sources */,

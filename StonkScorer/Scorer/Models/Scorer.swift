@@ -98,6 +98,36 @@ struct Scorer: TotalPoints {
             return total
         }
     }
+
+    mutating func reset() {
+        self = Scorer()
+    }
+
+    init() {
+        auto = Auto()
+        teleOp = TeleOp()
+        endGame = EndGame()
+    }
+
+    init(from score: SkystoneScore) {
+        self.init()
+
+        auto.foundationRepositioned = score.foundationRepositioned
+        auto.numberOfSkystoneBonuses = Int(score.numberOfSkystoneBonuses)
+        auto.stonesDelivered = Int(score.autoStonesDelivered)
+        auto.stonesPlaced = Int(score.autoStonesPlaced)
+        auto.numberOfNavigations = Int(score.numberOfNavigations)
+
+        teleOp.stonesDelivered = Int(score.teleOpStonesDelivered)
+        teleOp.stonesPlaced = Int(score.teleOpStonesPlaced)
+        teleOp.skyscraperHeight = Int(score.skyscraperHeight)
+
+        endGame.capstoneBonuses = Int(score.capstoneBonuses)
+        endGame.firstCapstoneLevel = Int(score.firstCapstoneLevel)
+        endGame.secondCapstoneLevel = Int(score.secondCapstoneLevel)
+        endGame.foundationMoved = score.foundationMoved
+        endGame.numberOfParkings = Int(score.numberOfParkings)
+    }
 }
 
 protocol TotalPoints {

@@ -13,74 +13,35 @@ struct ContentView: View {
     @State var showingNewUserView: Bool
 
     @State private var shouldShowSettings = false
+
     @State private var scorer = Scorer()
     @State private var matchInfo = MatchInfo()
 
     var body: some View {
         NavigationView {
-            List {
-                Section(header: Text("Match Info").font(.headline)) {
-
-                    AlliancePickerView(allianceColor: $matchInfo.allianceColor)
-
-                    ScorerTextFieldView(
-                        bindingValue: $matchInfo.teamNumber,
-                        image: Image(systemName: "t.circle.fill"),
-                        title: "Team Number",
-                        placeholder: "14270"
-                    ).keyboardType(.numberPad)
-
-                    ScorerTextFieldView(
-                        bindingValue: $matchInfo.matchNumber,
-                        image: Image(systemName: "m.circle.fill"),
-                        title: "Match Number",
-                        placeholder: "12"
-                    ).keyboardType(.numberPad)
-
-                    TextField("Comments", text: $matchInfo.comments)
-                }
-
-                ScorerView(scorer: $scorer)
-
-                Section {
-                    Button(action: {
-                        let _ = SkystoneScore(from: self.scorer, with: self.matchInfo)
-                    }, label: {
-                        HStack {
-                            Image(systemName: "arrow.down.circle.fill")
-                                .iconModifier()
-                            Text("Save Score")
-                                .bold()
-                            Spacer()
-                        }
-                    })
-                    .buttonStyle(BorderlessButtonStyle())
-                }
-                .foregroundColor(.white)
-                .listRowBackground(Color(UIColor.systemGreen))
-            }
-            .listStyle(GroupedListStyle())
-            .environment(\.horizontalSizeClass, .regular)
+            ScorerView(matchInfo: $matchInfo, scorer: $scorer)
             .sheet(isPresented: $showingNewUserView) {
                 SplashScreenView(isPresented: self.$showingNewUserView)
             }
             .navigationBarTitle("Scorer")
             .navigationBarItems(leading:
 
+                //Show Settings Button
                 Button(action: {
                     self.shouldShowSettings.toggle()
                 }, label: {
                     Image(systemName: "gear")
                         .navigationBarStyle()
                 })
-                .sheet(isPresented: $shouldShowSettings, content: {
-                    SettingsView(isPresented: self.$shouldShowSettings)
-                })
+                    .sheet(isPresented: $shouldShowSettings, content: {
+                        SettingsView(isPresented: self.$shouldShowSettings)
+                    })
 
                 , trailing:
 
+                // Reset Scorer Button
                 Button(action: {
-                    self.scorer = Scorer() //TODO: add a reset function, this is the lazy way
+                    self.scorer.reset()
                 }, label: {
                     Image(systemName: "gobackward")
                         .navigationBarStyle()
@@ -96,6 +57,12 @@ struct ContentView_Previews: PreviewProvider {
         ContentView(showingNewUserView: false)
     }
 }
+
+//Developer's Notes - Just a note to my future self
+
+//An alternative to extending SkystoneScore Entity would be to create some sort of CoreDataHelper object
+//The only downside of this solution is that the CoreData related functions are locked down to be used only with this entity even though the functions are quite universal and reusable from certain points of view
+//Conclusion - I will bother with a better implementation when I will have multiple Entities or Data Models
 
 extension SkystoneScore {
     convenience init(from scorer: Scorer,
@@ -156,5 +123,13 @@ extension SkystoneScore {
         })
         return container
     }()
-
 }
+
+
+//TODOs:
+
+// - toggle for reseting scorer after save
+// - toggle for hiding match info view
+
+// FullScorerView
+// ScoutingView
