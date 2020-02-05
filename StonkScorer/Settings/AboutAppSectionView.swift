@@ -28,6 +28,19 @@ struct AboutAppSectionView: View {
             .sheet(isPresented: $isShowingSplashScreen) {
                 SplashScreenView(isPresented: self.$isShowingSplashScreen)
             }
+
+            ZStack { //embedding the NavLink inside the ZStack and giving it an EmptyView() in order to hide the automatic disclorure indicator
+                NavigationLink(destination: AboutView()
+                    .environment(\.managedObjectContext, SkystoneScore.persistentContainer.viewContext)) {
+                    EmptyView()
+                }
+
+                SettingsRowView(
+                    image: Image(systemName: "bookmark.fill"),
+                    imageColor: Color(UIColor.systemBlue),
+                    title: "Saved Scores"
+                )
+            }
         }
     }
 }

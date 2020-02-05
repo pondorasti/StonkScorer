@@ -5,6 +5,7 @@
         <attribute name="autoStonesDelivered" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="autoStonesPlaced" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="capstoneBonuses" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="comments" optional="YES" attributeType="String"/>
         <attribute name="firstCapstoneLevel" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="foundationMoved" optional="YES" attributeType="Boolean" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="foundationRepositioned" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
@@ -20,6 +21,6 @@
         <attribute name="teleOpStonesPlaced" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
     </entity>
     <elements>
-        <element name="SkystoneScore" positionX="-63" positionY="-18" width="128" height="298"/>
+        <element name="SkystoneScore" positionX="-63" positionY="-18" width="128" height="313"/>
     </elements>
 </model>
