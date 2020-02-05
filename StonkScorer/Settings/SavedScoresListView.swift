@@ -1,5 +1,5 @@
 //
-//  SavedScoresView.swift
+//  SavedScoresListView.swift
 //  StonkScorer
 //
 //  Created by Alexandru Turcanu on 05/02/2020.
@@ -8,28 +8,26 @@
 
 import SwiftUI
 
-struct SavedScoresView: View {
+struct SavedScoresListView: View {
     @FetchRequest(entity: SkystoneScore.entity(), sortDescriptors: []) var scores: FetchedResults<SkystoneScore>
 
     var body: some View {
         List {
             ForEach(scores, id: \.self) { score in
-//                let scorer = Scorer()
-
-                NavigationLink(destination: ScorerView(matchInfo: .constant(MatchInfo()), scorer: .constant(Scorer(from: score))).navigationBarTitle("Score")) {
-
-
+                NavigationLink(destination: SavedScoreView(savedScore: score)) {
                     Text("\(score.matchNumber!)")
-
                 }
             }
         }
+        .listStyle(GroupedListStyle())
+        .environment(\.horizontalSizeClass, .regular)
         .navigationBarTitle("Saved Scores")
     }
 }
 
 struct SavedScoresView_Previews: PreviewProvider {
     static var previews: some View {
-        SavedScoresView()
+        SavedScoresListView()
     }
 }
+// question closure parameter as Binding value

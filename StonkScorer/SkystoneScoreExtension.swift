@@ -43,6 +43,33 @@ extension SkystoneScore {
         }
     }
 
+    func update(from scorer: Scorer) {
+        foundationRepositioned = scorer.auto.foundationRepositioned
+        numberOfSkystoneBonuses = Int16(scorer.auto.numberOfSkystoneBonuses)
+        autoStonesDelivered = Int16(scorer.auto.stonesDelivered)
+        autoStonesPlaced = Int16(scorer.auto.stonesPlaced)
+        numberOfNavigations = Int16(scorer.auto.numberOfNavigations)
+
+        teleOpStonesDelivered = Int16(scorer.teleOp.stonesDelivered)
+        teleOpStonesPlaced = Int16(scorer.teleOp.stonesPlaced)
+        skyscraperHeight = Int16(scorer.teleOp.skyscraperHeight)
+
+        capstoneBonuses = Int16(scorer.endGame.capstoneBonuses)
+        firstCapstoneLevel = Int16(scorer.endGame.firstCapstoneLevel)
+        secondCapstoneLevel = Int16(scorer.endGame.secondCapstoneLevel)
+        foundationMoved = scorer.endGame.foundationMoved
+        numberOfParkings = Int16(scorer.endGame.numberOfParkings)
+
+        SkystoneScore.conditionalSave()
+    }
+
+    func update(from matchInfo: MatchInfo) {
+        allianceColor = Int16(matchInfo.allianceColor)
+        teamNumber = matchInfo.teamNumber
+        matchNumber = matchInfo.matchNumber
+        comments = matchInfo.comments
+    }
+
     //Developer's Notes - Just a note to my future self
 
     //An alternative to extending SkystoneScore Entity would be to create some sort of CoreDataHelper object

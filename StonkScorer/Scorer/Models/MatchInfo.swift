@@ -9,8 +9,24 @@
 import Foundation
 
 struct MatchInfo {
-    var allianceColor = 0
-    var teamNumber = ""
-    var matchNumber = ""
-    var comments = ""
+    var allianceColor: Int
+    var teamNumber: String
+    var matchNumber: String
+    var comments: String
+
+    init() {
+        allianceColor = 0
+        teamNumber = ""
+        matchNumber = ""
+        comments = ""
+    }
+
+    init(from score: SkystoneScore) {
+        self.init()
+
+        allianceColor = Int(score.allianceColor)
+        teamNumber = score.teamNumber ?? ""
+        matchNumber = score.matchNumber ?? ""
+        comments = score.comments ?? ""
+    }
 }

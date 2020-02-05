@@ -35,7 +35,6 @@ struct ScorerView: View {
                     Button(action: {
                         let _ = SkystoneScore(from: self.scorer, with: self.matchInfo)
                         self.showingSaveAlert.toggle()
-                        self.scorer.reset()
                     }, label: {
                         HStack {
                             Image(systemName: "arrow.down.circle.fill")
@@ -49,7 +48,9 @@ struct ScorerView: View {
                         .alert(isPresented: $showingSaveAlert) {
                             Alert(title: Text("Data saved!"),// TODO: better text
                                 message: Text("Go to settings to see all the saved scores"),
-                                dismissButton: .default(Text("Done"))
+                                dismissButton: .default(Text("Done!"), action: {
+                                    self.scorer.reset()
+                                })
                             )
                     }
                 }
