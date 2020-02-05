@@ -26,10 +26,11 @@
 		C545655D23BB604A0062A0CB /* ScoringGuidelines.swift in Sources */ = {isa = PBXBuildFile; fileRef = C545655C23BB604A0062A0CB /* ScoringGuidelines.swift */; };
 		C545656123BB63C40062A0CB /* TeleOpSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C545656023BB63C40062A0CB /* TeleOpSectionView.swift */; };
 		C547ECF323E771420008B411 /* MatchInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C547ECF223E771420008B411 /* MatchInfo.swift */; };
-		C547ECF523EAA0F40008B411 /* SavedScoresView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C547ECF423EAA0F40008B411 /* SavedScoresView.swift */; };
+		C547ECF523EAA0F40008B411 /* SavedScoresListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C547ECF423EAA0F40008B411 /* SavedScoresListView.swift */; };
 		C547ECF723EB0FCE0008B411 /* MatchInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C547ECF623EB0FCD0008B411 /* MatchInfoView.swift */; };
 		C552379823BFB3A000F75526 /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C552379723BFB3A000F75526 /* MailView.swift */; };
 		C56DE93923BFD327007BD13A /* SettingsRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56DE93823BFD327007BD13A /* SettingsRowView.swift */; };
+		C57483BE23EB445A00DA49EB /* SkystoneScoreExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57483BD23EB445A00DA49EB /* SkystoneScoreExtension.swift */; };
 		C5909F0423E5B6ED00D06070 /* Scorer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C5909F0223E5B6ED00D06070 /* Scorer.xcdatamodeld */; };
 		C5909F3323E7120100D06070 /* ScorerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5909F3223E7120100D06070 /* ScorerView.swift */; };
 		C5909F3523E713AB00D06070 /* ScorerTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5909F3423E713AB00D06070 /* ScorerTextFieldView.swift */; };
@@ -37,7 +38,6 @@
 		C5909F3923E75A8000D06070 /* AlliancePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5909F3823E75A8000D06070 /* AlliancePickerView.swift */; };
 		C5E8D9C023BB56A6009B07E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E8D9BF23BB56A6009B07E8 /* AppDelegate.swift */; };
 		C5E8D9C223BB56A6009B07E8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E8D9C123BB56A6009B07E8 /* SceneDelegate.swift */; };
-		C5E8D9C423BB56A6009B07E8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E8D9C323BB56A6009B07E8 /* ContentView.swift */; };
 		C5E8D9C623BB56AA009B07E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5E8D9C523BB56AA009B07E8 /* Assets.xcassets */; };
 		C5E8D9C923BB56AA009B07E8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5E8D9C823BB56AA009B07E8 /* Preview Assets.xcassets */; };
 		C5E8D9CC23BB56AA009B07E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5E8D9CA23BB56AA009B07E8 /* LaunchScreen.storyboard */; };
@@ -49,6 +49,8 @@
 		C5F41C0323BE2B4900A657FC /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F41C0223BE2B4900A657FC /* SplashScreenView.swift */; };
 		C5F41C0723BE756F00A657FC /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F41C0623BE756F00A657FC /* UserDefaults.swift */; };
 		C5F41C0923BE92CD00A657FC /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F41C0823BE92CD00A657FC /* SettingsView.swift */; };
+		C5F8BE5723EB1C15004BABC3 /* SavedScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F8BE5623EB1C15004BABC3 /* SavedScoreView.swift */; };
+		C5F8BE5923EB1D17004BABC3 /* ScorerGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F8BE5823EB1D17004BABC3 /* ScorerGroup.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,10 +74,11 @@
 		C545655C23BB604A0062A0CB /* ScoringGuidelines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoringGuidelines.swift; sourceTree = "<group>"; };
 		C545656023BB63C40062A0CB /* TeleOpSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeleOpSectionView.swift; sourceTree = "<group>"; };
 		C547ECF223E771420008B411 /* MatchInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchInfo.swift; sourceTree = "<group>"; };
-		C547ECF423EAA0F40008B411 /* SavedScoresView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedScoresView.swift; sourceTree = "<group>"; };
+		C547ECF423EAA0F40008B411 /* SavedScoresListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedScoresListView.swift; sourceTree = "<group>"; };
 		C547ECF623EB0FCD0008B411 /* MatchInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchInfoView.swift; sourceTree = "<group>"; };
 		C552379723BFB3A000F75526 /* MailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailView.swift; sourceTree = "<group>"; };
 		C56DE93823BFD327007BD13A /* SettingsRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRowView.swift; sourceTree = "<group>"; };
+		C57483BD23EB445A00DA49EB /* SkystoneScoreExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkystoneScoreExtension.swift; sourceTree = "<group>"; };
 		C5909F0323E5B6ED00D06070 /* Scorer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Scorer.xcdatamodel; sourceTree = "<group>"; };
 		C5909F3223E7120100D06070 /* ScorerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScorerView.swift; sourceTree = "<group>"; };
 		C5909F3423E713AB00D06070 /* ScorerTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScorerTextFieldView.swift; sourceTree = "<group>"; };
@@ -84,7 +87,6 @@
 		C5E8D9BC23BB56A6009B07E8 /* FTC Scorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FTC Scorer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5E8D9BF23BB56A6009B07E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C5E8D9C123BB56A6009B07E8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C5E8D9C323BB56A6009B07E8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C5E8D9C523BB56AA009B07E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C5E8D9C823BB56AA009B07E8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C5E8D9CB23BB56AA009B07E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -97,6 +99,8 @@
 		C5F41C0223BE2B4900A657FC /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		C5F41C0623BE756F00A657FC /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		C5F41C0823BE92CD00A657FC /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		C5F8BE5623EB1C15004BABC3 /* SavedScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedScoreView.swift; sourceTree = "<group>"; };
+		C5F8BE5823EB1D17004BABC3 /* ScorerGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScorerGroup.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,7 +165,8 @@
 			children = (
 				C5F41C0823BE92CD00A657FC /* SettingsView.swift */,
 				C50984BD23C125FB00CD708F /* AboutAppSectionView.swift */,
-				C547ECF423EAA0F40008B411 /* SavedScoresView.swift */,
+				C547ECF423EAA0F40008B411 /* SavedScoresListView.swift */,
+				C5F8BE5623EB1C15004BABC3 /* SavedScoreView.swift */,
 				C50984BF23C12A2B00CD708F /* SendFeedbackSectionView.swift */,
 				C50984C123C12A9100CD708F /* AppInfoSectionView.swift */,
 				C50984C323C1399A00CD708F /* AboutView.swift */,
@@ -184,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				C5909F3223E7120100D06070 /* ScorerView.swift */,
+				C5F8BE5823EB1D17004BABC3 /* ScorerGroup.swift */,
 				C547ECFA23EB13B90008B411 /* Models */,
 				C545656423BBB23C0062A0CB /* List Row Types */,
 				C547ECF823EB10760008B411 /* Modules View */,
@@ -211,7 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				C5909F0223E5B6ED00D06070 /* Scorer.xcdatamodeld */,
-				C5E8D9C323BB56A6009B07E8 /* ContentView.swift */,
+				C57483BD23EB445A00DA49EB /* SkystoneScoreExtension.swift */,
 				C5F41BF723BE245100A657FC /* Splash Screen */,
 				C556065E23BD27F700E2CE41 /* Scorer */,
 				C552379623BFB37F00F75526 /* Settings */,
@@ -351,21 +357,23 @@
 				C531974223BBC69B00690A96 /* Scorer.swift in Sources */,
 				C56DE93923BFD327007BD13A /* SettingsRowView.swift in Sources */,
 				C552379823BFB3A000F75526 /* MailView.swift in Sources */,
-				C547ECF523EAA0F40008B411 /* SavedScoresView.swift in Sources */,
+				C547ECF523EAA0F40008B411 /* SavedScoresListView.swift in Sources */,
 				C5F41BFD23BE24F000A657FC /* Color.swift in Sources */,
+				C5F8BE5723EB1C15004BABC3 /* SavedScoreView.swift in Sources */,
 				C50984BA23C11EE600CD708F /* SharePopUp.swift in Sources */,
 				C50984BC23C1249A00CD708F /* URL.swift in Sources */,
 				C5F41C0323BE2B4900A657FC /* SplashScreenView.swift in Sources */,
 				C545656123BB63C40062A0CB /* TeleOpSectionView.swift in Sources */,
 				C5F41BF523BD36E700A657FC /* ScorerTotalPointsView.swift in Sources */,
 				C545655D23BB604A0062A0CB /* ScoringGuidelines.swift in Sources */,
+				C57483BE23EB445A00DA49EB /* SkystoneScoreExtension.swift in Sources */,
 				C5E8D9C023BB56A6009B07E8 /* AppDelegate.swift in Sources */,
 				C50984BE23C125FB00CD708F /* AboutAppSectionView.swift in Sources */,
 				C50984C223C12A9100CD708F /* AppInfoSectionView.swift in Sources */,
 				C5E8D9C223BB56A6009B07E8 /* SceneDelegate.swift in Sources */,
 				C547ECF723EB0FCE0008B411 /* MatchInfoView.swift in Sources */,
 				C531974A23BCB4B700690A96 /* ScorerPickerView.swift in Sources */,
-				C5E8D9C423BB56A6009B07E8 /* ContentView.swift in Sources */,
+				C5F8BE5923EB1D17004BABC3 /* ScorerGroup.swift in Sources */,
 				C5909F3323E7120100D06070 /* ScorerView.swift in Sources */,
 				C5909F0423E5B6ED00D06070 /* Scorer.xcdatamodeld in Sources */,
 				C5F41C0123BE2A1700A657FC /* TitleView.swift in Sources */,
