@@ -29,4 +29,8 @@ struct MatchInfo {
         matchNumber = score.matchNumber ?? ""
         comments = score.comments ?? ""
     }
+
+    mutating func reset() {
+        self = MatchInfo()
+    }
 }

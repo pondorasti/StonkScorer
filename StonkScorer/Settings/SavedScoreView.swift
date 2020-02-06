@@ -9,15 +9,15 @@
 import SwiftUI
 
 struct SavedScoreView: View {
-    let savedScore: SkystoneScore
+    @Environment(\.managedObjectContext) var moc
 
+    @State var savedScore: SkystoneScore
     @State private var showingDeleteAlert = false
-
 
     var body: some View {
         let scorer = Binding(
             get: { Scorer(from: self.savedScore) },
-            set: { self.savedScore.update(from: $0) }
+            set: { self.savedScore.update(from: $0, in: self.moc)}
         )
 
         let matchInfo = Binding(
@@ -58,4 +58,6 @@ struct SavedScoreView: View {
     }
 }
 
-//TODO: initialize scorer from binding
+
+// edit <-> save button
+//

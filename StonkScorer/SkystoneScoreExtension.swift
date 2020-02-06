@@ -43,7 +43,7 @@ extension SkystoneScore {
         }
     }
 
-    func update(from scorer: Scorer) {
+    func update(from scorer: Scorer, in context: NSManagedObjectContext) {
         foundationRepositioned = scorer.auto.foundationRepositioned
         numberOfSkystoneBonuses = Int16(scorer.auto.numberOfSkystoneBonuses)
         autoStonesDelivered = Int16(scorer.auto.stonesDelivered)
@@ -60,7 +60,7 @@ extension SkystoneScore {
         foundationMoved = scorer.endGame.foundationMoved
         numberOfParkings = Int16(scorer.endGame.numberOfParkings)
 
-        SkystoneScore.conditionalSave()
+        SkystoneScore.conditionalSave(in: context)
     }
 
     func update(from matchInfo: MatchInfo) {
@@ -75,6 +75,13 @@ extension SkystoneScore {
     //An alternative to extending SkystoneScore Entity would be to create some sort of CoreDataHelper object
     //The only downside of this solution is that the CoreData related functions are locked down to be used only with this entity even though the functions are quite universal and reusable from certain points of view
     //Conclusion - I will bother with a better implementation when I will have multiple Entities or Data Models
+
+    // MARK: - Core Data Delete
+
+    func delete(in context: NSManagedObjectContext = SkystoneScore.persistentContainer.viewContext) {
+        context.delete(self)
+        SkystoneScore.conditionalSave(in: context)
+    }
 
     // MARK: - Core Data Saving support
     static func conditionalSave(in context: NSManagedObjectContext = SkystoneScore.persistentContainer.viewContext) {

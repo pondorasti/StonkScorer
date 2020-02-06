@@ -49,6 +49,7 @@ struct ScorerView: View {
                             Alert(title: Text("Data saved!"),// TODO: better text
                                 message: Text("Go to settings to see all the saved scores"),
                                 dismissButton: .default(Text("Done!"), action: {
+                                    self.matchInfo.reset()
                                     self.scorer.reset()
                                 })
                             )
@@ -78,6 +79,7 @@ struct ScorerView: View {
 
                 // Reset Scorer Button
                 Button(action: {
+                    self.matchInfo.reset()
                     self.scorer.reset()
                 }, label: {
                     Image(systemName: "gobackward")
@@ -88,3 +90,4 @@ struct ScorerView: View {
         .navigationViewStyle(StackNavigationViewStyle())
     }
 }
+//TODO: reset MatchInfo
