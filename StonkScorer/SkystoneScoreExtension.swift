@@ -43,7 +43,12 @@ extension SkystoneScore {
         }
     }
 
-    func update(from scorer: Scorer, in context: NSManagedObjectContext) {
+    func update(from matchInfo: MatchInfo, and scorer: Scorer, in context: NSManagedObjectContext) {
+        allianceColor = Int16(matchInfo.allianceColor)
+        teamNumber = matchInfo.teamNumber
+        matchNumber = matchInfo.matchNumber
+        comments = matchInfo.comments
+
         foundationRepositioned = scorer.auto.foundationRepositioned
         numberOfSkystoneBonuses = Int16(scorer.auto.numberOfSkystoneBonuses)
         autoStonesDelivered = Int16(scorer.auto.stonesDelivered)
@@ -61,13 +66,6 @@ extension SkystoneScore {
         numberOfParkings = Int16(scorer.endGame.numberOfParkings)
 
         SkystoneScore.conditionalSave(in: context)
-    }
-
-    func update(from matchInfo: MatchInfo) {
-        allianceColor = Int16(matchInfo.allianceColor)
-        teamNumber = matchInfo.teamNumber
-        matchNumber = matchInfo.matchNumber
-        comments = matchInfo.comments
     }
 
     //Developer's Notes - Just a note to my future self

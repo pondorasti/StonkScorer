@@ -28,6 +28,7 @@
 		C547ECF323E771420008B411 /* MatchInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C547ECF223E771420008B411 /* MatchInfo.swift */; };
 		C547ECF523EAA0F40008B411 /* SavedScoresListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C547ECF423EAA0F40008B411 /* SavedScoresListView.swift */; };
 		C547ECF723EB0FCE0008B411 /* MatchInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C547ECF623EB0FCD0008B411 /* MatchInfoView.swift */; };
+		C55128C523ED5B81009B009C /* SavedScoreRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55128C423ED5B81009B009C /* SavedScoreRow.swift */; };
 		C552379823BFB3A000F75526 /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C552379723BFB3A000F75526 /* MailView.swift */; };
 		C56DE93923BFD327007BD13A /* SettingsRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56DE93823BFD327007BD13A /* SettingsRowView.swift */; };
 		C57483BE23EB445A00DA49EB /* SkystoneScoreExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57483BD23EB445A00DA49EB /* SkystoneScoreExtension.swift */; };
@@ -76,6 +77,7 @@
 		C547ECF223E771420008B411 /* MatchInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchInfo.swift; sourceTree = "<group>"; };
 		C547ECF423EAA0F40008B411 /* SavedScoresListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedScoresListView.swift; sourceTree = "<group>"; };
 		C547ECF623EB0FCD0008B411 /* MatchInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchInfoView.swift; sourceTree = "<group>"; };
+		C55128C423ED5B81009B009C /* SavedScoreRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedScoreRow.swift; sourceTree = "<group>"; };
 		C552379723BFB3A000F75526 /* MailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailView.swift; sourceTree = "<group>"; };
 		C56DE93823BFD327007BD13A /* SettingsRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRowView.swift; sourceTree = "<group>"; };
 		C57483BD23EB445A00DA49EB /* SkystoneScoreExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkystoneScoreExtension.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 				C5F41C0823BE92CD00A657FC /* SettingsView.swift */,
 				C50984BD23C125FB00CD708F /* AboutAppSectionView.swift */,
 				C547ECF423EAA0F40008B411 /* SavedScoresListView.swift */,
+				C55128C423ED5B81009B009C /* SavedScoreRow.swift */,
 				C50984BF23C12A2B00CD708F /* SendFeedbackSectionView.swift */,
 				C50984C123C12A9100CD708F /* AppInfoSectionView.swift */,
 				C5F8BE5623EB1C15004BABC3 /* SavedScoreView.swift */,
@@ -355,6 +358,7 @@
 				C5909F3923E75A8000D06070 /* AlliancePickerView.swift in Sources */,
 				C5F41C0723BE756F00A657FC /* UserDefaults.swift in Sources */,
 				C531974223BBC69B00690A96 /* Scorer.swift in Sources */,
+				C55128C523ED5B81009B009C /* SavedScoreRow.swift in Sources */,
 				C56DE93923BFD327007BD13A /* SettingsRowView.swift in Sources */,
 				C552379823BFB3A000F75526 /* MailView.swift in Sources */,
 				C547ECF523EAA0F40008B411 /* SavedScoresListView.swift in Sources */,

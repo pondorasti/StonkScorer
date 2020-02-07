@@ -9,24 +9,23 @@
 import SwiftUI
 
 struct SavedScoreView: View {
+    @Environment(\.presentationMode) var presentationMode
     @Environment(\.managedObjectContext) var moc
 
     @State var savedScore: SkystoneScore
+    @State var matchInfo: MatchInfo
+    @State var scorer: Scorer
+
     @State private var showingDeleteAlert = false
+    @State private var editingMode = false
+
+    @State var text = "Edit"
+
 
     var body: some View {
-        let scorer = Binding(
-            get: { Scorer(from: self.savedScore) },
-            set: { self.savedScore.update(from: $0, in: self.moc)}
-        )
-
-        let matchInfo = Binding(
-            get: { MatchInfo(from: self.savedScore) },
-            set: { self.savedScore.update(from: $0)}
-        )
-
-        return List {
-            ScorerGroup(matchInfo: matchInfo, scorer: scorer)
+        List {
+            ScorerGroup(matchInfo: $matchInfo, scorer: $scorer)
+                .disabled(!editingMode)
 
             // save button
             Section {
@@ -46,7 +45,10 @@ struct SavedScoreView: View {
                         Alert(title: Text("Delete item?"),// TODO: better text
                             message: Text("Are you sure you want to make this go away for forever?"),
                             primaryButton: .default(Text("Cancel")),
-                            secondaryButton: .destructive(Text("Delete"))
+                            secondaryButton: .destructive(Text("Delete"), action: {
+                                self.savedScore.delete(in: self.moc)
+                                self.presentationMode.wrappedValue.dismiss()
+                            })
                         )
                 }
             }
@@ -55,9 +57,24 @@ struct SavedScoreView: View {
         }
         .listStyle(GroupedListStyle())
         .environment(\.horizontalSizeClass, .regular)
+        .navigationBarTitle("Score")
+        .navigationBarItems(trailing:
+            Button(action: {
+                self.editingMode.toggle()
+
+                if self.editingMode {
+                    self.text = "Done"
+                    self.savedScore.update(
+                        from: self.matchInfo,
+                        and: self.scorer,
+                        in: self.moc
+                    )
+                } else {
+                    self.text = "Edit"
+                }
+            }, label: {
+                Text(text)
+            })
+        )
     }
 }
-
-
-// edit <-> save button
-//

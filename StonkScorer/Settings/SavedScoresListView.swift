@@ -15,8 +15,8 @@ struct SavedScoresListView: View {
     var body: some View {
         List {
             ForEach(scores, id: \.self) { score in
-                NavigationLink(destination: SavedScoreView(savedScore: score).environment(\.managedObjectContext,
-                                                                                          self.moc)) {
+                NavigationLink(destination: SavedScoreView(savedScore: score, matchInfo: MatchInfo(from: score), scorer: Scorer(from: score)).environment(\.managedObjectContext, self.moc)) {
+//                    SavedScoreRow()
                     Text("\(score.matchNumber!)")
                 }
             }
