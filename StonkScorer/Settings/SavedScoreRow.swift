@@ -9,38 +9,35 @@
 import SwiftUI
 
 struct SavedScoreRow: View {
-
-    @State var matchInfo: MatchInfo
+    @ObservedObject var score: SkystoneScore
 
     var body: some View {
-        HStack {
+        let matchInfo = State(initialValue: MatchInfo(from: self.score))
+        let scorer = State(initialValue: Scorer(from: self.score))
+
+        return HStack {
             VStack(alignment: .leading) {
-                Text("Team \(matchInfo.teamNumber)")
+                Text("Team \(matchInfo.wrappedValue.teamNumber)")
                     .font(.headline)
                     .foregroundColor(.primary)
-                Text("Match \(matchInfo.matchNumber)")
+                Text("Match \(matchInfo.wrappedValue.matchNumber)")
                     .font(.body)
                     .foregroundColor(.secondary)
             }
 
-            Spacer()
-
-            ZStack {
-                Text("36")
-                    .fontWeight(.semibold)
-                    .foregroundColor(.white)
-                    .padding(.all, 8)
-                    .background(
-                        Circle()
-                            .foregroundColor(.red)
-                    )
-            }
+            Text("\(scorer.wrappedValue.totalPoints)")
+//                .fontWeight(.semibold)
+                .font(.headline)
+                .foregroundColor(.white)
+                .padding(.all, 8)
+                .background(
+                    GeometryReader { geometry in
+                        RoundedRectangle(cornerRadius: (matchInfo.wrappedValue.allianceColor == 0 ? geometry.size.height / 2 : 6))
+                            .foregroundColor(matchInfo.wrappedValue.allianceColor == 0 ? Color(UIColor.systemBlue) : Color(UIColor.systemRed))
+                            .frame(width: geometry.size.height, height: geometry.size.height)
+                    })
+                .frame(minWidth: 48) // *facepalm* ... TODO: look for better solution to center this view
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .trailing)
         }
-    }
-}
-
-struct SavedScoreRow_Previews: PreviewProvider {
-    static var previews: some View {
-        SavedScoreRow(matchInfo: MatchInfo())
     }
 }

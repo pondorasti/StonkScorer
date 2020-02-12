@@ -38,7 +38,3 @@ struct SavedScoresView_Previews: PreviewProvider {
         SavedScoresListView()
     }
 }
-
-//TODO
-
-// the childs of a view inherit environemnt objects
