@@ -12,35 +12,19 @@ struct SavedScoreView: View {
     @Environment(\.presentationMode) var presentationMode
     @Environment(\.managedObjectContext) var moc
 
-    var fetchRequest: FetchRequest<SkystoneScore>
-    var score: SkystoneScore {
-        guard let score = fetchRequest.wrappedValue.first else {
-            fatalError("Could not retrieve saved score from fetchRequest")
-        }
-
-        return score
-    }
+    @ObservedObject var score: SkystoneScore
 
     @State private var showingDeleteAlert = false
 
-    init(scoreID: UUID) {
-        fetchRequest = FetchRequest(
-            entity: SkystoneScore.entity(),
-            sortDescriptors: [],
-            predicate: NSPredicate(format: "id == %@", scoreID as CVarArg)
-        )
-
-    }
-
     var body: some View {
         let scorer = Binding(
-            get: {  Scorer(from: self.score) },
-            set: { if true { self.score.update(scorer: $0, in: self.moc) } }
+            get: { Scorer(from: self.score) },
+            set: { self.score.update(scorer: $0, in: self.moc) }
         )
 
         let matchInfo = Binding(
             get: { MatchInfo(from: self.score) },
-            set: { if true { self.score.update(matchInfo: $0, in: self.moc) } }
+            set: { self.score.update(matchInfo: $0, in: self.moc) }
         )
 
         return List {
@@ -77,5 +61,8 @@ struct SavedScoreView: View {
         .listStyle(GroupedListStyle())
         .environment(\.horizontalSizeClass, .regular)
         .navigationBarTitle("Score")
+        .gesture(DragGesture().onChanged { _ in
+            UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+        })
     }
 }

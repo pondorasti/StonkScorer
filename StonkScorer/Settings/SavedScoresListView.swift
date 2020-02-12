@@ -15,9 +15,8 @@ struct SavedScoresListView: View {
     var body: some View {
         List {
             ForEach(scores, id: \.self) { score in
-                NavigationLink(destination: SavedScoreView(scoreID: score.id!).environment(\.managedObjectContext, self.moc)) {
-                    SavedScoreRow(matchInfo: MatchInfo(from: score))
-//                    Text("\(score.matchNumber!)")
+                NavigationLink(destination: SavedScoreView(score: score).environment(\.managedObjectContext, self.moc)) {
+                    SavedScoreRow(score: score)
                 }
             }
         .onDelete(perform: deleteScores)
