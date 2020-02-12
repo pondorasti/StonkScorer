@@ -12,22 +12,41 @@ struct SavedScoreView: View {
     @Environment(\.presentationMode) var presentationMode
     @Environment(\.managedObjectContext) var moc
 
-    @State var savedScore: SkystoneScore
-    @State var matchInfo: MatchInfo
-    @State var scorer: Scorer
+    var fetchRequest: FetchRequest<SkystoneScore>
+    var score: SkystoneScore {
+        guard let score = fetchRequest.wrappedValue.first else {
+            fatalError("Could not retrieve saved score from fetchRequest")
+        }
+
+        return score
+    }
 
     @State private var showingDeleteAlert = false
-    @State private var editingMode = false
 
-    @State var text = "Edit"
+    init(scoreID: UUID) {
+        fetchRequest = FetchRequest(
+            entity: SkystoneScore.entity(),
+            sortDescriptors: [],
+            predicate: NSPredicate(format: "id == %@", scoreID as CVarArg)
+        )
 
+    }
 
     var body: some View {
-        List {
-            ScorerGroup(matchInfo: $matchInfo, scorer: $scorer)
-                .disabled(!editingMode)
+        let scorer = Binding(
+            get: {  Scorer(from: self.score) },
+            set: { if true { self.score.update(scorer: $0, in: self.moc) } }
+        )
 
-            // save button
+        let matchInfo = Binding(
+            get: { MatchInfo(from: self.score) },
+            set: { if true { self.score.update(matchInfo: $0, in: self.moc) } }
+        )
+
+        return List {
+            ScorerGroup(matchInfo: matchInfo, scorer: scorer)
+
+            //MARK: - Delete Button
             Section {
                 Button(action: {
                     self.showingDeleteAlert.toggle()
@@ -46,7 +65,7 @@ struct SavedScoreView: View {
                             message: Text("Are you sure you want to make this go away for forever?"),
                             primaryButton: .default(Text("Cancel")),
                             secondaryButton: .destructive(Text("Delete"), action: {
-                                self.savedScore.delete(in: self.moc)
+                                self.score.delete(in: self.moc)
                                 self.presentationMode.wrappedValue.dismiss()
                             })
                         )
@@ -58,23 +77,5 @@ struct SavedScoreView: View {
         .listStyle(GroupedListStyle())
         .environment(\.horizontalSizeClass, .regular)
         .navigationBarTitle("Score")
-        .navigationBarItems(trailing:
-            Button(action: {
-                self.editingMode.toggle()
-
-                if self.editingMode {
-                    self.text = "Done"
-                    self.savedScore.update(
-                        from: self.matchInfo,
-                        and: self.scorer,
-                        in: self.moc
-                    )
-                } else {
-                    self.text = "Edit"
-                }
-            }, label: {
-                Text(text)
-            })
-        )
     }
 }

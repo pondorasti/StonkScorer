@@ -15,9 +15,9 @@ struct SavedScoresListView: View {
     var body: some View {
         List {
             ForEach(scores, id: \.self) { score in
-                NavigationLink(destination: SavedScoreView(savedScore: score, matchInfo: MatchInfo(from: score), scorer: Scorer(from: score)).environment(\.managedObjectContext, self.moc)) {
-//                    SavedScoreRow()
-                    Text("\(score.matchNumber!)")
+                NavigationLink(destination: SavedScoreView(scoreID: score.id!).environment(\.managedObjectContext, self.moc)) {
+                    SavedScoreRow(matchInfo: MatchInfo(from: score))
+//                    Text("\(score.matchNumber!)")
                 }
             }
         .onDelete(perform: deleteScores)
@@ -39,3 +39,7 @@ struct SavedScoresView_Previews: PreviewProvider {
         SavedScoresListView()
     }
 }
+
+//TODO
+
+// the childs of a view inherit environemnt objects

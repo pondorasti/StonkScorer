@@ -30,7 +30,7 @@ struct ScorerView: View {
             List {
                 ScorerGroup(matchInfo: $matchInfo, scorer: $scorer)
 
-                // Save Button
+                //MARK: - Save Button
                 Section {
                     Button(action: {
                         let _ = SkystoneScore(from: self.scorer, with: self.matchInfo)

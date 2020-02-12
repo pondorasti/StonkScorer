@@ -17,6 +17,8 @@ extension SkystoneScore {
 
         self.init(context: context)
 
+        id = UUID()
+
         allianceColor = Int16(matchInfo.allianceColor)
         teamNumber = matchInfo.teamNumber
         matchNumber = matchInfo.matchNumber
@@ -43,27 +45,31 @@ extension SkystoneScore {
         }
     }
 
-    func update(from matchInfo: MatchInfo, and scorer: Scorer, in context: NSManagedObjectContext) {
-        allianceColor = Int16(matchInfo.allianceColor)
-        teamNumber = matchInfo.teamNumber
-        matchNumber = matchInfo.matchNumber
-        comments = matchInfo.comments
+    func update(matchInfo: MatchInfo? = nil, scorer: Scorer? = nil, in context: NSManagedObjectContext = SkystoneScore.persistentContainer.viewContext) {
+        if let matchInfo = matchInfo {
+            allianceColor = Int16(matchInfo.allianceColor)
+            teamNumber = matchInfo.teamNumber
+            matchNumber = matchInfo.matchNumber
+            comments = matchInfo.comments
+        }
 
-        foundationRepositioned = scorer.auto.foundationRepositioned
-        numberOfSkystoneBonuses = Int16(scorer.auto.numberOfSkystoneBonuses)
-        autoStonesDelivered = Int16(scorer.auto.stonesDelivered)
-        autoStonesPlaced = Int16(scorer.auto.stonesPlaced)
-        numberOfNavigations = Int16(scorer.auto.numberOfNavigations)
+        if let scorer = scorer {
+            foundationRepositioned = scorer.auto.foundationRepositioned
+            numberOfSkystoneBonuses = Int16(scorer.auto.numberOfSkystoneBonuses)
+            autoStonesDelivered = Int16(scorer.auto.stonesDelivered)
+            autoStonesPlaced = Int16(scorer.auto.stonesPlaced)
+            numberOfNavigations = Int16(scorer.auto.numberOfNavigations)
 
-        teleOpStonesDelivered = Int16(scorer.teleOp.stonesDelivered)
-        teleOpStonesPlaced = Int16(scorer.teleOp.stonesPlaced)
-        skyscraperHeight = Int16(scorer.teleOp.skyscraperHeight)
+            teleOpStonesDelivered = Int16(scorer.teleOp.stonesDelivered)
+            teleOpStonesPlaced = Int16(scorer.teleOp.stonesPlaced)
+            skyscraperHeight = Int16(scorer.teleOp.skyscraperHeight)
 
-        capstoneBonuses = Int16(scorer.endGame.capstoneBonuses)
-        firstCapstoneLevel = Int16(scorer.endGame.firstCapstoneLevel)
-        secondCapstoneLevel = Int16(scorer.endGame.secondCapstoneLevel)
-        foundationMoved = scorer.endGame.foundationMoved
-        numberOfParkings = Int16(scorer.endGame.numberOfParkings)
+            capstoneBonuses = Int16(scorer.endGame.capstoneBonuses)
+            firstCapstoneLevel = Int16(scorer.endGame.firstCapstoneLevel)
+            secondCapstoneLevel = Int16(scorer.endGame.secondCapstoneLevel)
+            foundationMoved = scorer.endGame.foundationMoved
+            numberOfParkings = Int16(scorer.endGame.numberOfParkings)
+        }
 
         SkystoneScore.conditionalSave(in: context)
     }

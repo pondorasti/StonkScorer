@@ -9,13 +9,16 @@
 import SwiftUI
 
 struct SavedScoreRow: View {
+
+    @State var matchInfo: MatchInfo
+
     var body: some View {
         HStack {
             VStack(alignment: .leading) {
-                Text("Team 14270")
+                Text("Team \(matchInfo.teamNumber)")
                     .font(.headline)
                     .foregroundColor(.primary)
-                Text("Match 3")
+                Text("Match \(matchInfo.matchNumber)")
                     .font(.body)
                     .foregroundColor(.secondary)
             }
@@ -38,6 +41,6 @@ struct SavedScoreRow: View {
 
 struct SavedScoreRow_Previews: PreviewProvider {
     static var previews: some View {
-        SavedScoreRow()
+        SavedScoreRow(matchInfo: MatchInfo())
     }
 }
