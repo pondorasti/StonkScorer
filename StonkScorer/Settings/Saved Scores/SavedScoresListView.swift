@@ -15,7 +15,7 @@ struct SavedScoresListView: View {
     var body: some View {
         List {
             ForEach(scores, id: \.self) { score in
-                NavigationLink(destination: SavedScoreView(score: score).environment(\.managedObjectContext, self.moc)) {
+                NavigationLink(destination: SavedScoreDetailView(score: score).environment(\.managedObjectContext, self.moc)) {
                     SavedScoreRow(score: score)
                 }
             }

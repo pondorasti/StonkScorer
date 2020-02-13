@@ -19,7 +19,8 @@ struct AlliancePickerView: View {
                 .frame(width: Constants.sfSymbolSize, height: Constants.sfSymbolSize, alignment: .center)
                 .frame(minWidth: Constants.iconMinWidth)
                 .foregroundColor(allianceColor == 0 ? Color(UIColor.systemBlue) : Color(UIColor.systemRed))
-                .animation(.linear)
+                .rotation3DEffect(allianceColor == 0 ? .degrees(0) : .degrees(-180), axis: (x: 1, y: 0, z: 0))
+                .animation(.easeInOut)
 
             Text("Alliance Color")
 

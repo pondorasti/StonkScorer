@@ -1,5 +1,5 @@
 //
-//  SavedScoreView.swift
+//  SavedScoreDetailView.swift
 //  StonkScorer
 //
 //  Created by Alexandru Turcanu on 05/02/2020.
@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct SavedScoreView: View {
+struct SavedScoreDetailView: View {
     @Environment(\.presentationMode) var presentationMode
     @Environment(\.managedObjectContext) var moc
 
@@ -61,8 +61,6 @@ struct SavedScoreView: View {
         .listStyle(GroupedListStyle())
         .environment(\.horizontalSizeClass, .regular)
         .navigationBarTitle("Score")
-        .gesture(DragGesture().onChanged { _ in
-            UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
-        })
+        .shouldDismissKeyboard()
     }
 }

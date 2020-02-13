@@ -42,6 +42,7 @@
 		C5E8D9C623BB56AA009B07E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5E8D9C523BB56AA009B07E8 /* Assets.xcassets */; };
 		C5E8D9C923BB56AA009B07E8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5E8D9C823BB56AA009B07E8 /* Preview Assets.xcassets */; };
 		C5E8D9CC23BB56AA009B07E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5E8D9CA23BB56AA009B07E8 /* LaunchScreen.storyboard */; };
+		C5EFE54B23F5FF42005BC831 /* DismissKeyboardModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5EFE54A23F5FF42005BC831 /* DismissKeyboardModifier.swift */; };
 		C5F41BF523BD36E700A657FC /* ScorerTotalPointsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F41BF423BD36E700A657FC /* ScorerTotalPointsView.swift */; };
 		C5F41BFB23BE249400A657FC /* FeatureInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F41BFA23BE249400A657FC /* FeatureInfoView.swift */; };
 		C5F41BFD23BE24F000A657FC /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F41BFC23BE24F000A657FC /* Color.swift */; };
@@ -50,7 +51,7 @@
 		C5F41C0323BE2B4900A657FC /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F41C0223BE2B4900A657FC /* SplashScreenView.swift */; };
 		C5F41C0723BE756F00A657FC /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F41C0623BE756F00A657FC /* UserDefaults.swift */; };
 		C5F41C0923BE92CD00A657FC /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F41C0823BE92CD00A657FC /* SettingsView.swift */; };
-		C5F8BE5723EB1C15004BABC3 /* SavedScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F8BE5623EB1C15004BABC3 /* SavedScoreView.swift */; };
+		C5F8BE5723EB1C15004BABC3 /* SavedScoreDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F8BE5623EB1C15004BABC3 /* SavedScoreDetailView.swift */; };
 		C5F8BE5923EB1D17004BABC3 /* ScorerGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F8BE5823EB1D17004BABC3 /* ScorerGroup.swift */; };
 /* End PBXBuildFile section */
 
@@ -93,6 +94,7 @@
 		C5E8D9C823BB56AA009B07E8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C5E8D9CB23BB56AA009B07E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C5E8D9CD23BB56AA009B07E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C5EFE54A23F5FF42005BC831 /* DismissKeyboardModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissKeyboardModifier.swift; sourceTree = "<group>"; };
 		C5F41BF423BD36E700A657FC /* ScorerTotalPointsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScorerTotalPointsView.swift; sourceTree = "<group>"; };
 		C5F41BFA23BE249400A657FC /* FeatureInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureInfoView.swift; sourceTree = "<group>"; };
 		C5F41BFC23BE24F000A657FC /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
@@ -101,7 +103,7 @@
 		C5F41C0223BE2B4900A657FC /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		C5F41C0623BE756F00A657FC /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		C5F41C0823BE92CD00A657FC /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		C5F8BE5623EB1C15004BABC3 /* SavedScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedScoreView.swift; sourceTree = "<group>"; };
+		C5F8BE5623EB1C15004BABC3 /* SavedScoreDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedScoreDetailView.swift; sourceTree = "<group>"; };
 		C5F8BE5823EB1D17004BABC3 /* ScorerGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScorerGroup.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -122,6 +124,7 @@
 				C545655C23BB604A0062A0CB /* ScoringGuidelines.swift */,
 				C531974323BC954900690A96 /* Constants.swift */,
 				C50984C923C1F20C00CD708F /* ButtonModifier.swift */,
+				C5EFE54A23F5FF42005BC831 /* DismissKeyboardModifier.swift */,
 				C5909F3623E717EC00D06070 /* ImageModifier.swift */,
 				C5F41C0523BE753B00A657FC /* Extensions */,
 			);
@@ -167,11 +170,9 @@
 			children = (
 				C5F41C0823BE92CD00A657FC /* SettingsView.swift */,
 				C50984BD23C125FB00CD708F /* AboutAppSectionView.swift */,
-				C547ECF423EAA0F40008B411 /* SavedScoresListView.swift */,
-				C55128C423ED5B81009B009C /* SavedScoreRow.swift */,
+				C5EFE54C23F5FFAC005BC831 /* Saved Scores */,
 				C50984BF23C12A2B00CD708F /* SendFeedbackSectionView.swift */,
 				C50984C123C12A9100CD708F /* AppInfoSectionView.swift */,
-				C5F8BE5623EB1C15004BABC3 /* SavedScoreView.swift */,
 				C50984C323C1399A00CD708F /* AboutView.swift */,
 				C56DE93823BFD327007BD13A /* SettingsRowView.swift */,
 				C552379923BFB3A500F75526 /* UIKit Imports */,
@@ -238,6 +239,16 @@
 				C5E8D9C823BB56AA009B07E8 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C5EFE54C23F5FFAC005BC831 /* Saved Scores */ = {
+			isa = PBXGroup;
+			children = (
+				C547ECF423EAA0F40008B411 /* SavedScoresListView.swift */,
+				C55128C423ED5B81009B009C /* SavedScoreRow.swift */,
+				C5F8BE5623EB1C15004BABC3 /* SavedScoreDetailView.swift */,
+			);
+			path = "Saved Scores";
 			sourceTree = "<group>";
 		};
 		C5F41BF723BE245100A657FC /* Splash Screen */ = {
@@ -345,6 +356,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5EFE54B23F5FF42005BC831 /* DismissKeyboardModifier.swift in Sources */,
 				C531974E23BD25AA00690A96 /* ScoreBreakdownSectionView.swift in Sources */,
 				C5909F3723E717EC00D06070 /* ImageModifier.swift in Sources */,
 				C545655B23BB5FE50062A0CB /* AutonomousSectionView.swift in Sources */,
@@ -363,7 +375,7 @@
 				C552379823BFB3A000F75526 /* MailView.swift in Sources */,
 				C547ECF523EAA0F40008B411 /* SavedScoresListView.swift in Sources */,
 				C5F41BFD23BE24F000A657FC /* Color.swift in Sources */,
-				C5F8BE5723EB1C15004BABC3 /* SavedScoreView.swift in Sources */,
+				C5F8BE5723EB1C15004BABC3 /* SavedScoreDetailView.swift in Sources */,
 				C50984BA23C11EE600CD708F /* SharePopUp.swift in Sources */,
 				C50984BC23C1249A00CD708F /* URL.swift in Sources */,
 				C5F41C0323BE2B4900A657FC /* SplashScreenView.swift in Sources */,
