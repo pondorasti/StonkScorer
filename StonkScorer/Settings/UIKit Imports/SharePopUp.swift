@@ -7,23 +7,36 @@
 //
 
 import UIKit
+import SwiftUI
 
 extension UIApplication {
     class var topViewController: UIViewController? { return getTopViewController() }
+
     private class func getTopViewController(base: UIViewController? = UIApplication.shared.keyWindow?.rootViewController) -> UIViewController? {
-        if let nav = base as? UINavigationController { return getTopViewController(base: nav.visibleViewController) }
-        if let tab = base as? UITabBarController {
-            if let selected = tab.selectedViewController { return getTopViewController(base: selected) }
+        if let nav = base as? UINavigationController {
+            return getTopViewController(base: nav.visibleViewController)
+        } else if let tab = base as? UITabBarController,
+            let selected = tab.selectedViewController {
+                return getTopViewController(base: selected)
+        } else if let presented = base?.presentedViewController {
+            return getTopViewController(base: presented)
         }
-        if let presented = base?.presentedViewController { return getTopViewController(base: presented) }
+
         return base
     }
 }
 
 extension Hashable {
     func share() {
-        let activity = UIActivityViewController(activityItems: [self], applicationActivities: nil)
-        UIApplication.topViewController?.present(activity, animated: true, completion: nil)
+        let activityViewController = UIActivityViewController(activityItems: [self], applicationActivities: nil)
+
+        if let popoverController = activityViewController.popoverPresentationController {
+            popoverController.sourceRect = CGRect(x: UIScreen.main.bounds.width / 2, y: UIScreen.main.bounds.height / 2, width: 0, height: 0)
+            popoverController.sourceView = UIApplication.topViewController?.view
+            popoverController.permittedArrowDirections = UIPopoverArrowDirection(arrayLiteral: [.right])
+        }
+
+        UIApplication.topViewController?.present(activityViewController, animated: true, completion: nil)
     }
 }
 
