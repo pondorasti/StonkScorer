@@ -31,6 +31,10 @@ struct SavedScoresListView: View {
             scores[offset].delete(in: moc)
         }
     }
+
+    func shareScore() {
+
+    }
 }
 
 struct SavedScoresView_Previews: PreviewProvider {

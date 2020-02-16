@@ -28,6 +28,9 @@ extension URL {
         case twitter = "https://twitter.com/Pondorasti"
         case privacyPolicy = "https://docs.google.com/document/d/1Pf2aK4PXcrWsGKXQau_ivqZhgamcuvLsd9jmFtxyN44/edit?usp=sharing"
 
+        case quantumRobotics = "https://qrobotics.eu"
+        case darkNoise = "itms-apps://itunes.apple.com/app/id1465439395"
+        case applePrivacyPolicy = "https://www.apple.com/uk/legal/privacy/en-ww/"
         
     }
 

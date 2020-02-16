@@ -24,9 +24,10 @@ struct AppInfoSectionView: View {
             }
 
             //MARK: - Privacy Policy
-            Button(action: {
-                URL.open(link: .privacyPolicy)
-            }) {
+            ZStack {
+                NavigationLink(destination: PrivacyPolicyView()) {
+                    EmptyView()
+                }
                 SettingsRowView(
                     image: Image(systemName: "lock.circle.fill"),
                     imageColor: Color(UIColor.systemPink),
@@ -39,7 +40,6 @@ struct AppInfoSectionView: View {
                 NavigationLink(destination: AboutView()) {
                     EmptyView()
                 }
-
                 SettingsRowView(
                     image: Image(systemName: "info.circle.fill"),
                     imageColor: Color(UIColor.systemBlue),

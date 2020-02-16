@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C5034AB023F953B000C82EFA /* PrivacyPolicyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5034AAF23F953B000C82EFA /* PrivacyPolicyView.swift */; };
 		C50984BA23C11EE600CD708F /* SharePopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50984B923C11EE600CD708F /* SharePopUp.swift */; };
 		C50984BC23C1249A00CD708F /* URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50984BB23C1249A00CD708F /* URL.swift */; };
 		C50984BE23C125FB00CD708F /* AboutAppSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50984BD23C125FB00CD708F /* AboutAppSectionView.swift */; };
@@ -72,6 +73,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C5034AAF23F953B000C82EFA /* PrivacyPolicyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyView.swift; sourceTree = "<group>"; };
 		C50984B923C11EE600CD708F /* SharePopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharePopUp.swift; sourceTree = "<group>"; };
 		C50984BB23C1249A00CD708F /* URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URL.swift; sourceTree = "<group>"; };
 		C50984BD23C125FB00CD708F /* AboutAppSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutAppSectionView.swift; sourceTree = "<group>"; };
@@ -150,6 +152,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C5034AB123F9693700C82EFA /* App Info Section */ = {
+			isa = PBXGroup;
+			children = (
+				C50984C123C12A9100CD708F /* AppInfoSectionView.swift */,
+				C50984C323C1399A00CD708F /* AboutView.swift */,
+				C5034AAF23F953B000C82EFA /* PrivacyPolicyView.swift */,
+			);
+			path = "App Info Section";
+			sourceTree = "<group>";
+		};
+		C5034AB223F9695800C82EFA /* About App Section */ = {
+			isa = PBXGroup;
+			children = (
+				C50984BD23C125FB00CD708F /* AboutAppSectionView.swift */,
+				C5EFE54C23F5FFAC005BC831 /* Saved Scores */,
+				C5321FE823F94B91008DAEBA /* Alternate Icons */,
+			);
+			path = "About App Section";
+			sourceTree = "<group>";
+		};
 		C531975123BD25D700690A96 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
@@ -288,12 +310,9 @@
 			isa = PBXGroup;
 			children = (
 				C5F41C0823BE92CD00A657FC /* SettingsView.swift */,
-				C50984BD23C125FB00CD708F /* AboutAppSectionView.swift */,
-				C5321FE823F94B91008DAEBA /* Alternate Icons */,
-				C5EFE54C23F5FFAC005BC831 /* Saved Scores */,
+				C5034AB223F9695800C82EFA /* About App Section */,
 				C50984BF23C12A2B00CD708F /* SendFeedbackSectionView.swift */,
-				C50984C123C12A9100CD708F /* AppInfoSectionView.swift */,
-				C50984C323C1399A00CD708F /* AboutView.swift */,
+				C5034AB123F9693700C82EFA /* App Info Section */,
 				C56DE93823BFD327007BD13A /* SettingsRowView.swift */,
 				C552379923BFB3A500F75526 /* UIKit Imports */,
 			);
@@ -501,6 +520,7 @@
 				C547ECF323E771420008B411 /* MatchInfo.swift in Sources */,
 				C5F41BFB23BE249400A657FC /* FeatureInfoView.swift in Sources */,
 				C531975023BD25C500690A96 /* Image.swift in Sources */,
+				C5034AB023F953B000C82EFA /* PrivacyPolicyView.swift in Sources */,
 				C5909F3923E75A8000D06070 /* AlliancePickerView.swift in Sources */,
 				C5F41C0723BE756F00A657FC /* UserDefaults.swift in Sources */,
 				C531974223BBC69B00690A96 /* Scorer.swift in Sources */,

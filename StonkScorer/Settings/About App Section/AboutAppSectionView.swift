@@ -29,8 +29,8 @@ struct AboutAppSectionView: View {
             }
 
             ZStack { //embedding the NavLink inside the ZStack and giving it an EmptyView() in order to hide the automatic disclorure indicator
-                NavigationLink(destination: SavedScoresListView().environment(\.managedObjectContext,
-                                                                          SkystoneScore.persistentContainer.viewContext)) {
+                NavigationLink(destination: SavedScoresListView()
+                    .environment(\.managedObjectContext, SkystoneScore.persistentContainer.viewContext)) {
                     EmptyView()
                 }
 
@@ -41,7 +41,6 @@ struct AboutAppSectionView: View {
                 )
             }
 
-            #if os(iOS)
             ZStack { //embedding the NavLink inside the ZStack and giving it an EmptyView() in order to hide the automatic disclorure indicator
                 NavigationLink(destination: AlternateAppIconsListView()) {
                     EmptyView()
@@ -53,7 +52,6 @@ struct AboutAppSectionView: View {
                     title: "App Icons"
                 )
             }
-            #endif
         }
     }
 }

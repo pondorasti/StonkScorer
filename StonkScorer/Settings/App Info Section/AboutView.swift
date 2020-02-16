@@ -22,11 +22,16 @@ struct AboutView: View {
                 VStack(alignment: .leading, spacing: 16) {
                     Text("👋 Hey, I'm Alexandru Turcanu")
 
-                    Text("I'm a member of ")
-                    + Text("Quantum Robotics #14270")
-                        .foregroundColor(Color(UIColor.systemBlue))
-                        .bold()
-                    + Text(" in Romania by day, and a designer and indie app developer by night.")
+                    Group {
+                        Text("I'm a member of ")
+                        + Text("Quantum Robotics #14270")
+                            .foregroundColor(Color(UIColor.systemBlue))
+                            .bold()
+                        + Text(" in Romania by day, and a designer and indie app developer by night.")
+                    }
+                    .onTapGesture {
+                        URL.open(link: .quantumRobotics)
+                    }
 
                     Text("This app started with me playing around with SwiftUI, originally developing this for myself. I wanted a dead simple scoring app for FTC - Skystone that integrates perfectly with Apple's platforms without a busy and confusing interface.")
 
@@ -34,11 +39,16 @@ struct AboutView: View {
 
                     Text("If you like the app, you could share it with your friends, or leave a review on the app store ⭐️ !")
 
-                    Text("I couldn't finish writing this paragraph without listening to some ")
-                    + Text("Dark Noise")
-                        .foregroundColor(Color(UIColor.systemIndigo))
-                        .bold()
-                    + Text("-s, kudos to Charlie Chapman for inspiring me to add this section to the app")
+                    Group {
+                        Text("I couldn't finish writing this paragraph without listening to some ")
+                        + Text("Dark Noise")
+                            .foregroundColor(Color(UIColor.systemIndigo))
+                            .bold()
+                        + Text("-s, kudos to Charlie Chapman for inspiring me to add this section to the app")
+                    }
+                    .onTapGesture {
+                        URL.open(link: .darkNoise)
+                    }
                 }
             }
         }
