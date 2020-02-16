@@ -58,5 +58,137 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+
+    <key>CFBundleIcons</key>
+    <dict>
+
+        <key>CFBundlePrimaryIcon</key>
+        <dict>
+            <key>CFBundleIconFiles</key>
+            <array>
+                <string>Primary</string>
+            </array>
+        </dict>
+
+        <key>CFBundleAlternateIcons</key>
+        <dict>
+
+            <key>Blue</key>
+            <dict>
+                <key>CFBundleIconFiles</key>
+                <array>
+                    <string>Blue</string>
+                </array>
+            </dict>
+
+            <key>Purple</key>
+            <dict>
+                <key>CFBundleIconFiles</key>
+                <array>
+                    <string>Purple</string>
+                </array>
+            </dict>
+
+            <key>Pitch Black</key>
+            <dict>
+                <key>CFBundleIconFiles</key>
+                <array>
+                    <string>Pitch Black</string>
+                </array>
+            </dict>
+
+            <key>Neon</key>
+            <dict>
+                <key>CFBundleIconFiles</key>
+                <array>
+                    <string>Neon</string>
+                </array>
+            </dict>
+
+            <key>Six Colors</key>
+            <dict>
+                <key>CFBundleIconFiles</key>
+                <array>
+                    <string>Six Colors</string>
+                </array>
+            </dict>
+
+            <key>Noise</key>
+            <dict>
+                <key>CFBundleIconFiles</key>
+                <array>
+                    <string>Noise</string>
+                </array>
+            </dict>
+
+        </dict>
+    </dict>
+
+    <key>CFBundleIcons~ipad</key>
+    <dict>
+
+        <key>CFBundlePrimaryIcon</key>
+        <dict>
+            <key>CFBundleIconFiles</key>
+            <array>
+                <string>Primary</string>
+            </array>
+        </dict>
+
+        <key>CFBundleAlternateIcons</key>
+        <dict>
+
+            <key>Blue</key>
+            <dict>
+                <key>CFBundleIconFiles</key>
+                <array>
+                    <string>Blue</string>
+                </array>
+            </dict>
+
+            <key>Purple</key>
+            <dict>
+                <key>CFBundleIconFiles</key>
+                <array>
+                    <string>Purple</string>
+                </array>
+            </dict>
+
+            <key>Pitch Black</key>
+            <dict>
+                <key>CFBundleIconFiles</key>
+                <array>
+                    <string>Pitch Black</string>
+                </array>
+            </dict>
+
+            <key>Neon</key>
+            <dict>
+                <key>CFBundleIconFiles</key>
+                <array>
+                    <string>Neon</string>
+                </array>
+            </dict>
+
+            <key>Six Colors</key>
+            <dict>
+                <key>CFBundleIconFiles</key>
+                <array>
+                    <string>Six Colors</string>
+                </array>
+            </dict>
+
+            <key>Noise</key>
+            <dict>
+                <key>CFBundleIconFiles</key>
+                <array>
+                    <string>Noise</string>
+                </array>
+            </dict>
+
+        </dict>
+    </dict>
+
+
 </dict>
 </plist>

@@ -22,6 +22,22 @@
 		C531974C23BCF32900690A96 /* ScorerToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C531974B23BCF32900690A96 /* ScorerToggleView.swift */; };
 		C531974E23BD25AA00690A96 /* ScoreBreakdownSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C531974D23BD25AA00690A96 /* ScoreBreakdownSectionView.swift */; };
 		C531975023BD25C500690A96 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = C531974F23BD25C500690A96 /* Image.swift */; };
+		C5321F8B23F74C35008DAEBA /* AppIconService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5321F8A23F74C35008DAEBA /* AppIconService.swift */; };
+		C5321F9023F806D7008DAEBA /* AlternateAppIconsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5321F8F23F806D7008DAEBA /* AlternateAppIconsListView.swift */; };
+		C5321FCE23F949FA008DAEBA /* Blue@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5321FCC23F949FA008DAEBA /* Blue@3x.png */; };
+		C5321FCF23F949FA008DAEBA /* Blue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5321FCD23F949FA008DAEBA /* Blue@2x.png */; };
+		C5321FD123F94AC6008DAEBA /* Primary@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5321FD023F94AC6008DAEBA /* Primary@3x.png */; };
+		C5321FD323F94ACD008DAEBA /* Primary@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5321FD223F94ACD008DAEBA /* Primary@2x.png */; };
+		C5321FD623F94AD9008DAEBA /* Purple@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5321FD423F94AD9008DAEBA /* Purple@3x.png */; };
+		C5321FD723F94AD9008DAEBA /* Purple@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5321FD523F94AD9008DAEBA /* Purple@2x.png */; };
+		C5321FDA23F94B12008DAEBA /* Pitch Black@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5321FD823F94B12008DAEBA /* Pitch Black@3x.png */; };
+		C5321FDB23F94B12008DAEBA /* Pitch Black@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5321FD923F94B12008DAEBA /* Pitch Black@2x.png */; };
+		C5321FDE23F94B1E008DAEBA /* Neon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5321FDC23F94B1E008DAEBA /* Neon@2x.png */; };
+		C5321FDF23F94B1E008DAEBA /* Neon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5321FDD23F94B1E008DAEBA /* Neon@3x.png */; };
+		C5321FE223F94B40008DAEBA /* Noise@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5321FE023F94B40008DAEBA /* Noise@2x.png */; };
+		C5321FE323F94B40008DAEBA /* Noise@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5321FE123F94B40008DAEBA /* Noise@3x.png */; };
+		C5321FE623F94B4D008DAEBA /* Six Colors@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5321FE423F94B4D008DAEBA /* Six Colors@2x.png */; };
+		C5321FE723F94B4D008DAEBA /* Six Colors@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5321FE523F94B4D008DAEBA /* Six Colors@3x.png */; };
 		C545655B23BB5FE50062A0CB /* AutonomousSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C545655A23BB5FE50062A0CB /* AutonomousSectionView.swift */; };
 		C545655D23BB604A0062A0CB /* ScoringGuidelines.swift in Sources */ = {isa = PBXBuildFile; fileRef = C545655C23BB604A0062A0CB /* ScoringGuidelines.swift */; };
 		C545656123BB63C40062A0CB /* TeleOpSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C545656023BB63C40062A0CB /* TeleOpSectionView.swift */; };
@@ -71,6 +87,22 @@
 		C531974B23BCF32900690A96 /* ScorerToggleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScorerToggleView.swift; sourceTree = "<group>"; };
 		C531974D23BD25AA00690A96 /* ScoreBreakdownSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreBreakdownSectionView.swift; sourceTree = "<group>"; };
 		C531974F23BD25C500690A96 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		C5321F8A23F74C35008DAEBA /* AppIconService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIconService.swift; sourceTree = "<group>"; };
+		C5321F8F23F806D7008DAEBA /* AlternateAppIconsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlternateAppIconsListView.swift; sourceTree = "<group>"; };
+		C5321FCC23F949FA008DAEBA /* Blue@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Blue@3x.png"; path = "External Assets/App Icons/Blue/Blue@3x.png"; sourceTree = SOURCE_ROOT; };
+		C5321FCD23F949FA008DAEBA /* Blue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Blue@2x.png"; path = "External Assets/App Icons/Blue/Blue@2x.png"; sourceTree = SOURCE_ROOT; };
+		C5321FD023F94AC6008DAEBA /* Primary@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Primary@3x.png"; path = "External Assets/App Icons/Rounded Primary/Primary@3x.png"; sourceTree = SOURCE_ROOT; };
+		C5321FD223F94ACD008DAEBA /* Primary@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Primary@2x.png"; path = "External Assets/App Icons/Rounded Primary/Primary@2x.png"; sourceTree = SOURCE_ROOT; };
+		C5321FD423F94AD9008DAEBA /* Purple@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Purple@3x.png"; path = "External Assets/App Icons/Purple/Purple@3x.png"; sourceTree = SOURCE_ROOT; };
+		C5321FD523F94AD9008DAEBA /* Purple@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Purple@2x.png"; path = "External Assets/App Icons/Purple/Purple@2x.png"; sourceTree = SOURCE_ROOT; };
+		C5321FD823F94B12008DAEBA /* Pitch Black@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Pitch Black@3x.png"; path = "External Assets/App Icons/Pitch Black/Pitch Black@3x.png"; sourceTree = SOURCE_ROOT; };
+		C5321FD923F94B12008DAEBA /* Pitch Black@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Pitch Black@2x.png"; path = "External Assets/App Icons/Pitch Black/Pitch Black@2x.png"; sourceTree = SOURCE_ROOT; };
+		C5321FDC23F94B1E008DAEBA /* Neon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Neon@2x.png"; path = "External Assets/App Icons/Neon/Neon@2x.png"; sourceTree = SOURCE_ROOT; };
+		C5321FDD23F94B1E008DAEBA /* Neon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Neon@3x.png"; path = "External Assets/App Icons/Neon/Neon@3x.png"; sourceTree = SOURCE_ROOT; };
+		C5321FE023F94B40008DAEBA /* Noise@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Noise@2x.png"; path = "External Assets/App Icons/Noise/Noise@2x.png"; sourceTree = SOURCE_ROOT; };
+		C5321FE123F94B40008DAEBA /* Noise@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Noise@3x.png"; path = "External Assets/App Icons/Noise/Noise@3x.png"; sourceTree = SOURCE_ROOT; };
+		C5321FE423F94B4D008DAEBA /* Six Colors@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Six Colors@2x.png"; path = "External Assets/App Icons/Six Colors/Six Colors@2x.png"; sourceTree = SOURCE_ROOT; };
+		C5321FE523F94B4D008DAEBA /* Six Colors@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Six Colors@3x.png"; path = "External Assets/App Icons/Six Colors/Six Colors@3x.png"; sourceTree = SOURCE_ROOT; };
 		C545655923BB59B90062A0CB /* StonkScorer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = StonkScorer.entitlements; sourceTree = "<group>"; };
 		C545655A23BB5FE50062A0CB /* AutonomousSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutonomousSectionView.swift; sourceTree = "<group>"; };
 		C545655C23BB604A0062A0CB /* ScoringGuidelines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoringGuidelines.swift; sourceTree = "<group>"; };
@@ -131,6 +163,93 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
+		C5321F8923F74B2C008DAEBA /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				C5321F9523F82B61008DAEBA /* Primary */,
+				C5321F8D23F80673008DAEBA /* Blue */,
+				C5321FB123F86E03008DAEBA /* Purple */,
+				C5321F8E23F8067D008DAEBA /* Pitch Black */,
+				C5321F8C23F80660008DAEBA /* Neon */,
+				C5321F9C23F8699B008DAEBA /* Six Colors */,
+				C5321FCB23F94998008DAEBA /* Noise */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		C5321F8C23F80660008DAEBA /* Neon */ = {
+			isa = PBXGroup;
+			children = (
+				C5321FDC23F94B1E008DAEBA /* Neon@2x.png */,
+				C5321FDD23F94B1E008DAEBA /* Neon@3x.png */,
+			);
+			path = Neon;
+			sourceTree = "<group>";
+		};
+		C5321F8D23F80673008DAEBA /* Blue */ = {
+			isa = PBXGroup;
+			children = (
+				C5321FCD23F949FA008DAEBA /* Blue@2x.png */,
+				C5321FCC23F949FA008DAEBA /* Blue@3x.png */,
+			);
+			path = Blue;
+			sourceTree = "<group>";
+		};
+		C5321F8E23F8067D008DAEBA /* Pitch Black */ = {
+			isa = PBXGroup;
+			children = (
+				C5321FD923F94B12008DAEBA /* Pitch Black@2x.png */,
+				C5321FD823F94B12008DAEBA /* Pitch Black@3x.png */,
+			);
+			path = "Pitch Black";
+			sourceTree = "<group>";
+		};
+		C5321F9523F82B61008DAEBA /* Primary */ = {
+			isa = PBXGroup;
+			children = (
+				C5321FD223F94ACD008DAEBA /* Primary@2x.png */,
+				C5321FD023F94AC6008DAEBA /* Primary@3x.png */,
+			);
+			path = Primary;
+			sourceTree = "<group>";
+		};
+		C5321F9C23F8699B008DAEBA /* Six Colors */ = {
+			isa = PBXGroup;
+			children = (
+				C5321FE423F94B4D008DAEBA /* Six Colors@2x.png */,
+				C5321FE523F94B4D008DAEBA /* Six Colors@3x.png */,
+			);
+			path = "Six Colors";
+			sourceTree = "<group>";
+		};
+		C5321FB123F86E03008DAEBA /* Purple */ = {
+			isa = PBXGroup;
+			children = (
+				C5321FD523F94AD9008DAEBA /* Purple@2x.png */,
+				C5321FD423F94AD9008DAEBA /* Purple@3x.png */,
+			);
+			path = Purple;
+			sourceTree = "<group>";
+		};
+		C5321FCB23F94998008DAEBA /* Noise */ = {
+			isa = PBXGroup;
+			children = (
+				C5321FE023F94B40008DAEBA /* Noise@2x.png */,
+				C5321FE123F94B40008DAEBA /* Noise@3x.png */,
+			);
+			path = Noise;
+			sourceTree = "<group>";
+		};
+		C5321FE823F94B91008DAEBA /* Alternate Icons */ = {
+			isa = PBXGroup;
+			children = (
+				C5321F8F23F806D7008DAEBA /* AlternateAppIconsListView.swift */,
+				C5321F8A23F74C35008DAEBA /* AppIconService.swift */,
+				C5321F8923F74B2C008DAEBA /* Assets */,
+			);
+			path = "Alternate Icons";
+			sourceTree = "<group>";
+		};
 		C545656423BBB23C0062A0CB /* List Row Types */ = {
 			isa = PBXGroup;
 			children = (
@@ -170,6 +289,7 @@
 			children = (
 				C5F41C0823BE92CD00A657FC /* SettingsView.swift */,
 				C50984BD23C125FB00CD708F /* AboutAppSectionView.swift */,
+				C5321FE823F94B91008DAEBA /* Alternate Icons */,
 				C5EFE54C23F5FFAC005BC831 /* Saved Scores */,
 				C50984BF23C12A2B00CD708F /* SendFeedbackSectionView.swift */,
 				C50984C123C12A9100CD708F /* AppInfoSectionView.swift */,
@@ -343,9 +463,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5321FDE23F94B1E008DAEBA /* Neon@2x.png in Resources */,
 				C5E8D9CC23BB56AA009B07E8 /* LaunchScreen.storyboard in Resources */,
+				C5321FDA23F94B12008DAEBA /* Pitch Black@3x.png in Resources */,
+				C5321FCE23F949FA008DAEBA /* Blue@3x.png in Resources */,
+				C5321FE623F94B4D008DAEBA /* Six Colors@2x.png in Resources */,
+				C5321FE323F94B40008DAEBA /* Noise@3x.png in Resources */,
+				C5321FD323F94ACD008DAEBA /* Primary@2x.png in Resources */,
+				C5321FDB23F94B12008DAEBA /* Pitch Black@2x.png in Resources */,
+				C5321FD623F94AD9008DAEBA /* Purple@3x.png in Resources */,
+				C5321FE723F94B4D008DAEBA /* Six Colors@3x.png in Resources */,
 				C5E8D9C923BB56AA009B07E8 /* Preview Assets.xcassets in Resources */,
 				C5E8D9C623BB56AA009B07E8 /* Assets.xcassets in Resources */,
+				C5321FE223F94B40008DAEBA /* Noise@2x.png in Resources */,
+				C5321FD123F94AC6008DAEBA /* Primary@3x.png in Resources */,
+				C5321FD723F94AD9008DAEBA /* Purple@2x.png in Resources */,
+				C5321FCF23F949FA008DAEBA /* Blue@2x.png in Resources */,
+				C5321FDF23F94B1E008DAEBA /* Neon@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,6 +504,7 @@
 				C5909F3923E75A8000D06070 /* AlliancePickerView.swift in Sources */,
 				C5F41C0723BE756F00A657FC /* UserDefaults.swift in Sources */,
 				C531974223BBC69B00690A96 /* Scorer.swift in Sources */,
+				C5321F8B23F74C35008DAEBA /* AppIconService.swift in Sources */,
 				C55128C523ED5B81009B009C /* SavedScoreRow.swift in Sources */,
 				C56DE93923BFD327007BD13A /* SettingsRowView.swift in Sources */,
 				C552379823BFB3A000F75526 /* MailView.swift in Sources */,
@@ -398,6 +533,7 @@
 				C531974C23BCF32900690A96 /* ScorerToggleView.swift in Sources */,
 				C5F41BFF23BE25E600A657FC /* FeaturesContainerView.swift in Sources */,
 				C5909F3523E713AB00D06070 /* ScorerTextFieldView.swift in Sources */,
+				C5321F9023F806D7008DAEBA /* AlternateAppIconsListView.swift in Sources */,
 				C5F41C0923BE92CD00A657FC /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

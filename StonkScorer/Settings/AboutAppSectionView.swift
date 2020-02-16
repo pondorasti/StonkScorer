@@ -9,7 +9,6 @@
 import SwiftUI
 
 struct AboutAppSectionView: View {
-    
     @Binding var isShowingSplashScreen: Bool
 
     var body: some View {
@@ -41,6 +40,20 @@ struct AboutAppSectionView: View {
                     title: "Saved Scores"
                 )
             }
+
+            #if os(iOS)
+            ZStack { //embedding the NavLink inside the ZStack and giving it an EmptyView() in order to hide the automatic disclorure indicator
+                NavigationLink(destination: AlternateAppIconsListView()) {
+                    EmptyView()
+                }
+
+                SettingsRowView(
+                    image: Image(systemName: "square.stack.fill"),
+                    imageColor: Color(UIColor.systemPurple),
+                    title: "App Icons"
+                )
+            }
+            #endif
         }
     }
 }

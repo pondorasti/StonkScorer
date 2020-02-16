@@ -20,7 +20,7 @@ extension URL {
         case rateApp = "itms-apps://itunes.apple.com/app/id1496183214?action=write-review"
         #endif
 
-        #if os(iOS)
+        #if os(iOS) // i am 99% sure that this does not work
         case appStore = "itms-apps://itunes.apple.com/app/id1493387167"
         case rateApp = "itms-apps://itunes.apple.com/app/id1493387167?action=write-review"
         #endif
