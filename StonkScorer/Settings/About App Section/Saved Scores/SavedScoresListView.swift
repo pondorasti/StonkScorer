@@ -19,11 +19,19 @@ struct SavedScoresListView: View {
                     SavedScoreRow(score: score)
                 }
             }
-        .onDelete(perform: deleteScores)
+            .onDelete(perform: deleteScores)
         }
         .listStyle(GroupedListStyle())
         .environment(\.horizontalSizeClass, .regular)
         .navigationBarTitle("Saved Scores")
+        .navigationBarItems(trailing:
+            Button(action: {
+                self.shareScores()
+            }, label: {
+                Image(systemName: "square.and.arrow.up")
+                    .navigationBarStyle()
+            })
+        )
     }
 
     func deleteScores(at offsets: IndexSet) {
@@ -32,8 +40,38 @@ struct SavedScoresListView: View {
         }
     }
 
-    func shareScore() {
+    func shareScores() {
+//        let header = """
+//        Team Number, Match Number, Alliance, Auto - Foundation Repositioned, \
+//        Auto - Skystone Bonuses, Auto - Stones Delivered, Auto - Stones Placed, Auto - Nr of Navigations, \
+//        TeleOp - Stones Delivered, TeleOp - Stones Placed, TeleOp - Skyscraper Height, \
+//        EndGame - Nr of Capstone Bonuses, EndGame - Capstone 1 Level, EndGame - Capstone 2 Level, EndGame - Foundation Moved, EndGame - Nr of Parking, \
+//        Comments\n
+//        """
 
+        var exportString = ""
+
+        for score in scores {
+            exportString.append("""
+                \(score.teamNumber ?? ""), \(score.matchNumber ?? ""), \(score.allianceColor == 0 ? "Blue" : "Red"), \
+                \(score.foundationRepositioned), \(score.numberOfSkystoneBonuses), \(score.autoStonesDelivered), \(score.autoStonesPlaced), \(score.numberOfNavigations), \
+                \(score.teleOpStonesPlaced), \(score.teleOpStonesDelivered), \(score.skyscraperHeight), \
+                \(score.capstoneBonuses), \(score.firstCapstoneLevel), \(score.secondCapstoneLevel), \(score.foundationMoved), \(score.numberOfParkings), \
+                \(score.comments ?? "")\n
+                """)
+        }
+
+
+        let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+        let csvFile = documentsDirectory.appendingPathComponent("FTCScorer - \(UIDevice.current.name).csv")
+
+        do {
+            try exportString.write(to: csvFile, atomically: true, encoding: .utf8)
+        } catch {
+            print("Failed to create file. Error: \(error.localizedDescription)")
+        }
+
+        csvFile.share()
     }
 }
 
