@@ -9,6 +9,8 @@
 import SwiftUI
 
 struct PrivacyPolicyView: View {
+    @State var showingClipboardAlert = false
+
     var body: some View {
         List {
             Section {
@@ -42,8 +44,11 @@ struct PrivacyPolicyView: View {
                             .underline()
                     }
                     .onTapGesture {
-                        //TODO: copy to clipboard email
-                        print("hello")
+                        UIPasteboard.general.string = "ftc@alexandruturcanu.com"
+                        self.showingClipboardAlert.toggle()
+                    }
+                    .alert(isPresented: $showingClipboardAlert) {
+                        Alert(title: Text("Email copied to clipboard!"))
                     }
                 }
             }
@@ -59,3 +64,5 @@ struct PrivacyPolicyView_Previews: PreviewProvider {
         PrivacyPolicyView()
     }
 }
+
+//TODO: generalize support email by using a constant, less stringly typed values :]
