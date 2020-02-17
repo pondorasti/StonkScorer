@@ -12,6 +12,8 @@ struct SavedScoresListView: View {
     @Environment(\.managedObjectContext) var moc
     @FetchRequest(entity: SkystoneScore.entity(), sortDescriptors: []) var scores: FetchedResults<SkystoneScore>
 
+    @State private var showingDeleteAllAlert = false
+
     var body: some View {
         List {
             ForEach(scores, id: \.self) { score in
@@ -25,12 +27,33 @@ struct SavedScoresListView: View {
         .environment(\.horizontalSizeClass, .regular)
         .navigationBarTitle("Saved Scores")
         .navigationBarItems(trailing:
-            Button(action: {
-                self.shareScores()
-            }, label: {
-                Image(systemName: "square.and.arrow.up")
-                    .navigationBarStyle()
-            })
+            HStack {
+                Button(action: {
+                    self.shareScores()
+                }, label: {
+                    Image(systemName: "square.and.arrow.up")
+                        .navigationBarStyle()
+                })
+
+                Button(action: {
+                    self.showingDeleteAllAlert.toggle()
+                }, label: {
+                    Image(systemName: "trash")
+                        .navigationBarStyle()
+                })
+                    .alert(isPresented: $showingDeleteAllAlert) {
+                        Alert(
+                            title: Text("Delete all scores?"),
+                            message: Text("Are you sure you want to delete all saved scores?"),
+                            primaryButton: .cancel(),
+                            secondaryButton: .destructive(Text("Delete"), action: {
+                                //TODO: a cleaner solution should exist, but for now it gets the job done
+                                for score in self.scores {
+                                    score.delete(in: self.moc)
+                                }
+                            }))
+                }
+            }
         )
     }
 
