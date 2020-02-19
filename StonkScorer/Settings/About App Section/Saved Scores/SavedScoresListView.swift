@@ -19,10 +19,12 @@ struct SavedScoresListView: View {
             ForEach(scores, id: \.self) { score in
                 NavigationLink(destination: SavedScoreDetailView(score: score).environment(\.managedObjectContext, self.moc)) {
                     SavedScoreRow(score: score)
+                        .animation(.linear)
                 }
             }
             .onDelete(perform: deleteScores)
         }
+        .animation(.linear)
         .listStyle(GroupedListStyle())
         .environment(\.horizontalSizeClass, .regular)
         .navigationBarTitle("Saved Scores")
