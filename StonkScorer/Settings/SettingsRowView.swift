@@ -26,9 +26,9 @@ struct SettingsRowView: View {
                 Text(title)
                     .foregroundColor(.primary)
 
-                Text(description)
-                    .font(.body)
-                    .foregroundColor(.secondary)
+//                Text(description)
+//                    .font(.body)
+//                    .foregroundColor(.secondary)
             }
 
 
