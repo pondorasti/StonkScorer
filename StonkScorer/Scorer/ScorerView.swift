@@ -18,7 +18,7 @@ struct ScorerView: View {
         }
     }
 
-    @State private var shouldShowSettings = false
+    @State private var actualShouldShowSettings = false
 
     @State private var scorer = Scorer()
     @State private var matchInfo = MatchInfo()
@@ -26,7 +26,17 @@ struct ScorerView: View {
     @State private var showingSaveAlert = false
 
     var body: some View {
-        NavigationView {
+        let shouldShowSettings = Binding(
+            get: { self.actualShouldShowSettings },
+            set: {
+                self.actualShouldShowSettings = $0
+                if !$0 {
+                    self.updateScorerAssist()
+                }
+            }
+        )
+
+        return NavigationView {
             List {
                 ScorerGroup(matchInfo: $matchInfo, scorer: $scorer)
 
@@ -35,6 +45,8 @@ struct ScorerView: View {
                     Button(action: {
                         let _ = SkystoneScore(from: self.scorer, with: self.matchInfo)
                         self.showingSaveAlert.toggle()
+
+                        
                     }, label: {
                         HStack {
                             Image(systemName: "arrow.down.circle.fill")
@@ -60,20 +72,22 @@ struct ScorerView: View {
             }
             .listStyle(GroupedListStyle())
             .environment(\.horizontalSizeClass, .regular)
+            .navigationViewStyle(StackNavigationViewStyle())
+            .navigationBarTitle("Scorer")
+            .shouldDismissKeyboard()
             .sheet(isPresented: $showingNewUserView) {
                 SplashScreenView(isPresented: self.$showingNewUserView)
             }
-            .navigationBarTitle("Scorer")
             .navigationBarItems(leading:
 
                 //Show Settings Button
                 Button(action: {
-                    self.shouldShowSettings.toggle()
+                    shouldShowSettings.wrappedValue.toggle()
                 }, label: {
                     Image(systemName: "gear")
                         .navigationBarStyle()
-                }).sheet(isPresented: $shouldShowSettings, content: {
-                    SettingsView(isPresented: self.$shouldShowSettings)
+                }).sheet(isPresented: shouldShowSettings, content: {
+                    SettingsView(isPresented: shouldShowSettings)
 
                 }), trailing:
 
@@ -86,8 +100,15 @@ struct ScorerView: View {
                         .navigationBarStyle()
                 })
             )
-            .shouldDismissKeyboard()
         }
-        .navigationViewStyle(StackNavigationViewStyle())
+        .onAppear { //Note: this methods gets called only one, when the view is created and appears
+            self.updateScorerAssist()
+        }
+    }
+
+    private func updateScorerAssist() {
+        if let shouldAssistScoring = UserDefaults.Keys.retrieveObject(for: .shouldAssistScoring) as? Bool {
+            self.scorer.shouldAssistScoring = shouldAssistScoring
+        }
     }
 }

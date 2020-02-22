@@ -9,7 +9,40 @@
 import Foundation
 
 struct Scorer: TotalPoints {
-    var auto = Auto()
+    var shouldAssistScoring = false
+
+    var auto = Auto() {
+        didSet {
+            guard shouldAssistScoring else {
+                return
+            }
+
+            //Auto
+            if auto.stonesDelivered != oldValue.stonesDelivered,
+                auto.stonesDelivered < auto.stonesPlaced {
+                auto.stonesPlaced = auto.stonesDelivered
+            }
+
+            if auto.stonesPlaced != oldValue.stonesPlaced,
+                auto.stonesDelivered < auto.stonesPlaced {
+                auto.stonesDelivered = auto.stonesPlaced
+            }
+
+            //TeleOp
+            if teleOp.stonesPlaced <= 6 && teleOp.stonesDelivered == 0 {
+                teleOp.stonesPlaced = auto.stonesPlaced
+            }
+
+            //EndGame
+            //For disabling capstoneLevel depending on capstoneBonuses
+            if endGame.capstoneBonuses == 0 {
+                endGame.firstCapstoneLevel = 0
+                endGame.secondCapstoneLevel = 0
+            } else if endGame.capstoneBonuses == 1 {
+                endGame.secondCapstoneLevel = 0
+            }
+        }
+    }
     var teleOp = TeleOp()
     var endGame = EndGame()
 
@@ -25,20 +58,8 @@ struct Scorer: TotalPoints {
     struct Auto: TotalPoints {
         var foundationRepositioned: Bool = false
         var numberOfSkystoneBonuses: Int = 0
-        var stonesDelivered: Int = 0 {
-            didSet {
-                if stonesDelivered < stonesPlaced {
-                    stonesPlaced = stonesDelivered
-                }
-            }
-        }
-        var stonesPlaced: Int = 0 {
-            didSet {
-                if stonesDelivered < stonesPlaced {
-                    stonesDelivered = stonesPlaced
-                }
-            }
-        }
+        var stonesDelivered: Int = 0
+        var stonesPlaced: Int = 0
         var numberOfNavigations: Int = 0
 
         var totalPoints: Int {
@@ -71,16 +92,7 @@ struct Scorer: TotalPoints {
     }
 
     struct EndGame: TotalPoints {
-        var capstoneBonuses: Int = 0 {
-            didSet {
-                if capstoneBonuses == 0 {
-                    firstCapstoneLevel = 0
-                    secondCapstoneLevel = 0
-                } else if capstoneBonuses == 1 {
-                    secondCapstoneLevel = 0
-                }
-            }
-        }
+        var capstoneBonuses: Int = 0
         var firstCapstoneLevel: Int = 0
         var secondCapstoneLevel: Int = 0
         var foundationMoved: Bool = false

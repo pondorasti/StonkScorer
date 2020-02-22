@@ -12,6 +12,7 @@ extension UserDefaults {
     enum Keys: String {
         case showingMatchInfo
         case showingNewUserView
+        case shouldAssistScoring
 
         static func retrieveObject(for key: Keys) -> Any? {
             return UserDefaults.standard.object(forKey: key.rawValue)

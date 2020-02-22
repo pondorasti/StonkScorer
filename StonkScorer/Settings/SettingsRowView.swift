@@ -13,6 +13,8 @@ struct SettingsRowView: View {
     var image: Image
     var imageColor: Color
     var title: String
+    var description: String = ""
+    var shouldShowDisclosureIcon = true
 
     var body: some View {
         HStack {
@@ -20,13 +22,23 @@ struct SettingsRowView: View {
                 .iconModifier()
                 .foregroundColor(imageColor)
 
-            Text(title)
-                .foregroundColor(.primary)
+            VStack {
+                Text(title)
+                    .foregroundColor(.primary)
+
+                Text(description)
+                    .font(.body)
+                    .foregroundColor(.secondary)
+            }
+
 
             Spacer()
 
-            Image(systemName: "chevron.right")
+            if shouldShowDisclosureIcon {
+                Image(systemName: "chevron.right")
                 .foregroundColor(Color(UIColor.systemGray))
+
+            }
         }
     }
 }
