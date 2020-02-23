@@ -9,7 +9,9 @@
 import SwiftUI
 
 struct ScorerView: View {
+    var splashScreenVersion: SplashScreen.Version?
     @State var showingNewUserView: Bool
+
     var showingMatchInfo: Bool {
         if UserDefaults.Keys.retrieveObject(for: .showingNewUserView) as? Bool == true {
             return true
@@ -76,7 +78,10 @@ struct ScorerView: View {
             .navigationBarTitle("Scorer")
             .shouldDismissKeyboard()
             .sheet(isPresented: $showingNewUserView) {
-                SplashScreenView(isPresented: self.$showingNewUserView)
+                //TODO: find a better way to handle versions of SplashScreen
+                //nil coalesing doesn't look alright
+                SplashScreenView(isPresented: self.$showingNewUserView,
+                                 splashScreenInfo: SplashScreen.Information(version: self.splashScreenVersion ?? .welcomeScreen))
             }
             .navigationBarItems(leading:
 

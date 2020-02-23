@@ -10,25 +10,13 @@ import SwiftUI
 
 struct FeaturesContainerView: View {
 
+    var features: [FeatureInfoModel]
+
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
-            FeatureInfoView(
-                title: "User Focused App",
-                description: "Intuitive user interfaces and seamless transitions.",
-                imageName: "person.crop.square.fill"
-            )
-
-            FeatureInfoView(
-                title: "Multi Platform Support",
-                description: "Use the app on any device you would like. iPhone. iPad. Mac.",
-                imageName: "aspectratio.fill"
-            )
-
-            FeatureInfoView(
-                title: "Dark Mode Support",
-                description: "Automatically switches between Light and Dark Mode based on your time.",
-                imageName: "circle.righthalf.fill"
-            )
+            ForEach(features, id: \.self) {
+                FeatureInfoView(featureInfo: $0)
+            }
         }
         .padding(.horizontal)
     }
@@ -36,6 +24,6 @@ struct FeaturesContainerView: View {
 
 struct FeaturesContainerView_Previews: PreviewProvider {
     static var previews: some View {
-        FeaturesContainerView()
+        FeaturesContainerView(features: [FeatureInfoModel]())
     }
 }

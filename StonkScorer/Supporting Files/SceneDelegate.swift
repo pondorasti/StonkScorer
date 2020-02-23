@@ -21,16 +21,22 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         //Check if it should show SplashScreen/NewFeatures
         let showingNewUserView: Bool
+        let version: SplashScreen.Version?
         if UserDefaults.Keys.retrieveObject(for: .showingNewUserView) == nil {
             showingNewUserView = true
-        }  else {
+            version = .welcomeScreen
+        }  else if UserDefaults.Keys.retrieveObject(for: .firstUpdate) == nil {
+            showingNewUserView = true
+            version = .firstUpdate
+        } else {
             showingNewUserView = false
+            version = nil
         }
 
 
 
         let context = SkystoneScore.persistentContainer.viewContext
-        let scorerView = ScorerView(showingNewUserView: showingNewUserView)
+        let scorerView = ScorerView(splashScreenVersion: version, showingNewUserView: showingNewUserView)
             .environment(\.managedObjectContext, context)
 
         // Use a UIHostingController as window root view controller.

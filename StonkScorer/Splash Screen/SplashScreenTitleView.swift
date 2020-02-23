@@ -1,5 +1,5 @@
 //
-//  TitleView.swift
+//  SplashScreenTitleView.swift
 //  StonkScorer
 //
 //  Created by Alexandru Turcanu on 02/01/2020.
@@ -8,13 +8,12 @@
 
 import SwiftUI
 
-struct TitleView: View {
-    
-    let imageName = "person.3.fill"
+struct SplashScreenTitleView: View {
+    var titleInfo: SplashScreenTitleModel
 
     var body: some View {
         VStack {
-            Image(systemName: imageName)
+            Image(systemName: titleInfo.imageName)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 180, alignment: .center)
@@ -22,11 +21,11 @@ struct TitleView: View {
                 .foregroundColor(.mainColor)
 
             VStack(alignment: .leading) {
-                Text("Welcome to")
+                Text(titleInfo.upperTittle)
                     .fontWeight(.black)
                     .font(.system(size: 36))
 
-                Text("FTC Scorer")
+                Text(titleInfo.lowerTitle)
                     .fontWeight(.black)
                     .font(.system(size: 36))
                     .foregroundColor(.mainColor)
@@ -35,8 +34,14 @@ struct TitleView: View {
     }
 }
 
+struct SplashScreenTitleModel {
+    var imageName = "person.3.fill"
+    var upperTittle = "Welcome to"
+    var lowerTitle = "FTC Scorer"
+}
+
 struct TitleView_Previews: PreviewProvider {
     static var previews: some View {
-        TitleView()
+        SplashScreenTitleView(titleInfo: SplashScreenTitleModel())
     }
 }

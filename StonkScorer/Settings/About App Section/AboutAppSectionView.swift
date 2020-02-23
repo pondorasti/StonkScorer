@@ -30,7 +30,8 @@ struct AboutAppSectionView: View {
                 )
             }
             .sheet(isPresented: $isShowingSplashScreen) {
-                SplashScreenView(isPresented: self.$isShowingSplashScreen)
+                SplashScreenView(isPresented: self.$isShowingSplashScreen,
+                                 splashScreenInfo: SplashScreen.Information(version: .firstUpdate))
             }
 
             ZStack { //embedding the NavLink inside the ZStack and giving it an EmptyView() in order to hide the automatic disclorure indicator

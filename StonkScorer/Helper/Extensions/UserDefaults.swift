@@ -13,6 +13,7 @@ extension UserDefaults {
         case showingMatchInfo
         case showingNewUserView
         case shouldAssistScoring
+        case firstUpdate
 
         static func retrieveObject(for key: Keys) -> Any? {
             return UserDefaults.standard.object(forKey: key.rawValue)
