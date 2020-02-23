@@ -17,34 +17,69 @@ struct Scorer: TotalPoints {
                 return
             }
 
-            //Auto
-            if auto.stonesDelivered != oldValue.stonesDelivered,
-                auto.stonesDelivered < auto.stonesPlaced {
-                auto.stonesPlaced = auto.stonesDelivered
+            //Decrease stonesPlaced based on stonesDelivered
+            if oldValue.stonesDelivered > auto.stonesDelivered,
+                auto.stonesPlaced != 0 {
+                    auto.stonesPlaced -= 1
             }
 
-            if auto.stonesPlaced != oldValue.stonesPlaced,
-                auto.stonesDelivered < auto.stonesPlaced {
-                auto.stonesDelivered = auto.stonesPlaced
-            }
-
-            //TeleOp
-            if teleOp.stonesPlaced <= 6 && teleOp.stonesDelivered == 0 {
-                teleOp.stonesPlaced = auto.stonesPlaced
-            }
-
-            //EndGame
-            //For disabling capstoneLevel depending on capstoneBonuses
-            if endGame.capstoneBonuses == 0 {
-                endGame.firstCapstoneLevel = 0
-                endGame.secondCapstoneLevel = 0
-            } else if endGame.capstoneBonuses == 1 {
-                endGame.secondCapstoneLevel = 0
+            //Increase/Decrease stonesDelivered & TeleOp stonesPlaced based on stonesPlaced
+            if oldValue.stonesPlaced < auto.stonesPlaced {
+                if auto.stonesDelivered < 6 {
+                    auto.stonesDelivered += 1
+                }
+                teleOp.stonesPlaced += 1
+            } else if oldValue.stonesPlaced > auto.stonesPlaced,
+                teleOp.stonesPlaced != 0 {
+                teleOp.stonesPlaced -= 1
             }
         }
     }
-    var teleOp = TeleOp()
-    var endGame = EndGame()
+
+    var teleOp = TeleOp() {
+        didSet {
+            guard shouldAssistScoring else {
+                return
+            }
+
+            // Increase stonesDelivered based on stonesPlaced
+            if oldValue.stonesPlaced < teleOp.stonesPlaced,
+                teleOp.stonesPlaced != auto.stonesPlaced {
+                teleOp.stonesDelivered += 1
+            } else if oldValue.stonesPlaced > teleOp.stonesPlaced,
+                teleOp.skyscraperHeight > teleOp.stonesPlaced,
+                teleOp.skyscraperHeight != 0 {
+                teleOp.skyscraperHeight -= 1
+            }
+
+            // Increase stonesDelivered & stonesPlaced based on skyscraperHeight
+            if oldValue.skyscraperHeight < teleOp.skyscraperHeight {
+                teleOp.stonesDelivered += 1
+                teleOp.stonesPlaced += 1
+            }
+        }
+    }
+
+    var endGame = EndGame() {
+        didSet {
+            guard shouldAssistScoring else {
+                return
+            }
+
+            //For disabling capstoneLevel depending on capstoneBonuses and autofilling capstone levels based on TeleOp skyscraperHeight
+            if oldValue.capstoneBonuses != endGame.capstoneBonuses {
+                if endGame.capstoneBonuses == 0 {
+                    endGame.firstCapstoneLevel = 0
+                    endGame.secondCapstoneLevel = 0
+                } else if endGame.capstoneBonuses == 1 {
+                    endGame.firstCapstoneLevel = teleOp.skyscraperHeight
+                    endGame.secondCapstoneLevel = 0
+                } else if endGame.capstoneBonuses == 2 {
+                    endGame.secondCapstoneLevel = teleOp.skyscraperHeight
+                }
+            }
+        }
+    }
 
     var totalPoints: Int {
         var total = 0
@@ -112,7 +147,9 @@ struct Scorer: TotalPoints {
     }
 
     mutating func reset() {
+        let shouldAssistScoring = self.shouldAssistScoring
         self = Scorer()
+        self.shouldAssistScoring = shouldAssistScoring
     }
 
     init() {
