@@ -55,6 +55,9 @@
 		C5909F3723E717EC00D06070 /* ImageModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5909F3623E717EC00D06070 /* ImageModifier.swift */; };
 		C5909F3923E75A8000D06070 /* AlliancePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5909F3823E75A8000D06070 /* AlliancePickerView.swift */; };
 		C5C0A7F1240318C7002BF4E1 /* SplashScreensListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C0A7F0240318C7002BF4E1 /* SplashScreensListView.swift */; };
+		C5C0A7F324047101002BF4E1 /* SplashScreenTitleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C0A7F224047101002BF4E1 /* SplashScreenTitleModel.swift */; };
+		C5C0A7F6240471E0002BF4E1 /* FeatureInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C0A7F5240471E0002BF4E1 /* FeatureInfoModel.swift */; };
+		C5C0A7FA24047243002BF4E1 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C0A7F924047243002BF4E1 /* SplashScreen.swift */; };
 		C5E8D9C023BB56A6009B07E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E8D9BF23BB56A6009B07E8 /* AppDelegate.swift */; };
 		C5E8D9C223BB56A6009B07E8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E8D9C123BB56A6009B07E8 /* SceneDelegate.swift */; };
 		C5E8D9C623BB56AA009B07E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5E8D9C523BB56AA009B07E8 /* Assets.xcassets */; };
@@ -64,7 +67,7 @@
 		C5F41BF523BD36E700A657FC /* ScorerTotalPointsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F41BF423BD36E700A657FC /* ScorerTotalPointsView.swift */; };
 		C5F41BFB23BE249400A657FC /* FeatureInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F41BFA23BE249400A657FC /* FeatureInfoView.swift */; };
 		C5F41BFD23BE24F000A657FC /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F41BFC23BE24F000A657FC /* Color.swift */; };
-		C5F41BFF23BE25E600A657FC /* FeaturesContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F41BFE23BE25E600A657FC /* FeaturesContainerView.swift */; };
+		C5F41BFF23BE25E600A657FC /* FeaturesStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F41BFE23BE25E600A657FC /* FeaturesStackView.swift */; };
 		C5F41C0123BE2A1700A657FC /* SplashScreenTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F41C0023BE2A1700A657FC /* SplashScreenTitleView.swift */; };
 		C5F41C0323BE2B4900A657FC /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F41C0223BE2B4900A657FC /* SplashScreenView.swift */; };
 		C5F41C0723BE756F00A657FC /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F41C0623BE756F00A657FC /* UserDefaults.swift */; };
@@ -123,6 +126,9 @@
 		C5909F3623E717EC00D06070 /* ImageModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModifier.swift; sourceTree = "<group>"; };
 		C5909F3823E75A8000D06070 /* AlliancePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlliancePickerView.swift; sourceTree = "<group>"; };
 		C5C0A7F0240318C7002BF4E1 /* SplashScreensListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreensListView.swift; sourceTree = "<group>"; };
+		C5C0A7F224047101002BF4E1 /* SplashScreenTitleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenTitleModel.swift; sourceTree = "<group>"; };
+		C5C0A7F5240471E0002BF4E1 /* FeatureInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureInfoModel.swift; sourceTree = "<group>"; };
+		C5C0A7F924047243002BF4E1 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		C5E8D9BC23BB56A6009B07E8 /* FTC Scorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FTC Scorer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5E8D9BF23BB56A6009B07E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C5E8D9C123BB56A6009B07E8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -134,7 +140,7 @@
 		C5F41BF423BD36E700A657FC /* ScorerTotalPointsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScorerTotalPointsView.swift; sourceTree = "<group>"; };
 		C5F41BFA23BE249400A657FC /* FeatureInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureInfoView.swift; sourceTree = "<group>"; };
 		C5F41BFC23BE24F000A657FC /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
-		C5F41BFE23BE25E600A657FC /* FeaturesContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturesContainerView.swift; sourceTree = "<group>"; };
+		C5F41BFE23BE25E600A657FC /* FeaturesStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturesStackView.swift; sourceTree = "<group>"; };
 		C5F41C0023BE2A1700A657FC /* SplashScreenTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenTitleView.swift; sourceTree = "<group>"; };
 		C5F41C0223BE2B4900A657FC /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		C5F41C0623BE756F00A657FC /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
@@ -343,6 +349,24 @@
 			path = Scorer;
 			sourceTree = "<group>";
 		};
+		C5C0A7F42404710E002BF4E1 /* Splash Screen Title */ = {
+			isa = PBXGroup;
+			children = (
+				C5F41C0023BE2A1700A657FC /* SplashScreenTitleView.swift */,
+				C5C0A7F224047101002BF4E1 /* SplashScreenTitleModel.swift */,
+			);
+			path = "Splash Screen Title";
+			sourceTree = "<group>";
+		};
+		C5C0A7F7240471F0002BF4E1 /* Feature Information */ = {
+			isa = PBXGroup;
+			children = (
+				C5F41BFA23BE249400A657FC /* FeatureInfoView.swift */,
+				C5C0A7F5240471E0002BF4E1 /* FeatureInfoModel.swift */,
+			);
+			path = "Feature Information";
+			sourceTree = "<group>";
+		};
 		C5E8D9B323BB56A6009B07E8 = {
 			isa = PBXGroup;
 			children = (
@@ -396,10 +420,11 @@
 		C5F41BF723BE245100A657FC /* Splash Screen */ = {
 			isa = PBXGroup;
 			children = (
-				C5F41BFA23BE249400A657FC /* FeatureInfoView.swift */,
-				C5F41BFE23BE25E600A657FC /* FeaturesContainerView.swift */,
-				C5F41C0023BE2A1700A657FC /* SplashScreenTitleView.swift */,
+				C5C0A7F7240471F0002BF4E1 /* Feature Information */,
+				C5F41BFE23BE25E600A657FC /* FeaturesStackView.swift */,
+				C5C0A7F42404710E002BF4E1 /* Splash Screen Title */,
 				C5F41C0223BE2B4900A657FC /* SplashScreenView.swift */,
+				C5C0A7F924047243002BF4E1 /* SplashScreen.swift */,
 			);
 			path = "Splash Screen";
 			sourceTree = "<group>";
@@ -517,6 +542,7 @@
 				C5909F3723E717EC00D06070 /* ImageModifier.swift in Sources */,
 				C545655B23BB5FE50062A0CB /* AutonomousSectionView.swift in Sources */,
 				C50984CA23C1F20C00CD708F /* ButtonModifier.swift in Sources */,
+				C5C0A7F324047101002BF4E1 /* SplashScreenTitleModel.swift in Sources */,
 				C531974823BCA89500690A96 /* ScorerStepperView.swift in Sources */,
 				C50984C023C12A2B00CD708F /* SendFeedbackSectionView.swift in Sources */,
 				C50984C423C1399A00CD708F /* AboutView.swift in Sources */,
@@ -531,6 +557,7 @@
 				C55128C523ED5B81009B009C /* SavedScoreRow.swift in Sources */,
 				C56DE93923BFD327007BD13A /* SettingsRowView.swift in Sources */,
 				C552379823BFB3A000F75526 /* MailView.swift in Sources */,
+				C5C0A7FA24047243002BF4E1 /* SplashScreen.swift in Sources */,
 				C547ECF523EAA0F40008B411 /* SavedScoresListView.swift in Sources */,
 				C5F41BFD23BE24F000A657FC /* Color.swift in Sources */,
 				C5F8BE5723EB1C15004BABC3 /* SavedScoreDetailView.swift in Sources */,
@@ -539,6 +566,7 @@
 				C5F41C0323BE2B4900A657FC /* SplashScreenView.swift in Sources */,
 				C545656123BB63C40062A0CB /* TeleOpSectionView.swift in Sources */,
 				C5F41BF523BD36E700A657FC /* ScorerTotalPointsView.swift in Sources */,
+				C5C0A7F6240471E0002BF4E1 /* FeatureInfoModel.swift in Sources */,
 				C545655D23BB604A0062A0CB /* ScoringGuidelines.swift in Sources */,
 				C57483BE23EB445A00DA49EB /* SkystoneScoreExtension.swift in Sources */,
 				C5E8D9C023BB56A6009B07E8 /* AppDelegate.swift in Sources */,
@@ -555,7 +583,7 @@
 				C531974623BCA66C00690A96 /* EndGameSectionView.swift in Sources */,
 				C531974423BC954900690A96 /* Constants.swift in Sources */,
 				C531974C23BCF32900690A96 /* ScorerToggleView.swift in Sources */,
-				C5F41BFF23BE25E600A657FC /* FeaturesContainerView.swift in Sources */,
+				C5F41BFF23BE25E600A657FC /* FeaturesStackView.swift in Sources */,
 				C5909F3523E713AB00D06070 /* ScorerTextFieldView.swift in Sources */,
 				C5321F9023F806D7008DAEBA /* AlternateAppIconsListView.swift in Sources */,
 				C5F41C0923BE92CD00A657FC /* SettingsListView.swift in Sources */,

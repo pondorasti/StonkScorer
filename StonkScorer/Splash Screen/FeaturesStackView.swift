@@ -1,5 +1,5 @@
 //
-//  FeaturesContainerView.swift
+//  FeaturesStackView.swift
 //  StonkScorer
 //
 //  Created by Alexandru Turcanu on 02/01/2020.
@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct FeaturesContainerView: View {
+struct FeaturesStackView: View {
 
     var features: [FeatureInfoModel]
 
@@ -24,6 +24,6 @@ struct FeaturesContainerView: View {
 
 struct FeaturesContainerView_Previews: PreviewProvider {
     static var previews: some View {
-        FeaturesContainerView(features: [FeatureInfoModel]())
+        FeaturesStackView(features: [FeatureInfoModel]())
     }
 }

@@ -35,12 +35,6 @@ struct FeatureInfoView: View {
     }
 }
 
-struct FeatureInfoModel: Hashable {
-    var title = "Seamless Transitions"
-    var description = "120 Hz refresh rate"
-    var imageName = "battery.100"
-}
-
 struct FeatureInfoView_Previews: PreviewProvider {
     static var previews: some View {
         FeatureInfoView(featureInfo: FeatureInfoModel())
