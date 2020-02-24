@@ -36,6 +36,11 @@ struct SplashScreenTitleView: View {
 
 struct TitleView_Previews: PreviewProvider {
     static var previews: some View {
-        SplashScreenTitleView(titleInfo: SplashScreenTitleModel())
+        SplashScreenTitleView(titleInfo: SplashScreenTitleModel(
+            imageName: "person.3.fill",
+            upperTittle: "Welcome to",
+            lowerTitle: "FTC Scorer")
+        )
     }
 }
+

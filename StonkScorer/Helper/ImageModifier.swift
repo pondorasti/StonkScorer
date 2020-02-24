@@ -14,5 +14,6 @@ extension Image {
         self
             .font(.system(size: Constants.sfSymbolSize))
             .frame(minWidth: Constants.iconMinWidth)
+            .accessibility(hidden: true)
     }
 }

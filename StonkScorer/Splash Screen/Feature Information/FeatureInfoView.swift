@@ -37,6 +37,12 @@ struct FeatureInfoView: View {
 
 struct FeatureInfoView_Previews: PreviewProvider {
     static var previews: some View {
-        FeatureInfoView(featureInfo: FeatureInfoModel())
+        FeatureInfoView(featureInfo: FeatureInfoModel(
+            title: "Seamless Transitions",
+            description: "120 Hz refresh rate",
+            imageName: "battery.100")
+        )
     }
 }
+
+

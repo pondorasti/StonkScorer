@@ -9,7 +9,7 @@
 import Foundation
 
 struct SplashScreenTitleModel {
-    var imageName = "person.3.fill"
-    var upperTittle = "Welcome to"
-    var lowerTitle = "FTC Scorer"
+    var imageName: String
+    var upperTittle: String
+    var lowerTitle: String
 }

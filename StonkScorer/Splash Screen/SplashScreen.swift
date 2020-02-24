@@ -70,10 +70,10 @@ struct SplashScreen {
     }
 
     struct Information {
-        var userDefaultstKey: UserDefaults.Keys = .showingNewUserView
-        var name = "Version 1.0"
-        var titleInfo = SplashScreenTitleModel()
-        var features = [FeatureInfoModel]()
+        var userDefaultstKey: UserDefaults.Keys
+        var name: String
+        var titleInfo: SplashScreenTitleModel
+        var features: [FeatureInfoModel]
 
         init(userDefaultstKey: UserDefaults.Keys, name: String, titleInfo: SplashScreenTitleModel, features: [FeatureInfoModel]) {
             self.userDefaultstKey = userDefaultstKey

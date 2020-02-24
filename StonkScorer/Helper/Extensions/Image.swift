@@ -32,5 +32,6 @@ extension Image {
             .resizable()
             .aspectRatio(contentMode: .fit)
             .frame(width: Constants.navBarIcons, height: Constants.navBarIcons, alignment: .center)
+            .accessibility(hidden: true)
     }
 }

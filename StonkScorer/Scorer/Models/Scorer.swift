@@ -89,7 +89,8 @@ struct Scorer: TotalPoints {
 
         return total
     }
-    
+
+    //MARK: - Auto
     struct Auto: TotalPoints {
         var foundationRepositioned: Bool = false
         var numberOfSkystoneBonuses: Int = 0
@@ -110,6 +111,7 @@ struct Scorer: TotalPoints {
         }
     }
 
+    //MARK: - TeleOp
     struct TeleOp: TotalPoints {
         var stonesDelivered: Int = 0
         var stonesPlaced: Int = 0
@@ -126,6 +128,7 @@ struct Scorer: TotalPoints {
         }
     }
 
+    //MARK: - EndGame
     struct EndGame: TotalPoints {
         var capstoneBonuses: Int = 0
         var firstCapstoneLevel: Int = 0
@@ -179,6 +182,7 @@ struct Scorer: TotalPoints {
     }
 }
 
+//MARK: - TotalPoints Protocol
 protocol TotalPoints {
     var totalPoints: Int { get }
 }

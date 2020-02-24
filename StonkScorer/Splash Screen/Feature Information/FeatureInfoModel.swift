@@ -9,7 +9,7 @@
 import Foundation
 
 struct FeatureInfoModel: Hashable {
-    var title = "Seamless Transitions"
-    var description = "120 Hz refresh rate"
-    var imageName = "battery.100"
+    var title: String
+    var description: String
+    var imageName: String
 }

@@ -36,7 +36,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
         let context = SkystoneScore.persistentContainer.viewContext
-        let scorerView = ScorerView(splashScreenVersion: version, showingNewUserView: showingNewUserView)
+        let scorerView = ScorerView(splashScreenVersion: version, showingSplashScreen: showingNewUserView)
             .environment(\.managedObjectContext, context)
 
         // Use a UIHostingController as window root view controller.
