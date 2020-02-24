@@ -74,7 +74,6 @@ struct ScorerView: View {
             }
             .listStyle(GroupedListStyle())
             .environment(\.horizontalSizeClass, .regular)
-            .navigationViewStyle(StackNavigationViewStyle())
             .navigationBarTitle("Scorer")
             .shouldDismissKeyboard()
             .sheet(isPresented: $showingNewUserView) {
@@ -106,6 +105,7 @@ struct ScorerView: View {
                 })
             )
         }
+        .navigationViewStyle(StackNavigationViewStyle())
         .onAppear { //Note: this methods gets called only one, when the view is created and appears
             self.updateScorerAssist()
         }

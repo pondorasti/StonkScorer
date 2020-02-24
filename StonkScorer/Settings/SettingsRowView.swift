@@ -13,7 +13,6 @@ struct SettingsRowView: View {
     var image: Image
     var imageColor: Color
     var title: String
-    var description: String = ""
     var shouldShowDisclosureIcon = true
 
     var body: some View {

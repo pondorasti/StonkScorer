@@ -52,7 +52,6 @@ struct AboutAppSectionView: View {
                     image: Image(systemName: "wand.and.stars"),
                     imageColor: Color(UIColor.systemYellow),
                     title: "Scorer Assist",
-                    description: "Brain of the app",
                     shouldShowDisclosureIcon: false
                 )
             }
