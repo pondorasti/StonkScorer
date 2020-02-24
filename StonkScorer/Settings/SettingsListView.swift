@@ -1,5 +1,5 @@
 //
-//  SettingsView.swift
+//  SettingsListView.swift
 //  StonkScorer
 //
 //  Created by Alexandru Turcanu on 02/01/2020.
@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct SettingsView: View {
+struct SettingsListView: View {
 
     @Binding var isPresented: Bool
     @State var isShowingSplashScreen = false
@@ -60,7 +60,7 @@ struct SettingsView: View {
 
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
-        SettingsView(isPresented: .constant(true))
+        SettingsListView(isPresented: .constant(true))
     }
 }
 

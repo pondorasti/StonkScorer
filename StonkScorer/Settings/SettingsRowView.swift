@@ -22,15 +22,8 @@ struct SettingsRowView: View {
                 .iconModifier()
                 .foregroundColor(imageColor)
 
-            VStack {
-                Text(title)
-                    .foregroundColor(.primary)
-
-//                Text(description)
-//                    .font(.body)
-//                    .foregroundColor(.secondary)
-            }
-
+            Text(title)
+                .foregroundColor(.primary)
 
             Spacer()
 

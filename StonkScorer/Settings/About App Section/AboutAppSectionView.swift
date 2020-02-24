@@ -14,27 +14,26 @@ struct AboutAppSectionView: View {
     var body: some View {
         let shouldAssistScoring = Binding(
             get: { UserDefaults.Keys.retrieveObject(for: .shouldAssistScoring) as? Bool ?? false},
-            set: { test in UserDefaults.Keys.setObject(for: .shouldAssistScoring, with: test) }
+            set: { UserDefaults.Keys.setObject(for: .shouldAssistScoring, with: $0) }
         )
 
         return Section(header: Text("About the App").font(.headline)) {
 
-            //MARK: - Splash Screen
-            Button(action: {
-                self.isShowingSplashScreen.toggle()
-            }) {
+            //MARK: - Splash Screens
+            ZStack { //embedding the NavLink inside the ZStack and giving it an EmptyView() in order to hide the automatic disclorure indicator
+                NavigationLink(destination: SplashScreensListView()) {
+                    EmptyView()
+                }
+
                 SettingsRowView(
                     image: Image(systemName: "book.circle.fill"),
-                    imageColor: Color(UIColor.systemIndigo),
-                    title: "Splash Screen"
+                    imageColor: Color(UIColor.systemBlue),
+                    title: "Splash Screens"
                 )
             }
-            .sheet(isPresented: $isShowingSplashScreen) {
-                SplashScreenView(isPresented: self.$isShowingSplashScreen,
-                                 splashScreenInfo: SplashScreen.Information(version: .firstUpdate))
-            }
 
-            ZStack { //embedding the NavLink inside the ZStack and giving it an EmptyView() in order to hide the automatic disclorure indicator
+            //MARK: - Saved Scores
+            ZStack {
                 NavigationLink(destination: SavedScoresListView()
                     .environment(\.managedObjectContext, SkystoneScore.persistentContainer.viewContext)) {
                     EmptyView()
@@ -47,6 +46,7 @@ struct AboutAppSectionView: View {
                 )
             }
 
+            //MARK: - Scorer Assist
             Toggle(isOn: shouldAssistScoring) {
                 SettingsRowView(
                     image: Image(systemName: "wand.and.stars"),
@@ -57,7 +57,8 @@ struct AboutAppSectionView: View {
                 )
             }
 
-            ZStack { //embedding the NavLink inside the ZStack and giving it an EmptyView() in order to hide the automatic disclorure indicator
+            //MARK: - App Icons
+            ZStack {
                 NavigationLink(destination: AlternateAppIconsListView()) {
                     EmptyView()
                 }

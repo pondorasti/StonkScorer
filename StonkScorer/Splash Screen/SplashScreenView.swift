@@ -74,7 +74,7 @@ struct SplashScreen {
                 ])
             case .firstUpdate:
                 return Information(
-                    userDefaultstKey: .showingNewUserView,
+                    userDefaultstKey: .firstUpdate,
                     name: "Version 1.1",
                     titleInfo: SplashScreenTitleModel(
                         imageName: "person.3.fill",
@@ -88,12 +88,12 @@ struct SplashScreen {
                     ),
                     FeatureInfoModel(
                         title: "Scorer Assist",
-                        description: "Hassle-free and faster scoring than ever.",
+                        description: "Hassle-free and faster scoring than any other app.",
                         imageName: "wand.and.stars"
                     ),
                     FeatureInfoModel(
                         title: "Alternate App Icons",
-                        description: "No matter your wallpaper there's always one right for you.",
+                        description: "No matter your wallpaper there's always one that suits you.",
                         imageName: "square.stack.fill"
                     )
                 ])

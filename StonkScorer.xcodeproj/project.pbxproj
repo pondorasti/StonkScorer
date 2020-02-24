@@ -68,7 +68,7 @@
 		C5F41C0123BE2A1700A657FC /* SplashScreenTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F41C0023BE2A1700A657FC /* SplashScreenTitleView.swift */; };
 		C5F41C0323BE2B4900A657FC /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F41C0223BE2B4900A657FC /* SplashScreenView.swift */; };
 		C5F41C0723BE756F00A657FC /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F41C0623BE756F00A657FC /* UserDefaults.swift */; };
-		C5F41C0923BE92CD00A657FC /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F41C0823BE92CD00A657FC /* SettingsView.swift */; };
+		C5F41C0923BE92CD00A657FC /* SettingsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F41C0823BE92CD00A657FC /* SettingsListView.swift */; };
 		C5F8BE5723EB1C15004BABC3 /* SavedScoreDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F8BE5623EB1C15004BABC3 /* SavedScoreDetailView.swift */; };
 		C5F8BE5923EB1D17004BABC3 /* ScorerGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F8BE5823EB1D17004BABC3 /* ScorerGroup.swift */; };
 /* End PBXBuildFile section */
@@ -138,7 +138,7 @@
 		C5F41C0023BE2A1700A657FC /* SplashScreenTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenTitleView.swift; sourceTree = "<group>"; };
 		C5F41C0223BE2B4900A657FC /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		C5F41C0623BE756F00A657FC /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
-		C5F41C0823BE92CD00A657FC /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		C5F41C0823BE92CD00A657FC /* SettingsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsListView.swift; sourceTree = "<group>"; };
 		C5F8BE5623EB1C15004BABC3 /* SavedScoreDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedScoreDetailView.swift; sourceTree = "<group>"; };
 		C5F8BE5823EB1D17004BABC3 /* ScorerGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScorerGroup.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -312,7 +312,7 @@
 		C552379623BFB37F00F75526 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				C5F41C0823BE92CD00A657FC /* SettingsView.swift */,
+				C5F41C0823BE92CD00A657FC /* SettingsListView.swift */,
 				C5034AB223F9695800C82EFA /* About App Section */,
 				C50984BF23C12A2B00CD708F /* SendFeedbackSectionView.swift */,
 				C5034AB123F9693700C82EFA /* App Info Section */,
@@ -558,7 +558,7 @@
 				C5F41BFF23BE25E600A657FC /* FeaturesContainerView.swift in Sources */,
 				C5909F3523E713AB00D06070 /* ScorerTextFieldView.swift in Sources */,
 				C5321F9023F806D7008DAEBA /* AlternateAppIconsListView.swift in Sources */,
-				C5F41C0923BE92CD00A657FC /* SettingsView.swift in Sources */,
+				C5F41C0923BE92CD00A657FC /* SettingsListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -696,7 +696,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "StonkScorer/Supporting Files/StonkScorer.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 14;
+				CURRENT_PROJECT_VERSION = 15;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"StonkScorer/Preview Content\"";
 				DEVELOPMENT_TEAM = UALV34MRH2;
@@ -722,7 +722,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "StonkScorer/Supporting Files/StonkScorer.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 14;
+				CURRENT_PROJECT_VERSION = 15;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"StonkScorer/Preview Content\"";
 				DEVELOPMENT_TEAM = UALV34MRH2;

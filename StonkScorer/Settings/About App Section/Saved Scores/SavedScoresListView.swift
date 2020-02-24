@@ -66,15 +66,15 @@ struct SavedScoresListView: View {
     }
 
     func shareScores() {
-//        let header = """
-//        Team Number, Match Number, Alliance, Auto - Foundation Repositioned, \
-//        Auto - Skystone Bonuses, Auto - Stones Delivered, Auto - Stones Placed, Auto - Nr of Navigations, \
-//        TeleOp - Stones Delivered, TeleOp - Stones Placed, TeleOp - Skyscraper Height, \
-//        EndGame - Nr of Capstone Bonuses, EndGame - Capstone 1 Level, EndGame - Capstone 2 Level, EndGame - Foundation Moved, EndGame - Nr of Parking, \
-//        Comments\n
-//        """
+        let header = """
+        Team Number, Match Number, Alliance, Auto - Foundation Repositioned, \
+        Auto - Skystone Bonuses, Auto - Stones Delivered, Auto - Stones Placed, Auto - Nr of Navigations, \
+        TeleOp - Stones Delivered, TeleOp - Stones Placed, TeleOp - Skyscraper Height, \
+        EndGame - Nr of Capstone Bonuses, EndGame - Capstone 1 Level, EndGame - Capstone 2 Level, EndGame - Foundation Moved, EndGame - Nr of Parking, \
+        Comments\n
+        """
 
-        var exportString = ""
+        var exportString = header
 
         for score in scores {
             exportString.append("""

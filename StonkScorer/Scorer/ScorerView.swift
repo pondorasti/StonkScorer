@@ -92,7 +92,7 @@ struct ScorerView: View {
                     Image(systemName: "gear")
                         .navigationBarStyle()
                 }).sheet(isPresented: shouldShowSettings, content: {
-                    SettingsView(isPresented: shouldShowSettings)
+                    SettingsListView(isPresented: shouldShowSettings)
 
                 }), trailing:
 
