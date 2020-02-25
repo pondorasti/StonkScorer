@@ -189,6 +189,7 @@
 				C50984C923C1F20C00CD708F /* ButtonModifier.swift */,
 				C5EFE54A23F5FF42005BC831 /* DismissKeyboardModifier.swift */,
 				C5909F3623E717EC00D06070 /* ImageModifier.swift */,
+				C5C0A7FB24051BCE002BF4E1 /* Core Data */,
 				C5F41C0523BE753B00A657FC /* Extensions */,
 			);
 			path = Helper;
@@ -367,6 +368,15 @@
 			path = "Feature Information";
 			sourceTree = "<group>";
 		};
+		C5C0A7FB24051BCE002BF4E1 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				C57483BD23EB445A00DA49EB /* SkystoneScoreExtension.swift */,
+				C5909F0223E5B6ED00D06070 /* Scorer.xcdatamodeld */,
+			);
+			path = "Core Data";
+			sourceTree = "<group>";
+		};
 		C5E8D9B323BB56A6009B07E8 = {
 			isa = PBXGroup;
 			children = (
@@ -386,8 +396,6 @@
 		C5E8D9BE23BB56A6009B07E8 /* StonkScorer */ = {
 			isa = PBXGroup;
 			children = (
-				C5909F0223E5B6ED00D06070 /* Scorer.xcdatamodeld */,
-				C57483BD23EB445A00DA49EB /* SkystoneScoreExtension.swift */,
 				C5F41BF723BE245100A657FC /* Splash Screen */,
 				C556065E23BD27F700E2CE41 /* Scorer */,
 				C552379623BFB37F00F75526 /* Settings */,
@@ -800,8 +808,7 @@
 				C5909F0323E5B6ED00D06070 /* Scorer.xcdatamodel */,
 			);
 			currentVersion = C5909F0323E5B6ED00D06070 /* Scorer.xcdatamodel */;
-			name = Scorer.xcdatamodeld;
-			path = "Supporting Files/Scorer.xcdatamodeld";
+			path = Scorer.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

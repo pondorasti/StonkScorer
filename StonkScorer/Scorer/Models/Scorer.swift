@@ -17,20 +17,20 @@ struct Scorer: TotalPoints {
                 return
             }
 
-            //Decrease stonesPlaced based on stonesDelivered
+            // Decrease stonesPlaced based on stonesDelivered
             if oldValue.stonesDelivered > auto.stonesDelivered,
-                auto.stonesPlaced != 0 {
+                auto.stonesPlaced > 0 {
                     auto.stonesPlaced -= 1
             }
 
-            //Increase/Decrease stonesDelivered & TeleOp stonesPlaced based on stonesPlaced
+            // Increase/Decrease stonesDelivered & TeleOp stonesPlaced based on stonesPlaced
             if oldValue.stonesPlaced < auto.stonesPlaced {
                 if auto.stonesDelivered < 6 {
                     auto.stonesDelivered += 1
                 }
                 teleOp.stonesPlaced += 1
             } else if oldValue.stonesPlaced > auto.stonesPlaced,
-                teleOp.stonesPlaced != 0 {
+                teleOp.stonesPlaced > 0 {
                 teleOp.stonesPlaced -= 1
             }
         }
@@ -46,16 +46,43 @@ struct Scorer: TotalPoints {
             if oldValue.stonesPlaced < teleOp.stonesPlaced,
                 teleOp.stonesPlaced != auto.stonesPlaced {
                 teleOp.stonesDelivered += 1
+
+                return
             } else if oldValue.stonesPlaced > teleOp.stonesPlaced,
                 teleOp.skyscraperHeight > teleOp.stonesPlaced,
-                teleOp.skyscraperHeight != 0 {
+                teleOp.skyscraperHeight > 0 {
+                // Decrease skyscraperHeight based on stonesPlaced
                 teleOp.skyscraperHeight -= 1
+
+                return
             }
 
             // Increase stonesDelivered & stonesPlaced based on skyscraperHeight
             if oldValue.skyscraperHeight < teleOp.skyscraperHeight {
                 teleOp.stonesDelivered += 1
                 teleOp.stonesPlaced += 1
+
+                return
+            } else if oldValue.skyscraperHeight > teleOp.skyscraperHeight,
+                // Decrease stonesPlaced based on skyscraperHeight
+                teleOp.stonesPlaced > 0 {
+                teleOp.stonesPlaced -= 1
+
+                return
+            }
+
+            if oldValue.stonesDelivered > teleOp.stonesDelivered {
+                if teleOp.stonesPlaced > 0 {
+                    teleOp.stonesPlaced -= 1
+
+                    if teleOp.skyscraperHeight > 0,
+                    teleOp.skyscraperHeight > teleOp.stonesPlaced {
+                        teleOp.skyscraperHeight -= 1
+                    }
+                }
+
+
+                return
             }
         }
     }
@@ -66,7 +93,7 @@ struct Scorer: TotalPoints {
                 return
             }
 
-            //For disabling capstoneLevel depending on capstoneBonuses and autofilling capstone levels based on TeleOp skyscraperHeight
+            // For disabling capstoneLevel depending on capstoneBonuses and autofilling capstone levels based on TeleOp skyscraperHeight
             if oldValue.capstoneBonuses != endGame.capstoneBonuses {
                 if endGame.capstoneBonuses == 0 {
                     endGame.firstCapstoneLevel = 0
