@@ -9,7 +9,6 @@
 import SwiftUI
 
 struct SettingsRowView: View {
-
     var image: Image
     var imageColor: Color
     var title: String

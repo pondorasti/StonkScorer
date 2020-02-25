@@ -9,7 +9,6 @@
 import SwiftUI
 
 struct ScorerStepperView: View {
-    
     @Binding var bindingProperty: Int
 
     var image: Image
@@ -27,5 +26,3 @@ struct ScorerStepperView: View {
         }
     }
 }
-
-

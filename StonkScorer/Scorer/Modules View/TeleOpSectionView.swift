@@ -9,7 +9,6 @@
 import SwiftUI
 
 struct TeleOpSectionView: View {
-
     @Binding var teleOpScorer: Scorer.TeleOp
     
     var body: some View {

@@ -9,7 +9,6 @@
 import SwiftUI
 
 struct ScorerTotalPointsView<Type: TotalPoints>: View {
-    
     @Binding var scorer: Type
 
     var image: Image

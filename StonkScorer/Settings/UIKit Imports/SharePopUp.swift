@@ -39,4 +39,3 @@ extension Hashable {
         UIApplication.topViewController?.present(activityViewController, animated: true, completion: nil)
     }
 }
-

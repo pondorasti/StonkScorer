@@ -20,7 +20,7 @@ struct ScorerView: View {
     @State private var showingSaveAlert = false
 
     var body: some View {
-        //Note: - This custom binding is a workaround for calling updateScorerAssist func whenever the view appears (aka Settings is dismissed)
+        //Note: - This custom binding is a workaround for calling updateScorerAssist func whenever the view appears (aka SettingsListView is dismissed)
         let shouldShowSettings = Binding(
             get: { self.actualShouldShowSettings },
             set: {

@@ -9,7 +9,6 @@
 import SwiftUI
 
 struct SettingsListView: View {
-
     @Binding var isPresented: Bool
     @State var isShowingSplashScreen = false
 
@@ -63,5 +62,3 @@ struct SettingsView_Previews: PreviewProvider {
         SettingsListView(isPresented: .constant(true))
     }
 }
-
-

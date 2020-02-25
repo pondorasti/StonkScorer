@@ -24,7 +24,6 @@ struct AboutAppSectionView: View {
                 NavigationLink(destination: SplashScreensListView()) {
                     EmptyView()
                 }
-
                 SettingsRowView(
                     image: Image(systemName: "book.circle.fill"),
                     imageColor: Color(UIColor.systemBlue),
@@ -38,7 +37,6 @@ struct AboutAppSectionView: View {
                     .environment(\.managedObjectContext, SkystoneScore.persistentContainer.viewContext)) {
                     EmptyView()
                 }
-
                 SettingsRowView(
                     image: Image(systemName: "bookmark.fill"),
                     imageColor: Color(UIColor.systemBlue),
@@ -61,7 +59,6 @@ struct AboutAppSectionView: View {
                 NavigationLink(destination: AlternateAppIconsListView()) {
                     EmptyView()
                 }
-
                 SettingsRowView(
                     image: Image(systemName: "square.stack.fill"),
                     imageColor: Color(UIColor.systemIndigo),

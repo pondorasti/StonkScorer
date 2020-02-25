@@ -9,7 +9,6 @@
 import SwiftUI
 
 struct ScoreBreakdownSectionView: View {
-    
     @Binding var scorer: Scorer
 
     var body: some View {

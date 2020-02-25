@@ -9,7 +9,6 @@
 import SwiftUI
 
 struct AutonomousSectionView: View {
-
     @Binding var autoScorer: Scorer.Auto
 
     var body: some View {

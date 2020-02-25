@@ -9,7 +9,6 @@
 import SwiftUI
 
 struct EndGameSectionView: View {
-
     @Binding var endGameScorer: Scorer.EndGame
 
     var body: some View {
@@ -56,4 +55,3 @@ struct EndGameSectionView: View {
         }
     }
 }
-

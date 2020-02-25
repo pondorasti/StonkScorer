@@ -9,7 +9,6 @@
 import SwiftUI
 
 struct ScorerToggleView: View {
-    
     @Binding var bindingProperty: Bool
 
     var image: Image

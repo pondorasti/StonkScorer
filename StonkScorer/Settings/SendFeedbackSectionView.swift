@@ -10,7 +10,6 @@ import SwiftUI
 import MessageUI
 
 struct SendFeedbackSectionView: View {
-
     @State private var isShowingMailView = false
     @State private var result: Result<MFMailComposeResult, Error>? = nil
     
@@ -54,7 +53,6 @@ struct SendFeedbackSectionView: View {
                 )
             }
         }
-
     }
 }
 

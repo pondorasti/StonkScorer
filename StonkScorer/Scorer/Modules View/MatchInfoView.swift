@@ -9,7 +9,6 @@
 import SwiftUI
 
 struct MatchInfoView: View {
-
     @Binding var matchInfo: MatchInfo
 
     var body: some View {

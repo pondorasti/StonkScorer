@@ -9,7 +9,6 @@
 import SwiftUI
 
 struct ScorerPickerView: View {
-    
     @Binding var bindingProperty: Int
 
     var image: Image

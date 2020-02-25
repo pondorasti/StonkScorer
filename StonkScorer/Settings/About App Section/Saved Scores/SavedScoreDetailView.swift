@@ -43,16 +43,16 @@ struct SavedScoreDetailView: View {
                         Spacer()
                     }
                 })
-                    .buttonStyle(BorderlessButtonStyle())
-                    .alert(isPresented: $showingDeleteAlert) {
-                        Alert(title: Text("Delete item?"),// TODO: better text
-                            message: Text("Are you sure you want to make this go away for forever?"),
-                            primaryButton: .default(Text("Cancel")),
-                            secondaryButton: .destructive(Text("Delete"), action: {
-                                self.score.delete(in: self.moc)
-                                self.presentationMode.wrappedValue.dismiss()
-                            })
-                        )
+                .buttonStyle(BorderlessButtonStyle())
+                .alert(isPresented: $showingDeleteAlert) {
+                    Alert(title: Text("Delete item?"),
+                        message: Text("There is no turning back."),
+                        primaryButton: .default(Text("Cancel")),
+                        secondaryButton: .destructive(Text("Delete"), action: {
+                            self.score.delete(in: self.moc)
+                            self.presentationMode.wrappedValue.dismiss()
+                        })
+                    )
                 }
             }
             .foregroundColor(.white)

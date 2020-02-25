@@ -26,7 +26,6 @@ struct SavedScoreRow: View {
             }
 
             Text("\(scorer.wrappedValue.totalPoints)")
-//                .fontWeight(.semibold)
                 .font(.headline)
                 .foregroundColor(.white)
                 .padding(.all, 8)
