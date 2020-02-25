@@ -11,6 +11,16 @@
 
 FTC Scorer is a dead simple yet powerful way of scoring your practice matches.
 
+## Features
+
+- [x] Multi Platform Support - iPhone, iPad, Mac
+- [x] Dark Mode Support
+- [x] Save Scores 
+- [x] Scorer Assist 
+- [x] Alternate App Icons
+
+## Description
+
 This project started as a playground for experimenting with **SwiftUI** and evolved into something a bit more than that 😅. Although I had never worked before with declarative APIs, I found SwiftUI very intuitive and easy to grasp from a couple of Medium Articles and WWDC sessions, but not from Apple's documentation that is a complete waste of time. Along my journey, I had a couple of ups and downs. Nevertheless, I am looking forward in approaching my next projects with SwiftUI, now that I got the hang of it. Anyway, before I go here's some of my impressions and thoughts:
 
 * SwiftUI encourages reusable and modular snippets of code  🥳, something that I wish was easier with UIKit.
@@ -18,6 +28,8 @@ This project started as a playground for experimenting with **SwiftUI** and evol
 * SwiftUI makes it a pain-free process to adopt and implement OS level features: Dark Mode, Accessibility, Dynamic Type, etc.
 * The framework is relatively still in its early stages, chances are that you will quickly find the need for an object that has not yet been implemented (ex: multiline textfield, share sheet, etc), but there is a workaround for injecting UIKit code with UIViewRepresentable.
 * Navigations Bar and the macOS version feel laggy and buggy 🤨, not the production quality I was expecting.
+* Working with CoreData seems quite nice using @FetchRequest
+* SwiftUI is wonderful for writing cross platform apps, since there's only one Framework that interprets your code for each operating system. The downside is that you can't use the same UI code for an iPhone & Mac app (you will have to rewrite it), therefore I've ported the app to macOS using Catalyst.
 
 ## App Preview
 
