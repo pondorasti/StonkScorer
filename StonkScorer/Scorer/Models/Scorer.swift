@@ -19,6 +19,7 @@ struct Scorer: TotalPoints {
 
             // Decrease stonesPlaced based on stonesDelivered
             if oldValue.stonesDelivered > auto.stonesDelivered,
+                auto.stonesDelivered < auto.stonesPlaced,
                 auto.stonesPlaced > 0 {
                     auto.stonesPlaced -= 1
             }
@@ -71,7 +72,8 @@ struct Scorer: TotalPoints {
                 return
             }
 
-            if oldValue.stonesDelivered > teleOp.stonesDelivered {
+            if oldValue.stonesDelivered > teleOp.stonesDelivered,
+                teleOp.stonesDelivered < teleOp.stonesPlaced {
                 if teleOp.stonesPlaced > 0 {
                     teleOp.stonesPlaced -= 1
 
@@ -103,6 +105,10 @@ struct Scorer: TotalPoints {
                     endGame.secondCapstoneLevel = 0
                 } else if endGame.capstoneBonuses == 2 {
                     endGame.secondCapstoneLevel = teleOp.skyscraperHeight
+
+                    if endGame.firstCapstoneLevel == 0 {
+                        endGame.firstCapstoneLevel = teleOp.skyscraperHeight
+                    }
                 }
             }
         }
