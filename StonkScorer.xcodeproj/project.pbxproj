@@ -58,6 +58,8 @@
 		C5C0A7F324047101002BF4E1 /* SplashScreenTitleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C0A7F224047101002BF4E1 /* SplashScreenTitleModel.swift */; };
 		C5C0A7F6240471E0002BF4E1 /* FeatureInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C0A7F5240471E0002BF4E1 /* FeatureInfoModel.swift */; };
 		C5C0A7FA24047243002BF4E1 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C0A7F924047243002BF4E1 /* SplashScreen.swift */; };
+		C5C631E824066FD2003C8923 /* Stickers.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5C631E724066FD2003C8923 /* Stickers.xcassets */; };
+		C5C631EC24066FD2003C8923 /* SkystoneStickerPack.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = C5C631E524066FCF003C8923 /* SkystoneStickerPack.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		C5E8D9C023BB56A6009B07E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E8D9BF23BB56A6009B07E8 /* AppDelegate.swift */; };
 		C5E8D9C223BB56A6009B07E8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E8D9C123BB56A6009B07E8 /* SceneDelegate.swift */; };
 		C5E8D9C623BB56AA009B07E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5E8D9C523BB56AA009B07E8 /* Assets.xcassets */; };
@@ -75,6 +77,30 @@
 		C5F8BE5723EB1C15004BABC3 /* SavedScoreDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F8BE5623EB1C15004BABC3 /* SavedScoreDetailView.swift */; };
 		C5F8BE5923EB1D17004BABC3 /* ScorerGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F8BE5823EB1D17004BABC3 /* ScorerGroup.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C5C631EA24066FD2003C8923 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C5E8D9B423BB56A6009B07E8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C5C631E424066FCF003C8923;
+			remoteInfo = SkystoneStickerPack;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C5C631F024066FD2003C8923 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				C5C631EC24066FD2003C8923 /* SkystoneStickerPack.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		C5034AAF23F953B000C82EFA /* PrivacyPolicyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyView.swift; sourceTree = "<group>"; };
@@ -129,6 +155,9 @@
 		C5C0A7F224047101002BF4E1 /* SplashScreenTitleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenTitleModel.swift; sourceTree = "<group>"; };
 		C5C0A7F5240471E0002BF4E1 /* FeatureInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureInfoModel.swift; sourceTree = "<group>"; };
 		C5C0A7F924047243002BF4E1 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
+		C5C631E524066FCF003C8923 /* SkystoneStickerPack.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SkystoneStickerPack.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5C631E724066FD2003C8923 /* Stickers.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Stickers.xcassets; sourceTree = "<group>"; };
+		C5C631E924066FD2003C8923 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C5E8D9BC23BB56A6009B07E8 /* FTC Scorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FTC Scorer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5E8D9BF23BB56A6009B07E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C5E8D9C123BB56A6009B07E8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -377,10 +406,20 @@
 			path = "Core Data";
 			sourceTree = "<group>";
 		};
+		C5C631E624066FCF003C8923 /* SkystoneStickerPack */ = {
+			isa = PBXGroup;
+			children = (
+				C5C631E724066FD2003C8923 /* Stickers.xcassets */,
+				C5C631E924066FD2003C8923 /* Info.plist */,
+			);
+			path = SkystoneStickerPack;
+			sourceTree = "<group>";
+		};
 		C5E8D9B323BB56A6009B07E8 = {
 			isa = PBXGroup;
 			children = (
 				C5E8D9BE23BB56A6009B07E8 /* StonkScorer */,
+				C5C631E624066FCF003C8923 /* SkystoneStickerPack */,
 				C5E8D9BD23BB56A6009B07E8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -389,6 +428,7 @@
 			isa = PBXGroup;
 			children = (
 				C5E8D9BC23BB56A6009B07E8 /* FTC Scorer.app */,
+				C5C631E524066FCF003C8923 /* SkystoneStickerPack.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -463,6 +503,21 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		C5C631E424066FCF003C8923 /* SkystoneStickerPack */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C5C631ED24066FD2003C8923 /* Build configuration list for PBXNativeTarget "SkystoneStickerPack" */;
+			buildPhases = (
+				C5C631E324066FCF003C8923 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SkystoneStickerPack;
+			productName = SkystoneStickerPack;
+			productReference = C5C631E524066FCF003C8923 /* SkystoneStickerPack.appex */;
+			productType = "com.apple.product-type.app-extension.messages-sticker-pack";
+		};
 		C5E8D9BB23BB56A6009B07E8 /* StonkScorer */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C5E8D9D023BB56AA009B07E8 /* Build configuration list for PBXNativeTarget "StonkScorer" */;
@@ -470,10 +525,12 @@
 				C5E8D9B823BB56A6009B07E8 /* Sources */,
 				C5E8D9B923BB56A6009B07E8 /* Frameworks */,
 				C5E8D9BA23BB56A6009B07E8 /* Resources */,
+				C5C631F024066FD2003C8923 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				C5C631EB24066FD2003C8923 /* PBXTargetDependency */,
 			);
 			name = StonkScorer;
 			productName = StonkScorer;
@@ -490,6 +547,9 @@
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = CodingBytes;
 				TargetAttributes = {
+					C5C631E424066FCF003C8923 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
 					C5E8D9BB23BB56A6009B07E8 = {
 						CreatedOnToolsVersion = 11.3;
 					};
@@ -509,11 +569,20 @@
 			projectRoot = "";
 			targets = (
 				C5E8D9BB23BB56A6009B07E8 /* StonkScorer */,
+				C5C631E424066FCF003C8923 /* SkystoneStickerPack */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		C5C631E324066FCF003C8923 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5C631E824066FD2003C8923 /* Stickers.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C5E8D9BA23BB56A6009B07E8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -600,6 +669,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		C5C631EB24066FD2003C8923 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C5C631E424066FCF003C8923 /* SkystoneStickerPack */;
+			targetProxy = C5C631EA24066FD2003C8923 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		C5E8D9CA23BB56AA009B07E8 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -612,6 +689,36 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		C5C631EE24066FD2003C8923 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UALV34MRH2;
+				INFOPLIST_FILE = SkystoneStickerPack/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.codingBytes.StonkScorer.SkystoneStickerPack;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C5C631EF24066FD2003C8923 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UALV34MRH2;
+				INFOPLIST_FILE = SkystoneStickerPack/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.codingBytes.StonkScorer.SkystoneStickerPack;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		C5E8D9CE23BB56AA009B07E8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -732,7 +839,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "StonkScorer/Supporting Files/StonkScorer.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 16;
+				CURRENT_PROJECT_VERSION = 17;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"StonkScorer/Preview Content\"";
 				DEVELOPMENT_TEAM = UALV34MRH2;
@@ -758,7 +865,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "StonkScorer/Supporting Files/StonkScorer.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 16;
+				CURRENT_PROJECT_VERSION = 17;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"StonkScorer/Preview Content\"";
 				DEVELOPMENT_TEAM = UALV34MRH2;
@@ -781,6 +888,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		C5C631ED24066FD2003C8923 /* Build configuration list for PBXNativeTarget "SkystoneStickerPack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C5C631EE24066FD2003C8923 /* Debug */,
+				C5C631EF24066FD2003C8923 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C5E8D9B723BB56A6009B07E8 /* Build configuration list for PBXProject "StonkScorer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

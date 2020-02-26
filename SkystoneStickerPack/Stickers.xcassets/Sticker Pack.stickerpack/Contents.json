@@ -1,0 +1,35 @@
+{
+  "stickers" : [
+    {
+      "filename" : "Stone.sticker"
+    },
+    {
+      "filename" : "Skystone.sticker"
+    },
+    {
+      "filename" : "StoneDelivered.sticker"
+    },
+    {
+      "filename" : "StonePlaced.sticker"
+    },
+    {
+      "filename" : "Skyscraper.sticker"
+    },
+    {
+      "filename" : "CapstoneLevel.sticker"
+    },
+    {
+      "filename" : "Capstone.sticker"
+    },
+    {
+      "filename" : "DoubleCapstone.sticker"
+    }
+  ],
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  },
+  "properties" : {
+    "grid-size" : "regular"
+  }
+}
