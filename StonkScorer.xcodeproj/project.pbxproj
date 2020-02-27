@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -59,7 +59,7 @@
 		C5C0A7F6240471E0002BF4E1 /* FeatureInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C0A7F5240471E0002BF4E1 /* FeatureInfoModel.swift */; };
 		C5C0A7FA24047243002BF4E1 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C0A7F924047243002BF4E1 /* SplashScreen.swift */; };
 		C5C631E824066FD2003C8923 /* Stickers.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5C631E724066FD2003C8923 /* Stickers.xcassets */; };
-		C5C631EC24066FD2003C8923 /* SkystoneStickerPack.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = C5C631E524066FCF003C8923 /* SkystoneStickerPack.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C5C631EC24066FD2003C8923 /* SkystoneStickerPack.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = C5C631E524066FCF003C8923 /* SkystoneStickerPack.appex */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		C5E8D9C023BB56A6009B07E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E8D9BF23BB56A6009B07E8 /* AppDelegate.swift */; };
 		C5E8D9C223BB56A6009B07E8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E8D9C123BB56A6009B07E8 /* SceneDelegate.swift */; };
 		C5E8D9C623BB56AA009B07E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5E8D9C523BB56AA009B07E8 /* Assets.xcassets */; };
@@ -672,6 +672,7 @@
 /* Begin PBXTargetDependency section */
 		C5C631EB24066FD2003C8923 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
+			platformFilter = ios;
 			target = C5C631E424066FCF003C8923 /* SkystoneStickerPack */;
 			targetProxy = C5C631EA24066FD2003C8923 /* PBXContainerItemProxy */;
 		};
@@ -694,7 +695,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 18;
+				CURRENT_PROJECT_VERSION = 19;
 				DEVELOPMENT_TEAM = UALV34MRH2;
 				INFOPLIST_FILE = SkystoneStickerPack/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -711,7 +712,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 18;
+				CURRENT_PROJECT_VERSION = 19;
 				DEVELOPMENT_TEAM = UALV34MRH2;
 				INFOPLIST_FILE = SkystoneStickerPack/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -843,7 +844,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "StonkScorer/Supporting Files/StonkScorer.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 18;
+				CURRENT_PROJECT_VERSION = 19;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"StonkScorer/Preview Content\"";
 				DEVELOPMENT_TEAM = UALV34MRH2;
@@ -869,7 +870,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "StonkScorer/Supporting Files/StonkScorer.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 18;
+				CURRENT_PROJECT_VERSION = 19;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"StonkScorer/Preview Content\"";
 				DEVELOPMENT_TEAM = UALV34MRH2;

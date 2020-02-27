@@ -26,7 +26,7 @@ struct Scorer: TotalPoints {
 
             // Increase/Decrease stonesDelivered & TeleOp stonesPlaced based on stonesPlaced
             if oldValue.stonesPlaced < auto.stonesPlaced {
-                if auto.stonesDelivered < 6 {
+                if auto.stonesDelivered < 6 && auto.stonesDelivered < auto.stonesPlaced {
                     auto.stonesDelivered += 1
                 }
                 teleOp.stonesPlaced += 1
@@ -64,14 +64,9 @@ struct Scorer: TotalPoints {
                 teleOp.stonesPlaced += 1
 
                 return
-            } else if oldValue.skyscraperHeight > teleOp.skyscraperHeight,
-                // Decrease stonesPlaced based on skyscraperHeight
-                teleOp.stonesPlaced > 0 {
-                teleOp.stonesPlaced -= 1
-
-                return
             }
 
+            // Decrease stonesPlaced & skyscraperHeight based on stonesDelivered
             if oldValue.stonesDelivered > teleOp.stonesDelivered,
                 teleOp.stonesDelivered < teleOp.stonesPlaced {
                 if teleOp.stonesPlaced > 0 {
