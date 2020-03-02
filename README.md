@@ -18,6 +18,7 @@ FTC Scorer is a dead simple yet powerful way of scoring your practice matches.
 - [x] Save Scores 
 - [x] Scorer Assist 
 - [x] Alternate App Icons
+- [x] iMessage Sticker App
 
 ## Description
 
@@ -40,10 +41,12 @@ This project started as a playground for experimenting with **SwiftUI** and evol
 ## Screenshots
 
 <p align="center">
-    <img src="https://github.com/Pondorasti/StonkScorer/blob/master/External%20Assets/iOS%20Screenshots/6.5/1.jpg" width="400">
-    <img src="https://github.com/Pondorasti/StonkScorer/blob/master/External%20Assets/iOS%20Screenshots/6.5/2.jpg" width="400">
-    <img src="https://github.com/Pondorasti/StonkScorer/blob/master/External%20Assets/iOS%20Screenshots/6.5/3.jpg" width="400">
-    <img src="https://github.com/Pondorasti/StonkScorer/blob/master/External%20Assets/iOS%20Screenshots/6.5/4.jpg" width="400">
+    <img src="https://github.com/Pondorasti/StonkScorer/blob/master/External%20Assets/iOS%20Screenshots/V1.1/6.5/3d%20-%201.png" width="400">
+    <img src="https://github.com/Pondorasti/StonkScorer/blob/master/External%20Assets/iOS%20Screenshots/V1.1/6.5/3d%20-%202.png" width="400">
+  <img src="https://github.com/Pondorasti/StonkScorer/blob/master/External%20Assets/iOS%20Screenshots/V1.1/6.5/3d%20-%203.png" width="400">
+  <img src="https://github.com/Pondorasti/StonkScorer/blob/master/External%20Assets/iOS%20Screenshots/V1.1/6.5/3d%20-%204.png" width="400">
+  <img src="https://github.com/Pondorasti/StonkScorer/blob/master/External%20Assets/iOS%20Screenshots/V1.1/6.5/3d%20-%205.png" width="400">
+  <img src="https://github.com/Pondorasti/StonkScorer/blob/master/External%20Assets/iOS%20Screenshots/V1.1/6.5/3d%20-%206.png" width="400">
 </p>
 
 ## Author
