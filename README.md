@@ -35,7 +35,7 @@ This project started as a playground for experimenting with **SwiftUI** and evol
 ## App Preview
 
 <p align="center">
-   <image src="https://media.giphy.com/media/Q8xsudWIpz65w1Fh28/giphy.gif" width="200">
+   <image src="https://media.giphy.com/media/ib9hnrPzudBWOE5hTr/giphy.gif" width="300">
 </p>
 
 ## Screenshots
