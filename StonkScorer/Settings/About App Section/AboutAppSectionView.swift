@@ -25,7 +25,7 @@ struct AboutAppSectionView: View {
                     EmptyView()
                 }
                 SettingsRowView(
-                    image: Image(systemName: "book.circle.fill"),
+                    image: Image(systemName: "book.fill"),
                     imageColor: Color(UIColor.systemBlue),
                     title: "Splash Screens"
                 )
