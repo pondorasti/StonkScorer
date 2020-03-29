@@ -703,6 +703,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.codingBytes.StonkScorer.SkystoneStickerPack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -720,6 +721,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.codingBytes.StonkScorer.SkystoneStickerPack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -845,7 +847,6 @@
 				CODE_SIGN_ENTITLEMENTS = "StonkScorer/Supporting Files/StonkScorer.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 20;
-				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"StonkScorer/Preview Content\"";
 				DEVELOPMENT_TEAM = UALV34MRH2;
 				ENABLE_PREVIEWS = YES;
@@ -871,7 +872,6 @@
 				CODE_SIGN_ENTITLEMENTS = "StonkScorer/Supporting Files/StonkScorer.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 20;
-				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"StonkScorer/Preview Content\"";
 				DEVELOPMENT_TEAM = UALV34MRH2;
 				ENABLE_PREVIEWS = YES;
