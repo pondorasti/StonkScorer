@@ -27,8 +27,7 @@ struct SettingsRowView: View {
 
             if shouldShowDisclosureIcon {
                 Image(systemName: "chevron.right")
-                .foregroundColor(Color(UIColor.systemGray))
-
+                    .foregroundColor(Color(UIColor.systemGray))
             }
         }
     }
