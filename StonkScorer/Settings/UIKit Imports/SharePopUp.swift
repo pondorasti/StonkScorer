@@ -12,7 +12,7 @@ import SwiftUI
 extension UIApplication {
     class var topViewController: UIViewController? { return getTopViewController() }
 
-    private class func getTopViewController(base: UIViewController? = UIApplication.shared.keyWindow?.rootViewController) -> UIViewController? {
+    private class func getTopViewController(base: UIViewController? = UIApplication.shared.windows.first?.rootViewController) -> UIViewController? {
         if let nav = base as? UINavigationController {
             return getTopViewController(base: nav.visibleViewController)
         } else if let tab = base as? UITabBarController,
